@@ -1,0 +1,17 @@
+@import '../Styles/Colors.scss';
+
+.deskBar{
+    height: 100%;
+}
+.deskBar-main {
+    width: 8.3333%;
+    flex: 0 0 auto;
+    height: calc(100% - 20px);
+    border-radius: 25px;
+    margin: 10px 25px;
+    background: $primaryColor;
+}
+.logo-img{
+    width: calc(100% - 80px);
+    padding: 40px;
+}

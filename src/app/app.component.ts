@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./Styles/fonts.scss', './app.component.scss']
 })
 export class AppComponent {
   title = 'MookAdmin';
