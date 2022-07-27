@@ -1,7 +1,173 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$MookAdmin-primary: mat.define-palette(mat.$indigo-palette);
+$MookAdmin-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$MookAdmin-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$MookAdmin-theme: mat.define-light-theme((
+  color: (
+    primary: $MookAdmin-primary,
+    accent: $MookAdmin-accent,
+    warn: $MookAdmin-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($MookAdmin-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@import 'app/Styles/Variables.scss';
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: $border-radius;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 html,
 body {
     height: calc(100% - 5px);
     margin: 0;
 }
+
+app-desk-bar {
+    display: inline-block;
+    height: 100%;
+    position: fixed;
+    width: $deskBarWidth;
+}
+
+app-student {
+    display: flex;
+    justify-content: flex-end;
+    max-height: 100vh;
+    height: 100vh;
+}
+
+.is-flex {
+    display: flex;
+}
+
+/*****************************************************************************/
+/*********************************  button  **********************************/
+/*********************************  button  **********************************/
+/*********************************  button  **********************************/
+/*****************************************************************************/
+.button {
+    border-radius: $border-radius;
+    box-shadow: 1px 1px 10px 0px $lightBlackShadow;
+    color: $buttonColor;
+    background: #fff;
+}
+
+.button-svg>svg>path {
+    fill: $buttonColor;
+}
+
+.button-svg-special>svg {
+    fill: $buttonColor;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 1px 10px 0px $lightBlackShadow;
+    color: $buttonHoverColor;
+
+    .button-svg>svg>path {
+        fill: $buttonHoverColor  !important;
+    }
+
+    .button-svg-special>svg {
+        fill: $buttonHoverColor  !important;
+    }
+}
+
+/*****************************************************************************/
+/*********************************  cards  ***********************************/
+/*********************************  cards  ***********************************/
+/*********************************  cards  ***********************************/
+/*****************************************************************************/
+
+.card {
+    border-radius: $border-radius;
+    box-shadow: 1px 1px 10px 0px $lightBlackShadow;
+    color: $cardColor;
+}
+.card-body{
+    height: 80%;
+}
+
+.card-header {
+    border-radius: $border-radius $border-radius 0 0;
+    border-bottom: 1px solid $lightBlackShadow;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    div{
+        padding: 0px 5px;
+    }
+}
+
+.card-footer {
+    border-radius: 0 0 $border-radius $border-radius;
+    border-top: 1px solid $lightBlackShadow;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    div{
+        padding: 0px 5px;
+    }
+}
+
+.card-svg>svg>path {
+    fill: $cardColor;
+}
+
+.card-footer:hover {
+    background-color: $cardColor;
+    cursor: pointer;
+    color: #fff;
+
+    .card-svg>svg>path {
+        fill: #fff;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

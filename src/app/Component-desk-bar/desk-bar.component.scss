@@ -1,0 +1,47 @@
+@import '../Styles/Variables.scss';
+
+.deskBar-main {
+    display: flex;
+    flex-direction: column;
+    background: $primaryColor;
+    align-items: center;
+    flex: 0 0 auto;
+    height: calc(100vh - ($deskBarMarginTop + $deskBarMarginBottom));
+    margin: $deskBarMarginTop $deskBarMarginRight $deskBarMarginBottom $deskBarMarginLeft;
+    border-radius: $border-radius;
+    justify-content: space-between;
+}
+.logo-img {
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+.desk-home,
+.desk-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desk-home-icon,
+.desk-bottom-icon {
+    width: 80%;
+    padding: 7px 0px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+}
+.desk-home-icon:hover,
+.desk-bottom-icon:hover {
+background: $iconHoverOnPrimary;
+    border-radius: $border-radius;
+    .withfill > path {
+        fill: $svgFillOnHoverPrimary;
+    }
+    .withstroke > path {
+        stroke: $svgFillOnHoverPrimary;
+    }
+    
+}
+.desk-bottom {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,288 @@
+@import 'src/app/Styles/Variables.scss';
+
+/*************************************************************************************************************/
+/******************************************  Main Style  *****************************************************/
+/******************************************  Main Style  *****************************************************/
+/******************************************  Main Style  *****************************************************/
+/*************************************************************************************************************/
+.student-main {
+    direction: rtl;
+    margin-right: 20px;
+    border-radius: 25px;
+    font-family: $regular;
+    width: calc(100vw - $deskBarWidth - 15px);
+    max-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*************************************************************************************************************/
+/*********************************************  top bar  *****************************************************/
+/*********************************************  top bar  *****************************************************/
+/*********************************************  top bar  *****************************************************/
+/*************************************************************************************************************/
+.top-bar {
+    display: flex;
+    height: 8%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+    // border-bottom: 1px solid #00000038;
+}
+
+.welcome {
+    margin-right: 10px;
+}
+
+.welcome>p {
+    padding: 0 2px;
+}
+
+.date-theme {
+    align-items: center;
+}
+
+.date {
+    margin: 0px 10px;
+}
+
+.theme {
+    margin-left: 10px;
+}
+
+.theme>svg>path {
+    fill: #000;
+}
+
+/*************************************************************************************************************/
+/******************************************  main bar  *******************************************************/
+/******************************************  main bar  *******************************************************/
+/******************************************  main bar  *******************************************************/
+/*************************************************************************************************************/
+.main-bar {
+    height: 92%;
+}
+
+
+/*************************************************************************************************************/
+/*******************************************  right bar  *****************************************************/
+/*******************************************  right bar  *****************************************************/
+/*******************************************  right bar  *****************************************************/
+/*************************************************************************************************************/
+
+.right-bar {
+    width: calc(25% - 5px);
+    display: flex;
+    height: calc(100% - 5px);
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 10px);
+    width: calc(100% - 5px);
+    border-radius: $border-radius;
+}
+
+.comment-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    height: 10%;
+    border-radius: $border-radius $border-radius 0 0;
+}
+
+.comment-header>div {
+    padding: 0px 5px;
+}
+
+.comment-body {
+    height: 80%;
+}
+
+.comment-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    border-radius: 0 0 $border-radius $border-radius;
+}
+
+.comment-footer>div {
+    padding: 0px 5px;
+}
+
+/*************************************************************************************************************/
+/******************************************  middle bar  *****************************************************/
+/******************************************  middle bar  *****************************************************/
+/******************************************  middle bar  *****************************************************/
+/*************************************************************************************************************/
+
+.middle-bar {
+    width: calc(25% - 2.5px);
+    display: flex;
+    height: calc(100% - 5px);
+    flex-direction: column;
+    align-items: center;
+}
+
+.request-history {
+    display: flex;
+    height: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.request-main,
+.history-main {
+    // width: calc(50% - 10px);
+    width: 50%;
+    display: flex;
+    height: calc(100% - 10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius;
+    margin: 5px;
+}
+
+.request-main>div,
+.history-main>div {
+    padding: 5px 0;
+}
+
+.reports-main {
+    width: calc(100% - 10px);
+    display: flex;
+    height: calc(10% - 10px);
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 25px;
+    margin: 5px;
+    align-items: center;
+}
+
+.reports-main>div {
+    padding: 0 5px;
+}
+
+.overdue-main {
+    display: flex;
+    flex-direction: column;
+    height: calc(70% - 10px);
+    width: calc(100% - 5px);
+}
+
+.overdue-header {
+    margin-top: 5px;
+}
+
+/*************************************************************************************************************/
+/*******************************************  left bar  ******************************************************/
+/*******************************************  left bar  ******************************************************/
+/*******************************************  left bar  ******************************************************/
+/*************************************************************************************************************/
+
+.left-bar {
+    width: calc(50% - 2.5px);
+    display: flex;
+    height: calc(100% - 15px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-list {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 15px);
+    justify-content: space-around;
+    height: calc(50% - 5px);
+}
+
+.user-list-main {
+    width: calc(10% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.register-main {
+    width: calc(90% - 15px);
+}
+
+.register-header {
+    height: 20%;
+}
+
+.register-footer {
+    height: 10%;
+}
+
+.register-body {
+    height: 70%;
+    overflow: auto;
+}
+
+.user-list-text {
+    transform: rotateZ(90deg);
+    width: max-content;
+}
+
+.book-request-main {
+    width: calc(100% - 15px);
+    height: calc(50% - 5px);
+}
+
+.book-re-header,
+.book-re-footer {
+    height: 20%;
+}
+
+.book-re-body {
+    height: 60%;
+}
+
+.new-reg-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #00000005;
+    margin: 5px 5px;
+    padding: 10px 5px;
+    border-radius: $border-radius;
+}
+
+.new-reg-main:hover {
+    background: #0000000c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.reg-name {
+    width: 40%;
+}
+
+.reg-svg-accept>svg>path {
+    fill: green;
+}
+
+.reg-svg-deny>svg>path {
+    fill: red;
+}
+
+.reg-button {
+    display: flex;
+    align-items: center;
+}
