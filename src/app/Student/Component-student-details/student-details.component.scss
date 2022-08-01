@@ -1,0 +1,116 @@
+@import 'src/app/Styles/Variables.scss';
+
+.student-detail-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 75vh;
+    width: 50vw;
+    background: #fff;
+}
+
+
+.student-detail-body {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    direction: rtl;
+    align-items: flex-start;
+}
+
+.student-detail-header {
+    height: 10%;
+}
+
+.right-values {
+    width: 30%;
+}
+
+.left-values {
+    width: 60%;
+}
+
+.student-detail-footer:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.reg-svg-deny>svg>path {
+    fill: red;
+}
+
+.student-detail-deny {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 50%;
+    color: red;
+}
+
+.reg-svg-accept>svg>path {
+    fill: green;
+}
+
+.student-detail-accept {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    height: 50%;
+    color: green;
+}
+
+.student-detail-accept>div,
+.student-detail-deny>div {
+    padding: 1px 1px;
+}
+
+.student-detail-table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    align-items: stretch;
+    background: #0000000d;
+}
+
+.student-detail-table>thead {
+    border-bottom: 1px solid #8055E0;
+    padding: 3px 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.student-detail-table>tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-detail-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    direction: rtl;
+}
+
+.student-detail-detail {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.student-name,
+.request-date {
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}

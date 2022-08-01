@@ -5,9 +5,4 @@ export interface IAdmin {
     createdDate: string,
     updateDate: string,
     IsDeleted: boolean,
-    historyID?: number
-    TableName?: string,
-    ColumnName?: string,
-    TableID?: number
-    HistoryDate?: string
 }

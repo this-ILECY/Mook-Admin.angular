@@ -244,13 +244,16 @@
     height: calc(50% - 5px);
 }
 
-.book-re-header,
-.book-re-footer {
+.book-re-header {
     height: 20%;
 }
-
+.book-re-footer{
+    height: 10%;
+}
 .book-re-body {
-    height: 60%;
+    height: 70%;
+    display: flex;
+    overflow: auto;
 }
 
 .new-reg-main {
@@ -284,5 +287,33 @@
 
 .reg-button {
     display: flex;
+    align-items: center;
+}
+
+.request-book-count {
+    display: flex;
+}
+
+.book-request-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    height: calc(100% - 40px);
+    margin: 10px 5px;
+    border-radius: $border-radius;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.book-request-book-count {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.book-request-name {
+    text-align: center;
+    height: 40%;
+    display: flex;
+    overflow: hidden;
     align-items: center;
 }

@@ -1,0 +1,71 @@
+@import 'src/app/Styles/Variables.scss';
+
+.new-reg-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 50vh;
+    width: 25vw;
+    background: #fff;
+}
+
+.new-reg-body {
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.new-reg-header {
+    height: 20%;
+}
+
+.new-reg-footer {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.right-values {
+    width: 30%;
+}
+.left-values {
+    width: 60%;
+}
+.new-reg-footer:hover{
+    background-color: #fff;
+    color: #000;
+}
+.reg-svg-deny > svg > path {
+    fill: red;
+}
+.reg-new-deny {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+   height: 50%;
+color: red;
+}
+.reg-svg-accept > svg > path {
+    fill: green;
+}
+.reg-new-accept {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    height: 50%;
+    color: green;
+}
+.reg-new-accept>div,
+.reg-new-deny>div{
+    padding: 1px 1px;
+}

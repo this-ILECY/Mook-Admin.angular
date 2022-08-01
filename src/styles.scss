@@ -39,6 +39,7 @@ $MookAdmin-theme: mat.define-light-theme((
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
   }
   
   /* Track */
@@ -79,6 +80,27 @@ app-student {
 
 .is-flex {
     display: flex;
+}
+.mat-dialog-container{
+    display: contents !important;
+    overflow: visible !important;
+    // max-height: 100vh !important;
+    // max-width: 100vw !important;
+    // height: 90vh !important;
+    // width: 90vw !important;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+}
+app-book-request ,
+app-new-register {
+    padding: 0 !important;
+    border-radius: $border-radius !important;
+    height: 100% !important;
+    width: 100% !important;
+    overflow: visible !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*****************************************************************************/
