@@ -7,9 +7,9 @@ import { IStudent } from 'src/app/App-Services/Models/IStudent';
   templateUrl: './new-register.component.html',
   styleUrls: ['./new-register.component.scss']
 })
-export class ComponentNewRegisterComponent {
+export class NewRegisterComponent {
 
-  constructor(public dialogRef: MatDialogRef<ComponentNewRegisterComponent>,
+  constructor(public dialogRef: MatDialogRef<NewRegisterComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
       console.log(this.data);
       

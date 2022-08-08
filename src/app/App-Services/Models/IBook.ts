@@ -1,5 +1,7 @@
 export interface IBook{
     bookID:number,
+    PubID?:number,
+    PubName:string,
     bookName:string,
     bookPagesCount:number,
     bookRating:number,

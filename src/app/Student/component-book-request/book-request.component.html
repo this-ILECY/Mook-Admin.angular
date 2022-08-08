@@ -13,22 +13,27 @@
         <div class="book-re-detail">
             <div class="student-name">
                 <div class="student-name-text">نام سفارش دهنده: </div>
-                <div class="student-name-value" (click)="studentDetail(data.selectedRequest.student)">{{data.selectedRequest.student.studentName}}</div>
+                <div class="student-name-value" (click)="studentDetail(data.selectedRequest.student)">
+                    {{data.selectedRequest.student.studentName}}</div>
             </div>
             <div class="request-date">
                 <div class="request-date-text">تاریخ سفارش: </div>
                 <div class="request-date-value">{{data.selectedRequest.RequestH.createdDate}}</div>
             </div>
-            
+
 
         </div>
         <table class="book-re-table">
             <thead>
-                <th>نام  کتاب</th>
+                <th>نام کتاب</th>
+                <th>انتشارات</th>
             </thead>
             <tbody>
                 <ng-container *ngFor="let member of data.selectedRequest.requestDetail">
-                    <tr>{{member.book.bookName}}</tr>
+                    <tr (click)="openBookDetail(member.book)">
+                        <td>{{member.book.bookName}}</td>
+                        <td>{{member.book.PubName}}</td>
+                    </tr>
                 </ng-container>
             </tbody>
         </table>

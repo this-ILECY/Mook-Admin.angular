@@ -3,14 +3,14 @@
 .student-detail-main {
     font-family: $regular;
     direction: rtl;
-    height: 75vh;
-    width: 50vw;
+    height: 30vh;
+    width: 75vw;
     background: #fff;
 }
 
 
 .student-detail-body {
-    height: 90%;
+    height: 60%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -20,7 +20,7 @@
 }
 
 .student-detail-header {
-    height: 10%;
+    height: 40%;
 }
 
 .right-values {
@@ -87,6 +87,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .student-detail-table>tbody {
     display: flex;
     flex-direction: column;
@@ -102,15 +103,22 @@
 
 .student-detail-detail {
     display: flex;
-    width: 25%;
+    width: 100%;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
 }
+
 .student-name,
 .request-date {
     overflow: hidden;
     margin-right: 10px;
     display: flex;
     flex-direction: column;
+}
+
+.student-detail-detail>table {
+
+    thead>th,
+    tbody>tr>td {
+        text-align: center;
+    }
 }

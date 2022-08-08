@@ -3,8 +3,8 @@ import { DataService } from '../../App-Services/data-service';
 import { IAdmin } from '../../App-Services/Models/IAdmin';
 import { IStudent } from '../../App-Services/Models/IStudent';
 import { MatDialog } from '@angular/material/dialog';
-import { ComponentNewRegisterComponent } from '../Component-new-register/new-register.component';
-import { ComponentBookRequestComponent } from '../component-book-request/book-request.component';
+import { NewRegisterComponent } from '../Component-new-register/new-register.component';
+import { BookRequestComponent } from '../component-book-request/book-request.component';
 import { IRequestViewModel } from 'src/app/App-Services/Models/IRequestH';
 
 
@@ -31,14 +31,14 @@ export class StudentComponent implements OnInit {
   }
   openRegisterDetail(selectedStudent: IStudent) {
 
-    const dialogRef = this.dialog.open(ComponentNewRegisterComponent, { data: { 'selectedStudent': selectedStudent } });
+    const dialogRef = this.dialog.open(NewRegisterComponent, { data: { 'selectedStudent': selectedStudent } });
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(`Dialog result: ${result}`);
     // });
   }
   openBookRequest(selectedRequest: IRequestViewModel) {
 
-    const dialogRef = this.dialog.open(ComponentBookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
+    const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(`Dialog result: ${result}`);
     // });

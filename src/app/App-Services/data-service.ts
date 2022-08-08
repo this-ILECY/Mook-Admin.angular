@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IAdmin } from './Models/IAdmin';
 import { IBook } from './Models/IBook';
+import { IPublisher } from './Models/IPublisher';
 import { IRequestD } from './Models/IRequestD';
 import { IRequestH, IRequestViewModel } from './Models/IRequestH';
 import { IStudent } from './Models/IStudent';
@@ -16,8 +17,8 @@ export class DataService {
     private Book: IBook[] = [
         {
             bookID: 1,
-            bookName: "book1",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book1",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -28,8 +29,8 @@ export class DataService {
         },
         {
             bookID: 2,
-            bookName: "book2",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book2",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -40,8 +41,8 @@ export class DataService {
         },
         {
             bookID: 3,
-            bookName: "book3",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book3",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -52,8 +53,8 @@ export class DataService {
         },
         {
             bookID: 4,
-            bookName: "book4",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book4",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -64,8 +65,8 @@ export class DataService {
         },
         {
             bookID: 5,
-            bookName: "book5",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book5",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -75,9 +76,9 @@ export class DataService {
             AdminID: 1
         },
         {
-            bookID:6,
-            bookName: "book6",
-            bookPagesCount: 320,
+            bookID: 6,
+            PubID: 1, bookName: "book6",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -88,8 +89,8 @@ export class DataService {
         },
         {
             bookID: 7,
-            bookName: "book7",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book7",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -100,8 +101,8 @@ export class DataService {
         },
         {
             bookID: 8,
-            bookName: "book8",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book8",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -111,9 +112,9 @@ export class DataService {
             AdminID: 1
         },
         {
-            bookID:9,
-            bookName: "book9",
-            bookPagesCount: 320,
+            bookID: 9,
+            PubID: 1, bookName: "book9",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -124,8 +125,8 @@ export class DataService {
         },
         {
             bookID: 10,
-            bookName: "book10",
-            bookPagesCount: 320,
+            PubID: 1, bookName: "book10",
+            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "a book",
@@ -135,10 +136,10 @@ export class DataService {
             AdminID: 1
         }
     ]
-
-    public getBook(){
+    public getBook() {
         return this.Book;
     }
+
     private Admin: IAdmin[] = [{
         AdminID: 1,
         AdminName: "امیرحسین",
@@ -223,8 +224,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -244,8 +245,8 @@ export class DataService {
                     book:
                     {
                         bookID: 2,
-                        bookName: "book2",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book2",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -265,8 +266,8 @@ export class DataService {
                     book:
                     {
                         bookID: 3,
-                        bookName: "book3",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book3",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -286,8 +287,8 @@ export class DataService {
                     book:
                     {
                         bookID: 4,
-                        bookName: "book4",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book4",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -307,8 +308,8 @@ export class DataService {
                     book:
                     {
                         bookID: 5,
-                        bookName: "book5",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book5",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -326,8 +327,9 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-            }, 
-           
+                SpamCount: 5
+            },
+
         },
         {
             RequestH: {
@@ -347,8 +349,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -368,8 +370,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -389,8 +391,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -410,8 +412,8 @@ export class DataService {
                     book:
                     {
                         bookID: 9,
-                        bookName: "book9",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book9",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -431,8 +433,8 @@ export class DataService {
                     book:
                     {
                         bookID: 10,
-                        bookName: "book10",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book10",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -450,6 +452,7 @@ export class DataService {
                 studentUniversityID: "971456213",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
+                SpamCount: 5
             }
         },
         {
@@ -470,8 +473,260 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 3,
+                    RequestDID: 11,
+                    BookID: 1,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -491,8 +746,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -512,8 +767,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -533,8 +788,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -554,8 +809,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -573,6 +828,7 @@ export class DataService {
                 studentUniversityID: "9715081050",
                 createdDate: "1501/13/73",
                 updateDate: "1502/19/99",
+                SpamCount: 5
             }
         },
         {
@@ -593,8 +849,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -614,8 +870,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -635,8 +891,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -656,8 +912,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -677,8 +933,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -696,6 +952,7 @@ export class DataService {
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
+                SpamCount: 5
             }
         },
         {
@@ -716,8 +973,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -737,8 +994,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -758,8 +1015,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -779,8 +1036,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -800,8 +1057,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -819,6 +1076,7 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
+                SpamCount: 5
             }
         },
         {
@@ -839,8 +1097,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -860,8 +1118,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -881,8 +1139,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -902,8 +1160,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -923,8 +1181,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -942,6 +1200,7 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
+                SpamCount: 5
             }
         },
         {
@@ -962,8 +1221,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -983,8 +1242,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1004,8 +1263,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1025,8 +1284,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1046,8 +1305,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1065,6 +1324,7 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
+                SpamCount: 5
             }
         },
         {
@@ -1085,8 +1345,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1106,8 +1366,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1127,8 +1387,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1148,8 +1408,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1169,8 +1429,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1188,6 +1448,7 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
+                SpamCount: 5
             }
         },
         {
@@ -1208,8 +1469,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1229,8 +1490,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1250,8 +1511,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1271,8 +1532,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1292,8 +1553,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1311,6 +1572,7 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
+                SpamCount: 5
             }
         },
         {
@@ -1331,8 +1593,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1352,8 +1614,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1373,8 +1635,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1394,8 +1656,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1415,8 +1677,8 @@ export class DataService {
                     book:
                     {
                         bookID: 1,
-                        bookName: "book1",
-                        bookPagesCount: 320,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
                         bookRating: 3.2,
                         BookratingCount: 56,
                         bookDescription: "a book",
@@ -1425,7 +1687,112 @@ export class DataService {
                         IsDeleted: false,
                         AdminID: 1
                     }
-                }
+                },
+                {
+                    RequestHID: 5,
+                    RequestDID: 25,
+                    BookID: 5,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 5,
+                    RequestDID: 25,
+                    BookID: 5,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 5,
+                    RequestDID: 25,
+                    BookID: 5,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 5,
+                    RequestDID: 25,
+                    BookID: 5,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
+                {
+                    RequestHID: 5,
+                    RequestDID: 25,
+                    BookID: 5,
+                    description: "string",
+                    IsDamaged: false,
+                    IsLost: false,
+                    book:
+                    {
+                        bookID: 1,
+                        PubID: 1, bookName: "book1",
+                        PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه", bookPagesCount: 320,
+                        bookRating: 3.2,
+                        BookratingCount: 56,
+                        bookDescription: "a book",
+                        createdDate: '1401/05/06',
+                        UpdateDate: '1401/06/17',
+                        IsDeleted: false,
+                        AdminID: 1
+                    }
+                },
             ],
             student: {
                 studentID: 25,
@@ -1434,12 +1801,50 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
+                SpamCount: 5
             }
         }
     ]
-
     public getRequest() {
         return this.Request;
+    }
+
+    private publisher: IPublisher[] = [
+        {
+            PublisherID: 1,
+            PublisherName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی میانه",
+            PublisherPhone: "09141414114",
+            publisherAddress: "میانه خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
+            CreatedDate: '1400/12/12',
+            IsDeleted: false,
+        },
+        {
+            PublisherID: 2,
+            PublisherName: "کتاب های میانه",
+            PublisherPhone: "09121212112",
+            publisherAddress: "میانه خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
+            CreatedDate: '1404/10/12',
+            IsDeleted: false,
+        },
+        {
+            PublisherID: 3,
+            PublisherName: "نشر کتاب",
+            PublisherPhone: "09131313113",
+            publisherAddress: "میانه خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
+            CreatedDate: '1500/09/05',
+            IsDeleted: false,
+        },
+        {
+            PublisherID: 4,
+            PublisherName: "",
+            PublisherPhone: "09131313113",
+            publisherAddress: "میانه خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
+            CreatedDate: '1500/09/05',
+            IsDeleted: false,
+        },
+    ]
+    public getPublisher(){
+        return this.publisher;
     }
 
 }
