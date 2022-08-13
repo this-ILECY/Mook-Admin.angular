@@ -3,24 +3,24 @@
 .student-detail-main {
     font-family: $regular;
     direction: rtl;
-    height: 30vh;
+    height: 35vh;
     width: 75vw;
     background: #fff;
 }
 
 
 .student-detail-body {
-    height: 60%;
+    height: 70%;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     direction: rtl;
     align-items: flex-start;
 }
 
 .student-detail-header {
-    height: 40%;
+    height: 30%;
 }
 
 .right-values {
@@ -94,13 +94,6 @@
     align-items: center;
 }
 
-.student-detail-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    direction: rtl;
-}
-
 .student-detail-detail {
     display: flex;
     width: 100%;
@@ -121,4 +114,19 @@
     tbody>tr>td {
         text-align: center;
     }
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttons>div {
+    width: 15%;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-around;
+    align-items: center;
 }

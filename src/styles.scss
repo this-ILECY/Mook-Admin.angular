@@ -85,10 +85,6 @@ app-student {
 .mat-dialog-container {
     display: contents !important;
     overflow: visible !important;
-    // max-height: 100vh !important;
-    // max-width: 100vw !important;
-    // height: 90vh !important;
-    // width: 90vw !important;
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;
 }
@@ -125,6 +121,10 @@ app-new-register {
     fill: $buttonColor;
 }
 
+.button-svg-stroke>svg>path {
+    stroke: $buttonColor;
+}
+
 .button:hover {
     cursor: pointer;
     box-shadow: inset 1px 1px 10px 0px $lightBlackShadow;
@@ -136,6 +136,9 @@ app-new-register {
 
     .button-svg-special>svg {
         fill: $buttonHoverColor  !important;
+    }
+    .button-svg-stroke>svg>path {
+        stroke: $buttonHoverColor  !important;
     }
 }
 
@@ -216,7 +219,17 @@ body {
     resize: none;
     border: none;
     font-family: $regular;
-    color: $primaryColor;
-    border-radius: $border-radius;
+    color: $buttonColor;
+    font-size: $font-size;
     padding: 6px 10px;
+    border: 1px solid #00000000;
+}
+.input-disable:focus-visible {
+    border-radius: $border-radius;
+    outline: none;
+    border: 1px solid #00000061;
+}
+.input-disable:disabled {
+    cursor: default;
+    background-color:#00000000;
 }

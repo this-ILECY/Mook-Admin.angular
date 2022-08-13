@@ -1,0 +1,32 @@
+@import 'src/app/Styles/Variables.scss';
+
+.student-detail-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 35vh;
+    width: 75vw;
+    background: #fff;
+}
+
+
+.student-detail-body {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    direction: rtl;
+    align-items: flex-start;
+}
+
+.student-detail-header {
+    height: 30%;
+}
+
+.right-values {
+    width: 30%;
+}
+
+.student-report-table {
+    width: 100%;
+}

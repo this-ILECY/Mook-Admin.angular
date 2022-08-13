@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { IBook } from 'src/app/App-Services/Models/IBook';
 import { IStudent } from 'src/app/App-Services/Models/IStudent';
-import { BookDetailsComponent } from 'src/app/component-book-details/book-details.component';
+import { BookDetailsComponent } from 'src/app/Book/component-book-details/book-details.component';
 import { StudentDetailsComponent } from '../Component-student-details/student-details.component';
 
 @Component({

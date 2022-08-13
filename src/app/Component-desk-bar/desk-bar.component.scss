@@ -11,10 +11,17 @@
     border-radius: $border-radius;
     justify-content: space-between;
 }
+
 .logo-img {
     width: calc(100% - 40px);
     padding: 20px;
+    -webkit-user-drag: none;
+    -khtml-user-darg: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    // user-drag: none;
 }
+
 .desk-home,
 .desk-bottom {
     width: 100%;
@@ -22,6 +29,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .desk-home-icon,
 .desk-bottom-icon {
     width: 80%;
@@ -30,18 +38,22 @@
     display: flex;
     justify-content: center;
 }
+
 .desk-home-icon:hover,
 .desk-bottom-icon:hover {
-background: $iconHoverOnPrimary;
+    background: $iconHoverOnPrimary;
     border-radius: $border-radius;
-    .withfill > path {
+
+    .withfill>path {
         fill: $svgFillOnHoverPrimary;
     }
-    .withstroke > path {
+
+    .withstroke>path {
         stroke: $svgFillOnHoverPrimary;
     }
-    
+
 }
+
 .desk-bottom {
     margin-bottom: 10px;
 }

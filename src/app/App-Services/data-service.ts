@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { IAdmin } from './Models/IAdmin';
 import { IBook } from './Models/IBook';
 import { IPublisher } from './Models/IPublisher';
-import { IRequestD } from './Models/IRequestD';
-import { IRequestH, IRequestViewModel } from './Models/IRequestH';
-import { IStudent } from './Models/IStudent';
+import { IRequestH,IRequestD, IRequestViewModel } from './Models/IRequestH';
+import { IStudent, IStudentReport } from './Models/IStudent';
 
 @Injectable({
     providedIn: 'root'
@@ -159,6 +158,8 @@ export class DataService {
         studentUniversityID: "00452365",
         createdDate: "1500/13/65",
         updateDate: "1501/15/23",
+        IsBlocked: false,
+        IsSuspended: true
     },
     {
         studentID: 22,
@@ -167,6 +168,8 @@ export class DataService {
         studentUniversityID: "971456213",
         createdDate: "1500/13/22",
         updateDate: "1501/08/09",
+        IsBlocked: true,
+        IsSuspended: true
     },
     {
         studentID: 23,
@@ -175,6 +178,8 @@ export class DataService {
         studentUniversityID: "9715081050",
         createdDate: "1501/13/73",
         updateDate: "1502/19/99",
+        IsBlocked: false,
+        IsSuspended: false
     },
     {
         studentID: 24,
@@ -183,6 +188,8 @@ export class DataService {
         studentUniversityID: "351564332",
         createdDate: "1000/00/02",
         updateDate: "1401/00/31",
+        IsBlocked: true,
+        IsSuspended: false
     },
     {
         studentID: 25,
@@ -191,6 +198,8 @@ export class DataService {
         studentUniversityID: "68743563",
         createdDate: "1650/13/73",
         updateDate: "1600/19/99",
+        IsBlocked: false,
+        IsSuspended: true
     },
     {
         studentID: 26,
@@ -199,6 +208,8 @@ export class DataService {
         studentUniversityID: "5666576",
         createdDate: "1400/13/73",
         updateDate: "1502/19/99",
+        IsBlocked: false,
+        IsSuspended: true
     }]
     public getStudent() {
         return this.Student;
@@ -1809,6 +1820,7 @@ export class DataService {
         return this.Request;
     }
 
+
     private publisher: IPublisher[] = [
         {
             PublisherID: 1,
@@ -1843,8 +1855,84 @@ export class DataService {
             IsDeleted: false,
         },
     ]
-    public getPublisher(){
+    public getPublisher() {
         return this.publisher;
     }
 
+    private studentReport: IStudentReport[] = [
+        {
+            studentID: 21,
+            studentName: "سید علیرضا رضایی اصل",
+            studentSSID: "002585258",
+            studentUniversityID: "00452365",
+            registerDate: "1500/13/65",
+            RequestCount: 10,
+            RequsetDelayCount: 8,
+            LongestDelay: "285 day",
+            BookRent: 326,
+            BookDamaged: 325,
+        },
+        {
+            studentID: 22,
+            studentName: "مسعود مسعودی",
+            studentSSID: "007585950",
+            studentUniversityID: "971456213",
+            registerDate: "1500/13/22",
+            RequestCount: 10,
+            RequsetDelayCount: 8,
+            LongestDelay: "285 day",
+            BookRent: 326,
+            BookDamaged: 325
+        },
+        {
+            studentID: 23,
+            studentName: "شیرین شیرین زاده",
+            studentSSID: "008565987",
+            studentUniversityID: "9715081050",
+            registerDate: "1501/13/73",
+            RequestCount: 10,
+            RequsetDelayCount: 8,
+            LongestDelay: "285 day",
+            BookRent: 326,
+            BookDamaged: 325,
+        },
+        {
+            studentID: 24,
+            studentName: "رضا رضایی",
+            studentSSID: "002154515",
+            studentUniversityID: "351564332",
+            registerDate: "1000/00/02",
+            RequestCount: 10,
+            RequsetDelayCount: 8,
+            LongestDelay: "285 day",
+            BookRent: 326,
+            BookDamaged: 325,
+        },
+        {
+            studentID: 25,
+            studentName: "سارا سارایی",
+            studentSSID: "015455315",
+            studentUniversityID: "68743563",
+            registerDate: "1650/13/73",
+            RequestCount: 10,
+            RequsetDelayCount: 8,
+            LongestDelay: "285 day",
+            BookRent: 326,
+            BookDamaged: 325,
+        },
+        {
+            studentID: 26,
+            studentName: "اشکان اشکانیان",
+            studentSSID: "351354353",
+            studentUniversityID: "5666576",
+            registerDate: "1400/13/73",
+            RequestCount: 10,
+            RequsetDelayCount: 8,
+            LongestDelay: "285 day",
+            BookRent: 326,
+            BookDamaged: 325,
+        }]
+    public getStudentReport() {
+        return this.studentReport;
+    }
 }

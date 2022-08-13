@@ -1,3 +1,5 @@
+import { IRequestH, IRequestD } from "./IRequestH";
+
 export interface IStudent {
 
     studentID: number,
@@ -9,7 +11,22 @@ export interface IStudent {
     IsDeleted?: boolean,
     AdminID?: number,
     userID?: number,
+    IsBlocked?:boolean,
+    IsSuspended?:boolean,
     IsSpam?: boolean,
     SpamCount?: number,
     ReportPoint?: number,
+}
+
+export interface IStudentReport{
+    studentID:number,
+    studentName:string,
+    studentSSID:string,
+    studentUniversityID:string
+    RequestCount:number,
+    RequsetDelayCount:number,
+    LongestDelay:string,
+    BookRent:number,
+    BookDamaged:number,
+    registerDate:string
 }
