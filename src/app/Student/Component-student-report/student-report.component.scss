@@ -3,24 +3,24 @@
 .student-detail-main {
     font-family: $regular;
     direction: rtl;
-    height: 35vh;
+    height: 55vh;
     width: 75vw;
     background: #fff;
 }
 
 
 .student-detail-body {
-    height: 70%;
+    height: 85%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     direction: rtl;
     align-items: flex-start;
 }
 
 .student-detail-header {
-    height: 30%;
+    height: 15%;
 }
 
 .right-values {
@@ -28,5 +28,17 @@
 }
 
 .student-report-table {
-    width: 100%;
+    width: calc(100% - 20px);
+    margin: 10px;
+
+    tbody>tr>td {
+        text-align: center;
+        overflow: hidden;
+    }
+
+    tbody > tr:hover{
+        background-color: $buttonHoverColor;
+        cursor: pointer;
+        color: #fff;
+    }
 }

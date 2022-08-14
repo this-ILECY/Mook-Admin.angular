@@ -1,7 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DataService } from 'src/app/App-Services/data-service';
-import { IStudentReport } from 'src/app/App-Services/Models/IStudent';
+import { IStudent, IStudentReport } from 'src/app/App-Services/Models/IStudent';
+import { StudentDetailsComponent } from '../Component-student-details/student-details.component';
 
 @Component({
   selector: 'app-student-report',
@@ -12,7 +13,8 @@ export class StudentReportComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<StudentReportComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private dataservice: DataService) {
+    private dataservice: DataService,
+    private dialog: MatDialog) {
   }
 
   studentReport!: IStudentReport[];
@@ -20,6 +22,14 @@ export class StudentReportComponent implements OnInit {
   ngOnInit(): void {
     this.studentReport = this.dataservice.getStudentReport();
 
+  }
+
+  openStudentDetail(studentID: number) {
+
+
+    let selectedStudent: IStudent | undefined = this.dataservice.getStudent().find(x => x.studentID == studentID);
+
+    const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
   }
 
 }

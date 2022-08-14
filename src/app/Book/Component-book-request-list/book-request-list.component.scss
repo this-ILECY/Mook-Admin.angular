@@ -1,0 +1,44 @@
+@import 'src/app/Styles/Variables.scss';
+
+.book-request-list-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 55vh;
+    width: 75vw;
+    background: #fff;
+}
+
+
+.book-request-list-body {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    direction: rtl;
+    align-items: flex-start;
+}
+
+.book-request-list-header {
+    height: 15%;
+}
+
+.right-values {
+    width: 30%;
+}
+
+.student-report-table {
+    width: calc(100% - 20px);
+    margin: 10px;
+
+    tbody>tr>td {
+        text-align: center;
+        overflow: hidden;
+    }
+
+    tbody > tr:hover{
+        background-color: $buttonHoverColor;
+        cursor: pointer;
+        color: #fff;
+    }
+}

@@ -142,6 +142,39 @@ app-new-register {
     }
 }
 
+
+.revert-button {
+    background: $buttonColor;
+    color: #fff;
+}
+.revert-button-svg>svg>path {
+    fill: #fff;
+}
+
+.revert-button-svg-special>svg {
+    fill: #fff;
+}
+
+.revert-button-svg-stroke>svg>path {
+    stroke: #fff;
+}
+.revert-button:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 1px 10px 0px $darkBlackShadow;
+    color: $svgFillOnHoverPrimary;
+
+    .revert-button-svg>svg>path {
+        fill: $svgFillOnHoverPrimary  !important;
+    }
+
+    .revert-button-svg-special>svg {
+        fill: $svgFillOnHoverPrimary  !important;
+    }
+    .revert-button-svg-stroke>svg>path {
+        stroke: $svgFillOnHoverPrimary  !important;
+    }
+}
+
 /*****************************************************************************/
 /*********************************  cards  ***********************************/
 /*********************************  cards  ***********************************/
@@ -190,15 +223,15 @@ app-new-register {
     fill: $cardColor;
 }
 
-.card-footer:hover {
-    background-color: $cardColor;
-    cursor: pointer;
-    color: #fff;
+// .card-footer:hover {
+//     background-color: $cardColor;
+//     cursor: pointer;
+//     color: #fff;
     
-    .card-svg>svg>path {
-        fill: #fff;
-    }
-}
+//     .card-svg>svg>path {
+//         fill: #fff;
+//     }
+// }
 
 html,
 body {

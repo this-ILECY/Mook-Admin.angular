@@ -14,11 +14,6 @@ export interface IRequestH {
     IsDeleted?: boolean,
 }
 
-export interface IRequestViewModel{
-    RequestH:IRequestH,
-    requestDetail:IRequestDetailViewModel[],
-    student:IStudent
-}
 
 export interface IRequestD{
     RequestHID:number,
@@ -37,4 +32,10 @@ export interface IRequestDetailViewModel{
     IsDamaged:boolean,
     IsLost:boolean,
     book:IBook
+}
+
+export interface IRequestViewModel{
+    RequestH?:IRequestH,
+    requestDetail?:IRequestDetailViewModel[],
+    student?:IStudent
 }

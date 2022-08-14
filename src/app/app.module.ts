@@ -8,12 +8,13 @@ import { StudentComponent } from './Student/1.Component-student/student.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatDialogRef, MatDialog  } from '@angular/material/dialog';
 import { NewRegisterComponent } from './Student/Component-new-register/new-register.component';
-import { BookRequestComponent } from './Student/Component-book-request/book-request.component';
+import { BookRequestComponent } from './Book/Component-book-request-details/book-request.component';
 import { StudentDetailsComponent } from './Student/Component-student-details/student-details.component';
-import { BookDetailsComponent } from './Book/component-book-details/book-details.component';
+import { BookDetailsComponent } from './Book/Component-book-details/book-details.component';
 import { UserListComponent } from './Student/Component-user-list/user-list.component';
 import { YesNoMsgboxComponent } from './1.Essential-components/yes-no-msgbox/yes-no-msgbox.component';
 import { StudentReportComponent } from './Student/Component-student-report/student-report.component';
+import { BookRequestListComponent } from './Book/Component-book-request-list/book-request-list.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { StudentReportComponent } from './Student/Component-student-report/stude
     UserListComponent,
     YesNoMsgboxComponent,
     StudentReportComponent,
+    BookRequestListComponent,
   ],
   imports: [
     BrowserModule,
