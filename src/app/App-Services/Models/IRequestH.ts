@@ -12,6 +12,7 @@ export interface IRequestH {
     RequestDescription?: string,
     createdDate: string,
     IsDeleted?: boolean,
+    delayTime?:number
 }
 
 

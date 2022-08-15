@@ -15,6 +15,7 @@ import { UserListComponent } from './Student/Component-user-list/user-list.compo
 import { YesNoMsgboxComponent } from './1.Essential-components/yes-no-msgbox/yes-no-msgbox.component';
 import { StudentReportComponent } from './Student/Component-student-report/student-report.component';
 import { BookRequestListComponent } from './Book/Component-book-request-list/book-request-list.component';
+import { UserSpamReportComponent } from './Student/Component-user-spam-report/user-spam-report.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BookRequestListComponent } from './Book/Component-book-request-list/boo
     YesNoMsgboxComponent,
     StudentReportComponent,
     BookRequestListComponent,
+    UserSpamReportComponent,
   ],
   imports: [
     BrowserModule,

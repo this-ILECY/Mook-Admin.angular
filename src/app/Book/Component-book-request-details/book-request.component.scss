@@ -8,9 +8,7 @@
     background: #fff;
 }
 
-
 .book-re-body {
-    height: 70%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -149,7 +147,7 @@
 .request-date>div {
     padding: 5px 5px;
     text-align: center;
-    margin: 1px;
+    margin: 1px 10px;
     border-radius: $border-radius;
 }
 

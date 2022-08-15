@@ -82,6 +82,14 @@ app-student {
     display: none !important;
 }
 
+.h-70 {
+    height: 70% !important;
+}
+
+.h-85 {
+    height: 85% !important;
+}
+
 .mat-dialog-container {
     display: contents !important;
     overflow: visible !important;
@@ -137,6 +145,7 @@ app-new-register {
     .button-svg-special>svg {
         fill: $buttonHoverColor  !important;
     }
+
     .button-svg-stroke>svg>path {
         stroke: $buttonHoverColor  !important;
     }
@@ -147,6 +156,7 @@ app-new-register {
     background: $buttonColor;
     color: #fff;
 }
+
 .revert-button-svg>svg>path {
     fill: #fff;
 }
@@ -158,6 +168,7 @@ app-new-register {
 .revert-button-svg-stroke>svg>path {
     stroke: #fff;
 }
+
 .revert-button:hover {
     cursor: pointer;
     box-shadow: inset 1px 1px 10px 0px $darkBlackShadow;
@@ -170,6 +181,7 @@ app-new-register {
     .revert-button-svg-special>svg {
         fill: $svgFillOnHoverPrimary  !important;
     }
+
     .revert-button-svg-stroke>svg>path {
         stroke: $svgFillOnHoverPrimary  !important;
     }
@@ -199,7 +211,7 @@ app-new-register {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
     div {
         padding: 0px 5px;
     }
@@ -213,7 +225,7 @@ app-new-register {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
     div {
         padding: 0px 5px;
     }
@@ -227,7 +239,7 @@ app-new-register {
 //     background-color: $cardColor;
 //     cursor: pointer;
 //     color: #fff;
-    
+
 //     .card-svg>svg>path {
 //         fill: #fff;
 //     }
@@ -242,12 +254,13 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-    /*****************************************************************************/
-    /*********************************  input  ***********************************/
-    /*********************************  input  ***********************************/
-    /*********************************  input  ***********************************/
-    /*****************************************************************************/
-    
+
+/*****************************************************************************/
+/*********************************  input  ***********************************/
+/*********************************  input  ***********************************/
+/*********************************  input  ***********************************/
+/*****************************************************************************/
+
 .input-disable {
     resize: none;
     border: none;
@@ -257,12 +270,14 @@ body {
     padding: 6px 10px;
     border: 1px solid #00000000;
 }
+
 .input-disable:focus-visible {
     border-radius: $border-radius;
     outline: none;
     border: 1px solid #00000061;
 }
+
 .input-disable:disabled {
     cursor: default;
-    background-color:#00000000;
+    background-color: #00000000;
 }

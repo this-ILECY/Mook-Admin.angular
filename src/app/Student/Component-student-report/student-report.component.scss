@@ -10,12 +10,13 @@
 
 
 .student-detail-body {
-    height: 85%;
+    height: calc(85% - 20px);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     direction: rtl;
+    overflow: scroll;
     align-items: flex-start;
 }
 

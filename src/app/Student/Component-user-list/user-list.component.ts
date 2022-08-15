@@ -20,8 +20,6 @@ export class UserListComponent implements OnInit {
   Students!: IStudent[]
   ngOnInit(): void {
     this.Students = this.dataService.getStudent();
-    console.log(this.Students);
-    
   }
   openStudentDetail(selectedStudent:IStudent){
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });

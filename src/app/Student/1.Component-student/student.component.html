@@ -1,5 +1,5 @@
 <div class="student-main">
-    <div class="top-bar">
+    <!-- <div class="top-bar">
         <div class="welcome is-flex">
             <p class="hello">سلام</p>
             <p class="admin-name">{{AdminName}}</p>
@@ -15,7 +15,7 @@
                 </svg>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="main-bar is-flex">
         <div class="right-bar">
             <div class="comment-main card">
@@ -77,8 +77,8 @@
                     </div>
                 </div>
             </div>
-            <div class="reports-main button">
-                <div class="report-svg is-flex button-svg-special">
+            <div class="spam-main button" (click)="openSpamReport()">
+                <div class="spam-svg is-flex button-svg-special">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12 7V13M12 21C7.45283 21 5.17925 21 3.86492 20.0451C2.71851 19.2122 1.97936 17.9319 1.83124 16.5226C1.66142 14.9069 2.79821 12.938 5.07179 9C7.34538 5.06204 8.48217 3.09306 9.96632 2.43227C11.2608 1.85591 12.7391 1.85591 14.0337 2.43227C15.5178 3.09306 16.6546 5.06204 18.9282 9C21.2018 12.938 22.3386 14.9069 22.1688 16.5226C22.0206 17.9319 21.2815 19.2122 20.1351 20.0451C18.8208 21 16.5472 21 12 21Z"
@@ -88,7 +88,7 @@
                             fill="#FAFAFA" />
                     </svg>
                 </div>
-                <div class="report-text">
+                <div class="spam-text">
                     کاربران اسپم
                 </div>
             </div>
@@ -103,8 +103,28 @@
                     </div>
                     <div class="header-text">سفارشات تاریخ گذشته</div>
                 </div>
-                <div class="overdue-body card-body"></div>
-                <!-- <div class="overdue-footer card-footer">
+                <div class="overdue-body card-body">
+                    <ng-container *ngFor="let member of overdueRequest">
+                        <div class="overdue-card button" (click)="openBookRequest(member)">
+                            <div class="card-name">{{member.student.studentName}}</div>
+                            <div class="card-date">
+                                <div class="date-text">تاریخ ثبت:</div>
+                                <div class="date-value">{{member.RequestH.createdDate}}</div>
+                            </div>
+                            <div class="card-count">
+                                <div class="count-text">تعداد:</div>
+                                <div class="count-value">{{member.requestDetail.length}}</div>
+                            </div>
+                            <div class="card-delay">
+                                <div class="delay-text">تاخیر:</div>
+                                <div class="delay-value-main is-flex">
+                                    <div class="delay-value">{{member.RequestH.delayTime}}</div>
+                                    <div class="delay-day">روز</div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <!-- <div class="overdue-footer card-footer">
                     <div class="footer-text">مشاهده بیشتر</div>
                     <div class="footer-svg card-svg is-flex">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,8 +132,8 @@
                                 d="M22.0001 12.7499C22.4143 12.7499 22.7501 12.4141 22.7501 11.9999C22.7501 11.5857 22.4143 11.2499 22.0001 11.2499V12.7499ZM11.0001 11.2499C10.5859 11.2499 10.2501 11.5857 10.2501 11.9999C10.2501 12.4141 10.5859 12.7499 11.0001 12.7499V11.2499ZM11.0001 14.8646H10.2501H11.0001ZM7.7801 16.4494L8.2376 15.8551L7.7801 16.4494ZM7.7801 7.55046L8.2376 8.14477L7.7801 7.55046ZM11.0001 9.13528H11.7501H11.0001ZM4.05882 10.4151L4.51632 11.0094L4.05882 10.4151ZM4.05882 13.5847L3.60132 14.179L4.05882 13.5847ZM22.0001 11.2499L11.0001 11.2499V12.7499L22.0001 12.7499V11.2499ZM4.51632 11.0094L8.2376 8.14477L7.32261 6.95616L3.60132 9.8208L4.51632 11.0094ZM10.2501 9.13528L10.2501 14.8646H11.7501V9.13528H10.2501ZM8.2376 15.8551L4.51632 12.9904L3.60132 14.179L7.3226 17.0437L8.2376 15.8551ZM10.2501 14.8646C10.2501 15.9019 9.05956 16.4878 8.2376 15.8551L7.3226 17.0437C9.13092 18.4357 11.7501 17.1466 11.7501 14.8646H10.2501ZM8.2376 8.14477C9.05956 7.51202 10.2501 8.09798 10.2501 9.13528H11.7501C11.7501 6.85322 9.13092 5.56412 7.32261 6.95616L8.2376 8.14477ZM3.60132 9.8208C2.1713 10.9216 2.1713 13.0782 3.60132 14.179L4.51632 12.9904C3.86631 12.49 3.86631 11.5098 4.51632 11.0094L3.60132 9.8208Z"
                                 fill="#FAFAFA" />
                         </svg>
-                    </div>
-                </div> -->
+                    </div>-->
+                </div>
             </div>
         </div>
         <div class="left-bar">
