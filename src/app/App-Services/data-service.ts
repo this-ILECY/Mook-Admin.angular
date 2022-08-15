@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IAdmin } from './Models/IAdmin';
 import { IBook } from './Models/IBook';
+import { IComment } from './Models/IComment';
 import { IPublisher } from './Models/IPublisher';
 import { IRequestH, IRequestD, IRequestViewModel } from './Models/IRequestH';
 import { IStudent, IStudentReport } from './Models/IStudent';
@@ -160,7 +161,7 @@ export class DataService {
         updateDate: "1501/15/23",
         IsBlocked: false,
         IsSuspended: true,
-        IsSpam:true,
+        IsSpam: true,
         SpamCount: 33
     },
     {
@@ -172,7 +173,7 @@ export class DataService {
         updateDate: "1501/08/09",
         IsBlocked: true,
         IsSuspended: true,
-        IsSpam:true,
+        IsSpam: true,
         SpamCount: 45
     },
     {
@@ -184,7 +185,7 @@ export class DataService {
         updateDate: "1502/19/99",
         IsBlocked: false,
         IsSuspended: false,
-        IsSpam:false,
+        IsSpam: false,
         SpamCount: 0
     },
     {
@@ -196,7 +197,7 @@ export class DataService {
         updateDate: "1401/00/31",
         IsBlocked: true,
         IsSuspended: false,
-        IsSpam:true,
+        IsSpam: true,
         SpamCount: 10
     },
     {
@@ -208,7 +209,7 @@ export class DataService {
         updateDate: "1600/19/99",
         IsBlocked: false,
         IsSuspended: true,
-        IsSpam:true,
+        IsSpam: true,
         SpamCount: 1205
     },
     {
@@ -220,7 +221,7 @@ export class DataService {
         updateDate: "1502/19/99",
         IsBlocked: false,
         IsSuspended: true,
-        IsSpam:true,
+        IsSpam: true,
         SpamCount: 1
     },
     {
@@ -232,7 +233,7 @@ export class DataService {
         updateDate: "1501/08/09",
         IsBlocked: true,
         IsSuspended: true,
-        IsSpam:false,
+        IsSpam: false,
         SpamCount: 0
     }
     ]
@@ -247,7 +248,7 @@ export class DataService {
                 RequestID: 1,
                 studentID: 21,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/10/10',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -374,7 +375,7 @@ export class DataService {
                 RequestID: 2,
                 studentID: 22,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/11/12'
             },
             requestDetail: [
@@ -499,7 +500,7 @@ export class DataService {
                 RequestID: 3,
                 studentID: 23,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/08/09',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -877,7 +878,7 @@ export class DataService {
                 RequestID: 4,
                 studentID: 24,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/05/29'
             },
             requestDetail: [
@@ -1002,7 +1003,7 @@ export class DataService {
                 RequestID: 5,
                 studentID: 25,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/12/08'
             },
             requestDetail: [
@@ -1127,7 +1128,7 @@ export class DataService {
                 RequestID: 5,
                 studentID: 25,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/12/08',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -1253,7 +1254,7 @@ export class DataService {
                 RequestID: 5,
                 studentID: 25,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/12/08'
             },
             requestDetail: [
@@ -1378,7 +1379,7 @@ export class DataService {
                 RequestID: 5,
                 studentID: 25,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/12/08',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -1504,7 +1505,7 @@ export class DataService {
                 RequestID: 5,
                 studentID: 25,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/12/08',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -1630,7 +1631,7 @@ export class DataService {
                 RequestID: 5,
                 studentID: 25,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/12/08',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -1861,7 +1862,7 @@ export class DataService {
                 RequestID: 1,
                 studentID: 21,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/10/10'
             },
             requestDetail: [
@@ -1987,7 +1988,7 @@ export class DataService {
                 RequestID: 1,
                 studentID: 21,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/10/10'
             },
             requestDetail: [
@@ -2113,7 +2114,7 @@ export class DataService {
                 RequestID: 1,
                 studentID: 21,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/10/10',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -2240,7 +2241,7 @@ export class DataService {
                 RequestID: 1,
                 studentID: 26,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: true,
+                delayTime: 5, IsDelayed: true, IsAccepted: true,
                 createdDate: '1401/10/10',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -2370,7 +2371,7 @@ export class DataService {
                 RequestID: 1,
                 studentID: 26,
                 AdminID: 1,
-                delayTime: 5, IsDelayed : true, IsAccepted: false,
+                delayTime: 5, IsDelayed: true, IsAccepted: false,
                 createdDate: '1401/10/10',
                 RequestFinishedDate: '1502/12/12'
             },
@@ -2657,4 +2658,186 @@ export class DataService {
     public getStudentReport() {
         return this.studentReport;
     }
+
+    private comment: IComment[] = [
+        {
+            CommentID: 1,
+            student: {
+                studentID: 21,
+                studentName: "سید علیرضا رضایی اصل",
+                studentSSID: "002585258",
+                studentUniversityID: "00452365",
+                createdDate: "1500/13/65",
+                updateDate: "1501/15/23",
+                IsBlocked: false,
+                IsSuspended: true,
+                IsSpam: true,
+                SpamCount: 33
+            },
+            commentHeader: "افتضاح",
+            commentBody: "کتاب بشدت مزخرفی بود",
+            createdDate: "1401/01/21",
+            childComment: [
+                {
+                    CommentID: 2,
+                    student: {
+                        studentID: 27,
+                        studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
+                        studentSSID: "0548584",
+                        studentUniversityID: "981523650",
+                        createdDate: "1500/13/22",
+                        updateDate: "1501/08/09",
+                        IsBlocked: true,
+                        IsSuspended: true,
+                        IsSpam: false,
+                        SpamCount: 0
+                    },
+                    commentHeader: "مودب باش بیشعور",
+                    createdDate: "1401/01/21"
+                }
+            ]
+        },
+        {
+            CommentID: 3,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                SpamCount: 10
+            },
+            commentHeader: "باید ریخت سطل آشغال",
+            createdDate: "1401/01/22"
+        },
+        {
+            CommentID: 4,
+            student: {
+                studentID: 25,
+                studentName: "سارا سارایی",
+                studentSSID: "015455315",
+                studentUniversityID: "68743563",
+                createdDate: "1650/13/73",
+                updateDate: "1600/19/99",
+                IsBlocked: false,
+                IsSuspended: true,
+                IsSpam: true,
+                SpamCount: 1205
+            },
+            commentHeader: "نویسنده اش احمقه",
+            createdDate: "1501/01/22",
+            childComment: [
+                {
+                    CommentID: 5,
+                    student: {
+                        studentID: 26,
+                        studentName: "اشکان اشکانیان",
+                        studentSSID: "351354353",
+                        studentUniversityID: "5666576",
+                        createdDate: "1400/13/73",
+                        updateDate: "1502/19/99",
+                        IsBlocked: false,
+                        IsSuspended: true,
+                        IsSpam: true,
+                        SpamCount: 1
+                    },
+                    commentHeader: "احمق تویی",
+                    createdDate: "1501/01/23",
+                    childComment: [
+                        {
+                            CommentID: 6,
+                            student: {
+                                studentID: 25,
+                                studentName: "سارا سارایی",
+                                studentSSID: "015455315",
+                                studentUniversityID: "68743563",
+                                createdDate: "1650/13/73",
+                                updateDate: "1600/19/99",
+                                IsBlocked: false,
+                                IsSuspended: true,
+                                IsSpam: true,
+                                SpamCount: 1205
+                            },
+                            commentHeader: "%$@^%$^&$^%^ &%$^%(*&()*&",
+                            createdDate: "1501/01/22"
+                        }
+                    ]
+                },
+                {
+                    CommentID: 7,
+                    student: {
+                        studentID: 23,
+                        studentName: "شیرین شیرین زاده",
+                        studentSSID: "008565987",
+                        studentUniversityID: "9715081050",
+                        createdDate: "1501/13/73",
+                        updateDate: "1502/19/99",
+                        IsBlocked: false,
+                        IsSuspended: false,
+                        IsSpam: false,
+                        SpamCount: 0
+                    },
+                    commentHeader: "گمشو",
+                    createdDate: "1501/01/23",
+                }
+            ]
+        },
+        {
+            CommentID: 8,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                SpamCount: 10
+            },
+            commentHeader: "&^%&% *^*^*&)^ )*&*)",
+            createdDate: "1401/01/22",
+            childComment: [
+                {
+                    CommentID: 9,
+                    student: {
+                        studentID: 25,
+                        studentName: "سارا سارایی",
+                        studentSSID: "015455315",
+                        studentUniversityID: "68743563",
+                        createdDate: "1650/13/73",
+                        updateDate: "1600/19/99",
+                        IsBlocked: false,
+                        IsSuspended: true,
+                        IsSpam: true,
+                        SpamCount: 1205
+                    },
+                    commentHeader: "مزاحم نشو",
+                    createdDate: "1401/01/22"
+                }
+            ]
+        },
+        {
+            CommentID: 10,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                SpamCount: 10
+            },
+            commentHeader: "09121212112 *@#% $%@$#@$% ",
+            createdDate: "1401/01/22"
+        }
+    ]
 }
