@@ -12,6 +12,7 @@ import { map } from 'rxjs/operators'
 import { BookRequestListComponent } from 'src/app/Book/Component-book-request-list/book-request-list.component';
 import { UserSpamReportComponent } from '../Component-user-spam-report/user-spam-report.component';
 import { IComment } from 'src/app/App-Services/Models/IComment';
+import { StudentDetailsComponent } from '../Component-student-details/student-details.component';
 
 
 @Component({
@@ -64,5 +65,8 @@ export class StudentComponent implements OnInit {
   }
   openSpamReport() {
     const dialogRef = this.dialog.open(UserSpamReportComponent);
+  }
+  openStudent(selectedStudent: IStudent) {
+    const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
   }
 }

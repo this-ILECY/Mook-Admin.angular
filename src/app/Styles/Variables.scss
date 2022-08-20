@@ -9,8 +9,10 @@ $darkBlackShadow:#0000003b;
 $iconHoverOnPrimary:#7975ee;
 $svgFillOnHoverPrimary:#ffffff91;
 
-/*sizes*/
+/*radius*/
 $border-radius: 25px;
+$border-less-radius:10px;
+$border-light-radius:5px;
 
 /*fonts*/
 $regular:'IRANSans';
@@ -25,3 +27,7 @@ $font-size:16px;
  $deskBarMarginBottom:20px;
  $deskBarMarginRight:10px;
  $deskBarMarginLeft:10px;
+
+
+ /*sizes*/
+ $mainHeight:93vh;

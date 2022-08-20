@@ -11,8 +11,8 @@
     border-radius: 25px;
     font-family: $regular;
     width: calc(100vw - $deskBarWidth - 15px);
-    max-height: 100vh;
-    height: 100vh;
+    max-height: $mainHeight;
+    height: $mainHeight;
     overflow: hidden;
 }
 
@@ -21,14 +21,26 @@
 /*********************************************  top bar  *****************************************************/
 /*********************************************  top bar  *****************************************************/
 /*************************************************************************************************************/
-// .top-bar {
-//     display: flex;
-//     height: 8%;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     font-size: 17px;
-//     // border-bottom: 1px solid #00000038;
-// }
+.top-bar {
+    display: flex;
+    height: 8%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+    // border-bottom: 1px solid #00000038;
+}
+
+.student-search {
+    height: calc(100% - 20px);
+    display: flex;
+    width: 100%;
+    margin: 10px;
+
+    app-search-text-box{
+        width: 50%;
+        height: calc(100% - 10px);
+    }
+}
 
 // .welcome {
 //     margin-right: 10px;
@@ -62,6 +74,7 @@
 // .main-bar {
 //     height: 92%;
 // }
+
 .main-bar {
     height: calc(100% - 60px);
     padding: 30px 0px;
@@ -82,10 +95,11 @@
     align-items: center;
 }
 
+
 .comment-main {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 10px);
+    height: calc(100% - 5px);
     width: calc(100% - 5px);
     border-radius: $border-radius;
 }
@@ -117,36 +131,62 @@
     margin: 10px 5px;
     flex-direction: column;
     padding: 5px 10px;
-    border-radius: $border-radius;
+    border-radius: $border-less-radius;
 
     .message-header {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
+        width: 100%;
+        overflow: hidden;
 
         .header-text {
             font-family: $Bold;
+            max-width: 65%;
+            overflow: hidden;
         }
 
         .student-name {
+            max-width: calc(35%);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             margin-right: 10px;
             font-size: smaller;
             font-family: $light;
             font-style: italic;
         }
+
+        .student-name:hover {
+            cursor: pointer;
+            color: $buttonHoverColor;
+        }
+    }
+
+    .message-body {
+        margin: 5px 10px;
+        text-align: justify;
     }
 
     .message-footer {
         display: flex;
-        flex-direction: row-reverse;
-        font-size: smaller;
+        margin-top: 5px;
+        flex-direction: row;
+        font-size: medium;
         align-items: center;
+        justify-content: flex-end;
 
         .footer-svg-main {
             display: flex;
+            margin-right: 10px;
 
-            .footer-svg>svg {
-                height: 65%;
+            .footer-svg {
+
+                align-items: center;
+
+                svg {
+                    height: 75%;
+                }
             }
         }
     }

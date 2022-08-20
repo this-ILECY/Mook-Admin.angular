@@ -15,7 +15,7 @@ export interface IStudent {
     IsSuspended?:boolean,
     IsSpam?: boolean,
     SpamCount?: number,
-    ReportPoint?: number,
+    ReportPoint?: number
 }
 
 export interface IStudentReport{
@@ -28,5 +28,6 @@ export interface IStudentReport{
     LongestDelay:string,
     BookRent:number,
     BookDamaged:number,
+    BookLost?:number
     registerDate:string
 }

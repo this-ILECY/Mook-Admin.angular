@@ -43,6 +43,7 @@
 .desk-bottom-icon:hover {
     background: $iconHoverOnPrimary;
     border-radius: $border-radius;
+    cursor: pointer;
 
     .withfill>path {
         fill: $svgFillOnHoverPrimary;

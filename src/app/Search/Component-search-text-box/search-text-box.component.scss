@@ -1,0 +1,29 @@
+@import 'src/app/Styles/Variables.scss';
+
+.main {
+    width: 100%;
+    height: calc(100vh - $mainHeight);
+}
+
+.search-text {
+    width: 80%;
+    background-color: $lightBlackShadow;
+    height: calc(100vh - $mainHeight - 20px);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.student-search {
+    display: block;
+    position: relative;
+    direction: rtl;
+}
+
+.search-svg {
+    background-color: $lightBlackShadow;
+}

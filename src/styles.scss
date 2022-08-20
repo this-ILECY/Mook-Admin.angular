@@ -66,12 +66,15 @@ app-desk-bar {
     position: fixed;
     width: $deskBarWidth;
 }
-
+app-search-text-box {
+    display: flex;
+    height: 6vh ;
+}
 app-student {
     display: flex;
     justify-content: flex-end;
-    max-height: 100vh;
-    height: 100vh;
+    max-height: 93vh;
+    height: 93vh;
 }
 
 .is-flex {
@@ -261,18 +264,22 @@ body {
 /*********************************  input  ***********************************/
 /*****************************************************************************/
 
-.input-disable {
+.input {
     resize: none;
-    border: none;
     font-family: $regular;
     color: $buttonColor;
+    border-radius: $border-less-radius;
     font-size: $font-size;
     padding: 6px 10px;
+    border: 1px solid $lightBlackShadow;
+}
+
+.input-disable {
     border: 1px solid #00000000;
 }
 
-.input-disable:focus-visible {
-    border-radius: $border-radius;
+.input:focus-visible {
+    border-radius: $border-less-radius;
     outline: none;
     border: 1px solid #00000061;
 }
@@ -280,4 +287,53 @@ body {
 .input-disable:disabled {
     cursor: default;
     background-color: #00000000;
+}
+
+
+
+//// input group :
+/// 
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    height: calc(100% - 10px);
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: $border-light-radius 0 0 $border-light-radius;
+    border-right: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-radius: 0 $border-light-radius $border-light-radius 0;
+    border-left: 0;
+    height: 100%;
+}
+
+.form-control:focus-visible {
+    border-radius: 0 $border-light-radius $border-light-radius 0;
+    outline: none;
+    border: 0px solid #00000000;
+    border-left: none;
 }

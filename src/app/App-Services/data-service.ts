@@ -2593,7 +2593,7 @@ export class DataService {
             RequsetDelayCount: 8,
             LongestDelay: "285 day",
             BookRent: 326,
-            BookDamaged: 325,
+            BookLost: 12, BookDamaged: 325,
         },
         {
             studentID: 22,
@@ -2605,7 +2605,7 @@ export class DataService {
             RequsetDelayCount: 8,
             LongestDelay: "285 day",
             BookRent: 326,
-            BookDamaged: 325
+            BookLost: 12, BookDamaged: 325
         },
         {
             studentID: 23,
@@ -2617,7 +2617,7 @@ export class DataService {
             RequsetDelayCount: 8,
             LongestDelay: "285 day",
             BookRent: 326,
-            BookDamaged: 325,
+            BookLost: 12, BookDamaged: 325,
         },
         {
             studentID: 24,
@@ -2629,7 +2629,7 @@ export class DataService {
             RequsetDelayCount: 8,
             LongestDelay: "285 day",
             BookRent: 326,
-            BookDamaged: 325,
+            BookLost: 12, BookDamaged: 325,
         },
         {
             studentID: 25,
@@ -2641,7 +2641,7 @@ export class DataService {
             RequsetDelayCount: 8,
             LongestDelay: "285 day",
             BookRent: 326,
-            BookDamaged: 325,
+            BookLost: 12, BookDamaged: 325,
         },
         {
             studentID: 26,
@@ -2653,12 +2653,14 @@ export class DataService {
             RequsetDelayCount: 8,
             LongestDelay: "285 day",
             BookRent: 326,
-            BookDamaged: 325,
+            BookLost: 12, BookDamaged: 325,
         }]
     public getStudentReport() {
         return this.studentReport;
     }
 
+
+    //comment header less than 20 words
     private comment: IComment[] = [
         {
             CommentID: 1,

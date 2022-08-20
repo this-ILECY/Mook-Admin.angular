@@ -30,13 +30,13 @@
         </div>
         <div class="book-main-bar">
             <div class="book-detail-right">
-                <input type="text" #bookName class="book-name input-disable" name="" placeholder="نام کتاب" id="" disabled
+                <input type="text" #bookName class="book-name input-disable input" name="" placeholder="نام کتاب" id="" disabled
                     value="{{data.selectedBook.bookName}}">
                 <textarea name="" #bookDesc placeholder="شرح..." id="" cols="30" rows="10" disabled
-                    class="book-desc input-disable">{{data.selectedBook.bookDescription}}</textarea>
+                    class="book-desc input-disable input">{{data.selectedBook.bookDescription}}</textarea>
             </div>
             <div class="book-detail-left">
-                <select #bookPub class="book-publisher-select input-disable" name="" id="" disabled>
+                <select #bookPub class="book-publisher-select input-disable input" name="" id="" disabled>
                     <ng-container *ngFor="let member of publisher">
                         <option class="book-publisher-option" value="{{member.PublisherID}}">
                             <div class="publisher-main">
@@ -55,9 +55,9 @@
                     <div class="inner-left">
                         <div class="rating-value">{{data.selectedBook.bookRating}}</div>
                         <div class="rating-count-value">{{data.selectedBook.BookratingCount}}</div>
-                        <input type="text" #bookPageCount class="book-page-value input-disable" disabled
+                        <input type="text" #bookPageCount class="book-page-value input-disable input" disabled
                             value="{{data.selectedBook.bookPagesCount}}" placeholder="تعداد صفحات کتاب">
-                            <div type="text" class="book-date-value input-disable">
+                            <div type="text" class="book-date-value input-disable input">
                                 {{data.selectedBook.createdDate}}</div>
                     </div>
                 </div>

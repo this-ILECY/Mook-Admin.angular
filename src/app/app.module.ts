@@ -16,6 +16,12 @@ import { YesNoMsgboxComponent } from './1.Essential-components/yes-no-msgbox/yes
 import { StudentReportComponent } from './Student/Component-student-report/student-report.component';
 import { BookRequestListComponent } from './Book/Component-book-request-list/book-request-list.component';
 import { UserSpamReportComponent } from './Student/Component-user-spam-report/user-spam-report.component';
+import { BookComponent } from './Book/1.Component-book/book.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { HistoryComponent } from './history/history.component';
+import { StudentSearchComponent } from './Search/Component-student-search/student-search.component';
+import { SearchTextBoxComponent } from './Search/Component-search-text-box/search-text-box.component';
+import { SearchModalComponent } from './Search/Component-search-modal/search-modal.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +37,12 @@ import { UserSpamReportComponent } from './Student/Component-user-spam-report/us
     StudentReportComponent,
     BookRequestListComponent,
     UserSpamReportComponent,
+    BookComponent,
+    MainPageComponent,
+    HistoryComponent,
+    StudentSearchComponent,
+    SearchTextBoxComponent,
+    SearchModalComponent,
   ],
   imports: [
     BrowserModule,

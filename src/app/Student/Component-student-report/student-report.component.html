@@ -20,6 +20,7 @@
                 <th>بیشترین تاخیر</th>
                 <th>تعداد کتاب</th>
                 <th>کتابهای آسیب دیده</th>
+                <th>کتابهای گم شده</th>
                 <th>تاریخ ثبت نام</th>
             </thead>
             <tbody>
@@ -33,11 +34,12 @@
                         <td>{{member.LongestDelay}}</td>
                         <td>{{member.BookRent}}</td>
                         <td>{{member.BookDamaged}}</td>
+                        <td>{{member.BookLost}}</td>
                         <td>{{member.registerDate}}</td>
                     </tr>
                 </ng-container>
             </tbody>
         </table>
-        
+
     </div>
 </div>

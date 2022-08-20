@@ -10,5 +10,11 @@ export class AddressService {
   private logo = "/assets/logo/logoWhite.png"
   public getLogo() { return this.logo }
 
+  public router ={
+    student:"student",
+    book:"book",
+    main:"main",
+    history:"history"
+  }
 
 }

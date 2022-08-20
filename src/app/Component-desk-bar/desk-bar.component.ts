@@ -13,8 +13,8 @@ export class DeskBarComponent implements OnInit {
 
   constructor(private address: AddressService) { }
 
+  public routeName = this.address.router
 
   ngOnInit(): void {
   }
-
 }
