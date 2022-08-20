@@ -26,15 +26,16 @@ export class SearchModalComponent implements OnInit {
   search(value: string) {
 
     if (value.length > 0) {
-      // this.span.nativeElement.classList.remove('d-none');
-      this.test = true
+      this.span.nativeElement.classList.remove('d-none');
     } else {
-      // this.span.nativeElement.classList.add('d-none');
-      this.test = false
+      this.span.nativeElement.classList.add('d-none');
     }
 
     this.filteredBook = this.book.filter(x => x.PubName.includes(value) || x.bookName.includes(value) || x.bookDescription.includes(value));
     this.filteredStudent = this.student.filter(x => x.studentName.includes(value) || x.studentSSID.includes(value) || x.studentUniversityID.includes(value));
+
+    console.log(this.filteredBook, this.filteredStudent);
+    
   }
 
 }

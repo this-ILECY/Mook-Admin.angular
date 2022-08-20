@@ -13,13 +13,24 @@
     
         <div #span class="result d-none">
             <div class="main">
-                <div class="student">
-                    <div class="student-header"></div>
-                    <div class="student-body"></div>
+                <div class="rows student">
+                    <div class="student-header rows-header">دانشجویان</div>
+                    <ng-container *ngFor="let member of filteredStudent">
+                        <div class="rows-body student-body">
+                            <div class="col-one student-name">{{member.studentName}}</div>
+                            <div class="col-two ssid">{{member.studentSSID}}</div>
+                            <div class="col-three university-id">{{member.studentUniversityID}}</div>
+                        </div>
+                    </ng-container>
                 </div>
-                <div class="book">
-                    <div class="book-header"></div>
-                    <div class="book-body"></div>
+                <div class="rows book">
+                    <div class="rows-header book-header">کتابها</div>
+                    <ng-container *ngFor="let member  of filteredBook">
+                        <div class="rows-body book-body">
+                            <div class="col-one book-name">{{member.bookName}}</div>
+                            <div class="col-two book-pub">{{member.PubName}}</div>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
         </div>

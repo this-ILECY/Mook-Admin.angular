@@ -18,6 +18,9 @@
     height: 10%;
     border-radius: $border-light-radius
 }
+.search-text{
+    border: 0px solid #00000000;
+}
 
 .search-svg {
     height: 100%;
@@ -25,10 +28,73 @@
     border: 0px solid #00000000;
     border-right: none;
 }
+
 .result {
     margin-top: 20px;
     width: 100%;
     background: #fff;
     border-radius: $border-light-radius;
     height: 90%;
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .rows {
+        width: 50%;
+        overflow: auto;
+
+        .rows-body {
+            display: flex;
+            margin: 5px 15px;
+            padding: 5px 10px;
+            justify-content: space-between;
+            color: #8055e0;
+
+            .col-one {
+                width: 50%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .ssid {
+                width: 25%;
+                text-align: left;
+            }
+
+            .university-id {
+                width: 25%;
+                text-align: left;
+            }
+            .book-pub{
+                width: 50%;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
+        }
+        .rows-body:hover{
+            cursor: pointer;
+            background-color: $buttonHoverColor;
+            color: #fff;
+            border-radius: $border-less-radius;
+        }
+    }
+
+    .book {
+        border-right: 1px solid $lightBlackShadow;
+        width: 50%;
+        overflow: auto;
+    }
+}
+
+.rows-header {
+    color: #fff;
+    border-radius: $border-light-radius $border-light-radius 0 0 ;
+    background: $buttonColor;
+    text-align: center;
+    padding: 10px 0px;
 }
