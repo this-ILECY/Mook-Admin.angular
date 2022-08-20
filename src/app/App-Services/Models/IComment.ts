@@ -1,3 +1,4 @@
+import { IBook } from "./IBook"
 import { IStudent } from "./IStudent"
 
 export interface IComment{
@@ -6,5 +7,5 @@ export interface IComment{
     commentHeader:string
     commentBody?:string
     createdDate:string
-    childComment?: IComment[]
+    bookID?:number
 }

@@ -106,8 +106,52 @@
 }
 
 .comment-body {
-    height: 80%;
+    height: 85%;
+    background: #00000011;
+    overflow: auto;
 }
+
+.message {
+    display: flex;
+    background: #fff;
+    margin: 10px 5px;
+    flex-direction: column;
+    padding: 5px 10px;
+    border-radius: $border-radius;
+
+    .message-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        .header-text {
+            font-family: $Bold;
+        }
+
+        .student-name {
+            margin-right: 10px;
+            font-size: smaller;
+            font-family: $light;
+            font-style: italic;
+        }
+    }
+
+    .message-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: smaller;
+        align-items: center;
+
+        .footer-svg-main {
+            display: flex;
+
+            .footer-svg>svg {
+                height: 65%;
+            }
+        }
+    }
+}
+
 
 .comment-footer {
     display: flex;
@@ -200,8 +244,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: calc(50% - 20px);
-            padding: 10px 0px;
+            width: calc(50% - 30px);
+            padding: 10px 10px;
             margin-bottom: 10px;
             justify-content: center;
 
@@ -221,9 +265,10 @@
         }
     }
 
-    .card-name{
+    .card-name {
         text-align: center;
     }
+
     .count-value,
     .delay-day,
     .delay-value-main {

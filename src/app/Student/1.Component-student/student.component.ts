@@ -11,6 +11,7 @@ import { StudentReportComponent } from '../Component-student-report/student-repo
 import { map } from 'rxjs/operators'
 import { BookRequestListComponent } from 'src/app/Book/Component-book-request-list/book-request-list.component';
 import { UserSpamReportComponent } from '../Component-user-spam-report/user-spam-report.component';
+import { IComment } from 'src/app/App-Services/Models/IComment';
 
 
 @Component({
@@ -28,8 +29,11 @@ export class StudentComponent implements OnInit {
   public request = this.dataservice.getRequest();
   public newRequest = this.request.filter(x => x.RequestH.IsAccepted == false);
   public overdueRequest = this.request.filter(x => x.RequestH.IsDelayed);
+  public comment: IComment[] = this.dataservice.getComment();
   public AdminName: string = this.admin[0].AdminName;
   public language: string = 'Per';
+
+
 
   ngOnInit(): void {
   }
