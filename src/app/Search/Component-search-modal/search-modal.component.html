@@ -17,9 +17,14 @@
                     <div class="student-header rows-header">دانشجویان</div>
                     <ng-container *ngFor="let member of filteredStudent">
                         <div class="rows-body student-body">
-                            <div class="col-one student-name">{{member.studentName}}</div>
-                            <div class="col-two ssid">{{member.studentSSID}}</div>
-                            <div class="col-three university-id">{{member.studentUniversityID}}</div>
+                            <div class="main-row">
+                                <div class="col-one student-name">{{member.studentName}}</div>
+                                <div class="col-two ssid">{{member.studentSSID}}</div>
+                                <div class="col-three university-id">{{member.studentUniversityID}}</div>
+                            </div>
+                            <div class="action">
+
+                            </div>
                         </div>
                     </ng-container>
                 </div>
@@ -27,8 +32,12 @@
                     <div class="rows-header book-header">کتابها</div>
                     <ng-container *ngFor="let member  of filteredBook">
                         <div class="rows-body book-body">
-                            <div class="col-one book-name">{{member.bookName}}</div>
-                            <div class="col-two book-pub">{{member.PubName}}</div>
+                            <div class="main-row">
+                                <div class="col-one book-name">{{member.bookName}}</div>
+                                <div class="col-two book-pub">{{member.PubName}}</div>
+                                <div class="col-three book-author">{{member.Author}}</div>
+                            </div>
+                            <div class="action"></div>
                         </div>
                     </ng-container>
                 </div>
