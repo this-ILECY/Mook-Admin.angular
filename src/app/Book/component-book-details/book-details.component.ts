@@ -23,10 +23,13 @@ export class BookDetailsComponent implements OnInit {
   @ViewChild('bookDesc', { static: true }) bookDesc!: ElementRef
   @ViewChild('bookPub', { static: true }) bookPub!: ElementRef
   @ViewChild('bookPageCount', { static: true }) bookPageCount!: ElementRef
+  @ViewChild('bookAuthor', { static: true }) bookAuthor!: ElementRef
 
   publisher: IPublisher[] = this.dataService.getPublisher();
 
   ngOnInit(): void {
+    console.log(this.data);
+    
   }
   
   
@@ -35,7 +38,8 @@ export class BookDetailsComponent implements OnInit {
         this.bookName.nativeElement,
         this.bookDesc.nativeElement,
         this.bookPub.nativeElement,
-        this.bookPageCount.nativeElement
+        this.bookPageCount.nativeElement,
+        this.bookAuthor.nativeElement
       ]
       this.done.nativeElement.classList.remove('d-none');
       this.edit.nativeElement.classList.add('d-none');

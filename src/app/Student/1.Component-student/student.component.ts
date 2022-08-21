@@ -46,6 +46,8 @@ export class StudentComponent implements OnInit {
     // });
   }
   openBookRequest(selectedRequest: IRequestViewModel) {
+    console.log(selectedRequest);
+    
 
     const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
     // dialogRef.afterClosed().subscribe(result => {

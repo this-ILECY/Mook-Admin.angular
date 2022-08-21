@@ -27,12 +27,14 @@
             <thead>
                 <th>نام کتاب</th>
                 <th>انتشارات</th>
+                <th>نویسنده</th>
             </thead>
             <tbody>
                 <ng-container *ngFor="let member of data.selectedRequest.requestDetail">
                     <tr (click)="openBookDetail(member.book)">
                         <td>{{member.book.bookName}}</td>
                         <td>{{member.book.PubName}}</td>
+                        <td>{{member.book.Author}}</td>
                     </tr>
                 </ng-container>
             </tbody>

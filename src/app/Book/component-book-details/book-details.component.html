@@ -51,6 +51,7 @@
                         <div class="rating-count-title">تعداد امتیاز</div>
                         <div class="book-page-title">تعداد صفحات کتاب</div>
                         <div class="book-date-title">تاریخ ثبت کتاب</div>
+                        <div class="book-date-title">نویسنده</div>
                     </div>
                     <div class="inner-left">
                         <div class="rating-value">{{data.selectedBook.bookRating}}</div>
@@ -59,6 +60,8 @@
                             value="{{data.selectedBook.bookPagesCount}}" placeholder="تعداد صفحات کتاب">
                             <div type="text" class="book-date-value input-disable input">
                                 {{data.selectedBook.createdDate}}</div>
+                                <input type="text" #bookAuthor class="book-author input-disable input" disabled
+                                value="{{data.selectedBook.Author}}" placeholder="نویسنده">  
                     </div>
                 </div>
             </div>

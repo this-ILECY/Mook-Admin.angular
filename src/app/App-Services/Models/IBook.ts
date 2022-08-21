@@ -10,5 +10,6 @@ export interface IBook{
     createdDate:string,
     UpdateDate:string,
     IsDeleted:boolean,
-    AdminID:number
+    AdminID:number,
+    Author?:string
 }
