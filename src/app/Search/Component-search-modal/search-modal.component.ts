@@ -16,6 +16,7 @@ export class SearchModalComponent implements OnInit {
   }
 
   @ViewChild('span', { static: true }) span: ElementRef
+  @ViewChild('actions', { static: true }) actions: ElementRef
 
   public student: IStudent[] = this.dataservice.getStudent();
   public book: IBook[] = this.dataservice.getBook();
@@ -31,11 +32,18 @@ export class SearchModalComponent implements OnInit {
       this.span.nativeElement.classList.add('d-none');
     }
 
-    this.filteredBook = this.book.filter(x => x.PubName.includes(value) || x.bookName.includes(value) || x.bookDescription.includes(value));
+    this.filteredBook = this.book.filter(x => x.PubName.includes(value) || x.bookName.includes(value) || x.bookDescription.includes(value) || x.Author.includes(value));
     this.filteredStudent = this.student.filter(x => x.studentName.includes(value) || x.studentSSID.includes(value) || x.studentUniversityID.includes(value));
 
     console.log(this.filteredBook, this.filteredStudent);
+
+  }
+
+  openAction() {
+    console.log(this.actions);
     
+    this.actions.nativeElement.classList.add("uncollapsed");
+    this.actions.nativeElement.classList.remove("collapsed");
   }
 
 }

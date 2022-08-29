@@ -27,4 +27,9 @@ export class SearchTextBoxComponent implements OnInit {
     const dialogRef = this.dialog.open(SearchModalComponent);
   }
 
+  
 }
+
+document.addEventListener('keyDown',()=>{
+    
+})

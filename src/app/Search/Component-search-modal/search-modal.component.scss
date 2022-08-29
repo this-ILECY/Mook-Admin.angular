@@ -1,9 +1,12 @@
 @import 'src/app/Styles/Variables.scss';
 
+
+$search-main-height: 55vh;
+
 .search-main {
     font-family: $regular;
     direction: rtl;
-    height: 55vh;
+    height: $search-main-height;
     width: 75vw;
     background: rgba(255, 255, 255, 0);
     border-radius: $border-radius;
@@ -15,7 +18,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
-    height: 10%;
+    height: calc($search-main-height / 10);
     border-radius: $border-light-radius
 }
 
@@ -35,12 +38,13 @@
     width: 100%;
     background: #fff;
     border-radius: $border-light-radius;
-    height: 90%;
+    height: calc(($search-main-height / 10) * 9);
 
     .main {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        height: 100%;
     }
 
     .rows {
@@ -50,38 +54,78 @@
         .rows-body {
             display: flex;
             margin: 5px 15px;
-            padding: 5px 10px;
             justify-content: space-between;
             color: #8055e0;
             flex-direction: column;
 
             .main-row {
                 display: flex;
+                padding: 5px 10px 0 10px;
             }
+
 
             .col-one {
-                width: 40%;
+                width: calc(50% - 10px);
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
 
+            .university-id,
             .ssid {
+                margin-right: 10px;
                 width: 25%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 text-align: left;
             }
 
-            .university-id {
-                width: 25%;
-                text-align: left;
-            }
-
+            .book-name,
+            .book-author,
             .book-pub {
-                width: 50%;
+                width: calc(33.33% - 20px);
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
+
+            .book-author,
+            .book-pub {
+                margin-right: 10px;
+            }
+
+            .action {
+                display: flex;
+                background: #fff;
+                justify-content: space-around;
+                padding: 0;
+
+                .item {
+                    width: 20%;
+                    text-align: center;
+                    padding: 5px 10px 5px 10px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .item-start {
+                    border-radius: 0 0 $border-less-radius 0;
+                }
+
+                .item-middle {
+                    border-radius: 0;
+                }
+
+                .item-end {
+                    border-radius: 0 0 0 $border-less-radius;
+                }
+
+                .item:hover {
+                    background-color: $buttonHoverColor;
+                }
+            }
+
         }
 
         .rows-body:hover {
@@ -89,6 +133,11 @@
             background-color: $buttonHoverColor;
             color: #fff;
             border-radius: $border-less-radius;
+
+            .action {
+                border: 1px solid $buttonHoverColor;
+                border-radius: $border-less-radius;
+            }
         }
     }
 
@@ -105,4 +154,9 @@
     background: $buttonColor;
     text-align: center;
     padding: 10px 0px;
+}
+
+.row-detail {
+    overflow: auto;
+    height: calc(90% - 10px);
 }
