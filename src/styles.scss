@@ -66,10 +66,12 @@ app-desk-bar {
     position: fixed;
     width: $deskBarWidth;
 }
+
 app-search-text-box {
     display: flex;
-    height: 6vh ;
+    height: 6vh;
 }
+
 app-student {
     display: flex;
     justify-content: flex-end;
@@ -110,6 +112,10 @@ app-new-register {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.collapsed {
+    display: none !important;
 }
 
 /*****************************************************************************/
@@ -336,4 +342,14 @@ body {
     outline: none;
     border: 0px solid #00000000;
     border-left: none;
+}
+/*****************************************************************************/
+/*********************************  text  ************************************/
+/*********************************  text  ************************************/
+/*********************************  text  ************************************/
+/*****************************************************************************/
+.text-overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

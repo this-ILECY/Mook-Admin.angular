@@ -26,7 +26,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "نوید نویدی"
+             IsAvailable:true , Author: "نوید نویدی"
         },
         {
             bookID: 2,
@@ -41,7 +41,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "دیوید هالیدی"
+             IsAvailable:true , Author: "دیوید هالیدی"
         },
         {
             bookID: 3,
@@ -54,7 +54,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "خاویر کرمنت"
+             IsAvailable:true , Author: "خاویر کرمنت"
         },
         {
             bookID: 4,
@@ -69,7 +69,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "بریان تریسی"
+             IsAvailable:false , Author: "بریان تریسی"
         },
         {
             bookID: 5,
@@ -82,7 +82,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "والتر وایت"
+             IsAvailable:false , Author: "والتر وایت"
         },
         {
             bookID: 6,
@@ -96,7 +96,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "محمود فریدونی"
+             IsAvailable:false , Author: "محمود فریدونی"
         },
         {
             bookID: 7,
@@ -109,7 +109,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "ویکتور هوگو"
+             IsAvailable:true , Author: "ویکتور هوگو"
         },
         {
             bookID: 8,
@@ -123,7 +123,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "چارلز دیکنز"
+             IsAvailable:true , Author: "چارلز دیکنز"
         },
         {
             bookID: 9,
@@ -136,12 +136,12 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "جمعی از اساتید"
+             IsAvailable:true , Author: "جمعی از اساتید"
         },
         {
             bookID: 10,
             PubID: 1, bookName: "سیستم عامل",
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
+            PubName: "کتاب های شهر", bookPagesCount: 320,
             bookRating: 3.2,
             BookratingCount: 56,
             bookDescription: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
@@ -149,7 +149,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "یوبابا"
+             IsAvailable:false , Author: "یوبابا"
         },
         {
             bookID: 11,
@@ -163,7 +163,105 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-            Author: "James Mark"
+             IsAvailable:false , Author: "James Mark"
+        },
+        {
+            bookID: 12,
+            bookName: "وصایای امام!",
+            PubID: 4,
+            PubName: "فروشگاه شهر کتاب", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "امام!"
+        },
+        {
+            bookID: 13,
+            bookName: "نبرد من",
+            PubID: 4,
+            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "آدولف هیتلر"
+        },
+        {
+            bookID: 14,
+            bookName: "دنیای خالی از قهرمان",
+            PubID: 4,
+            PubName: "کتاب های شهر", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "براندون مول"
+        },
+        {
+            bookID: 15,
+            bookName: "در جست و جوی معما",
+            PubID: 4,
+            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "سیدنی شلدون"
+        },
+        {
+            bookID: 16,
+            bookName: "سیلماریلیون",
+            PubID: 4,
+            PubName: "فروشگاه آخرین کتاب", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "تالکین"
+        },
+        {
+            bookID: 17,
+            bookName: "هری پاتر",
+            PubID: 4,
+            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "رولینگ"
+        },
+        {
+            bookID: 18,
+            bookName: "آشفتگی",
+            PubID: 4,
+            PubName: "فروشگاه بزرگ شهر ", bookPagesCount: 320,
+            bookRating: 3.2,
+            BookratingCount: 56,
+            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            createdDate: '1401/05/06',
+            UpdateDate: '1401/06/17',
+            IsDeleted: false,
+            AdminID: 1,
+             IsAvailable:false , Author: "توماس برنهارد"
         }
     ]
     public getBook() {
@@ -302,7 +400,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "ویکتور هوگو"
+                         IsAvailable:false , Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -391,7 +489,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "والتر وایت"
+                         IsAvailable:false , Author: "والتر وایت"
                     },
                 }
             ],
@@ -455,7 +553,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "ویکتور هوگو"
+                         IsAvailable:false , Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -2025,7 +2123,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "والتر وایت"
+                         IsAvailable:true , Author: "والتر وایت"
                     },
                 }
             ],
@@ -2594,7 +2692,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "والتر وایت"
+                         IsAvailable:true , Author: "والتر وایت"
                     },
                 }
             ],
@@ -2664,7 +2762,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "ویکتور هوگو"
+                         IsAvailable:true , Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -2774,7 +2872,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "والتر وایت"
+                         IsAvailable:true , Author: "والتر وایت"
                     },
                 }
             ],
@@ -2822,7 +2920,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "محمود فریدونی"
+                         IsAvailable:false , Author: "محمود فریدونی"
                     },
                 },
                 {
@@ -2844,7 +2942,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "ویکتور هوگو"
+                         IsAvailable:false , Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -2952,7 +3050,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "والتر وایت"
+                         IsAvailable:false , Author: "والتر وایت"
                     },
                 }
             ],
@@ -3129,7 +3227,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                        Author: "والتر وایت"
+                         IsAvailable:true , Author: "والتر وایت"
                     },
                 }
             ],

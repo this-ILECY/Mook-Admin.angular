@@ -148,9 +148,6 @@
 
         .student-name {
             max-width: calc(35%);
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
             margin-right: 10px;
             font-size: smaller;
             font-family: $light;

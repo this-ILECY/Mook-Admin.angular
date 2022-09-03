@@ -1,7 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { DataService } from 'src/app/App-Services/data-service';
 import { IBook } from 'src/app/App-Services/Models/IBook';
 import { IStudent } from 'src/app/App-Services/Models/IStudent';
+import { BookDetailsComponent } from 'src/app/Book/Component-book-details/book-details.component';
 
 @Component({
   selector: 'app-search-modal',
@@ -10,13 +12,14 @@ import { IStudent } from 'src/app/App-Services/Models/IStudent';
 })
 export class SearchModalComponent implements OnInit {
 
-  constructor(private dataservice: DataService) { }
+  constructor(private dataservice: DataService,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  @ViewChild('span', { static: true }) span: ElementRef
-  @ViewChild('actions', { static: true }) actions: ElementRef
+  @ViewChild('span', { static: true }) span: ElementRef;
+  @ViewChild('studentAction', { static: true }) studentAction: ElementRef;
 
   public student: IStudent[] = this.dataservice.getStudent();
   public book: IBook[] = this.dataservice.getBook();
@@ -32,18 +35,31 @@ export class SearchModalComponent implements OnInit {
       this.span.nativeElement.classList.add('d-none');
     }
 
-    this.filteredBook = this.book.filter(x => x.PubName.includes(value) || x.bookName.includes(value) || x.bookDescription.includes(value) || x.Author.includes(value));
-    this.filteredStudent = this.student.filter(x => x.studentName.includes(value) || x.studentSSID.includes(value) || x.studentUniversityID.includes(value));
-
-    console.log(this.filteredBook, this.filteredStudent);
-
+    this.filteredBook = this.book.filter(x => x.PubName.toLowerCase().includes(value) || x.bookName.toLowerCase().includes(value) || x.bookDescription.toLowerCase().includes(value) || x.Author.toLowerCase().includes(value));
+    this.filteredStudent = this.student.filter(x => x.studentName.toLowerCase().includes(value) || x.studentSSID.toLowerCase().includes(value) || x.studentUniversityID.toLowerCase().includes(value));
   }
 
-  openAction() {
-    console.log(this.actions);
-    
-    this.actions.nativeElement.classList.add("uncollapsed");
-    this.actions.nativeElement.classList.remove("collapsed");
+  openAction(e: HTMLDivElement) {
+
+    let isCollapsed = e.classList.contains("collapsed");
+    let action = document.querySelectorAll(".action");
+
+    for (let index = 0; index < action.length; index++) {
+      action[index].classList.remove("uncollapsed");
+      action[index].classList.add("collapsed");
+    }
+
+    if (isCollapsed) {
+      e.classList.add("uncollapsed");
+      e.classList.remove("collapsed");
+    } else if (!isCollapsed) {
+      e.classList.remove("uncollapsed");
+      e.classList.add("collapsed");
+    }
+  }
+
+  openBookDetails(selectedBook) {
+    this.dialog.open(BookDetailsComponent, { data: { "selectedBook": selectedBook } });
   }
 
 }

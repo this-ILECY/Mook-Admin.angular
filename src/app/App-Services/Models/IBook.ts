@@ -12,4 +12,5 @@ export interface IBook{
     IsDeleted:boolean,
     AdminID:number,
     Author?:string
+    IsAvailable?:boolean
 }

@@ -55,29 +55,26 @@ $search-main-height: 55vh;
             display: flex;
             margin: 5px 15px;
             justify-content: space-between;
-            color: #8055e0;
+            color: $buttonColor;
             flex-direction: column;
 
             .main-row {
                 display: flex;
-                padding: 5px 10px 0 10px;
+                padding: 5px 10px 3px 10px;
             }
 
 
             .col-one {
                 width: calc(50% - 10px);
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+            }
+            .col-two {
+                width: 20%;
             }
 
             .university-id,
             .ssid {
                 margin-right: 10px;
                 width: 25%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
                 text-align: left;
             }
 
@@ -85,9 +82,6 @@ $search-main-height: 55vh;
             .book-author,
             .book-pub {
                 width: calc(33.33% - 20px);
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
             }
 
             .book-author,
@@ -100,6 +94,8 @@ $search-main-height: 55vh;
                 background: #fff;
                 justify-content: space-around;
                 padding: 0;
+                border-radius: $border-less-radius;
+                border: 1px solid $buttonHoverColor;
 
                 .item {
                     width: 20%;
@@ -107,6 +103,10 @@ $search-main-height: 55vh;
                     padding: 5px 10px 5px 10px;
                     align-items: center;
                     justify-content: center;
+                }
+
+                .item > svg > path {
+                    fill: $buttonColor;
                 }
 
                 .item-start {
@@ -122,7 +122,10 @@ $search-main-height: 55vh;
                 }
 
                 .item:hover {
-                    background-color: $buttonHoverColor;
+                    background-color: $buttonColor;
+                     svg > path {
+                        fill: #fff;
+                    }
                 }
             }
 
@@ -130,12 +133,12 @@ $search-main-height: 55vh;
 
         .rows-body:hover {
             cursor: pointer;
-            background-color: $buttonHoverColor;
+            background-color: $buttonColor;
             color: #fff;
             border-radius: $border-less-radius;
 
             .action {
-                border: 1px solid $buttonHoverColor;
+                border: 1px solid $buttonColor;
                 border-radius: $border-less-radius;
             }
         }
@@ -151,7 +154,7 @@ $search-main-height: 55vh;
 .rows-header {
     color: #fff;
     border-radius: $border-light-radius $border-light-radius 0 0;
-    background: $buttonColor;
+    background: $primaryColor;
     text-align: center;
     padding: 10px 0px;
 }

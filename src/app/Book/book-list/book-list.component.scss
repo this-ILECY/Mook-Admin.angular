@@ -1,0 +1,118 @@
+@import 'src/app/Styles/Variables.scss';
+
+.student-list-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 95vh;
+    width: 50vw;
+    background: #fff;
+}
+
+.student-list-table>tbody>tr>* {
+    padding: 5px 5px;
+}
+
+.student-list-table>tbody>tr:hover {
+    cursor: pointer;
+    background-color: $buttonHoverColor;
+    color: #fff;
+}
+
+.student-list-body {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    direction: rtl;
+    align-items: flex-start;
+}
+
+.student-list-header {
+    height: 10%;
+}
+
+.right-values {
+    width: 30%;
+}
+
+.left-values {
+    width: 60%;
+}
+
+.student-list-footer:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.reg-svg-deny>svg>path {
+    fill: red;
+}
+
+.student-list-deny {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 50%;
+    color: red;
+}
+
+.reg-svg-accept>svg>path {
+    fill: green;
+}
+
+.student-list-accept {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    height: 50%;
+    color: green;
+}
+
+.student-list-accept>div,
+.student-list-deny>div {
+    padding: 1px 1px;
+}
+
+.student-list-table {
+    display: table;
+}
+
+.student-list-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    direction: rtl;
+}
+
+.student-list-detail {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.student-name,
+.request-date {
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-list-detail>table {
+    padding: 0 15px;
+
+    thead>tr>th,
+    tbody>tr>td,
+    th {
+        overflow: hidden;
+        text-align: right !important;
+    }
+}

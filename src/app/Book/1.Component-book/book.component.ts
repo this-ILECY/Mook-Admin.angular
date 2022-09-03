@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BookListComponent } from '../book-list/book-list.component';
 
 @Component({
   selector: 'app-book',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+  openBookList() {
+    const dialogRef = this.dialog.open(BookListComponent);
   }
 
 }

@@ -19,9 +19,9 @@ import { UserSpamReportComponent } from './Student/Component-user-spam-report/us
 import { BookComponent } from './Book/1.Component-book/book.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { HistoryComponent } from './history/history.component';
-import { StudentSearchComponent } from './Search/Component-student-search/student-search.component';
 import { SearchTextBoxComponent } from './Search/Component-search-text-box/search-text-box.component';
 import { SearchModalComponent } from './Search/Component-search-modal/search-modal.component';
+import { BookListComponent } from './Book/book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +40,9 @@ import { SearchModalComponent } from './Search/Component-search-modal/search-mod
     BookComponent,
     MainPageComponent,
     HistoryComponent,
-    StudentSearchComponent,
     SearchTextBoxComponent,
     SearchModalComponent,
+    BookListComponent,
   ],
   imports: [
     BrowserModule,
