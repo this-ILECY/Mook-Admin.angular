@@ -290,6 +290,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: true,
         IsSpam: true,
+        IsRegistered:false,
         SpamCount: 33
     },
     {
@@ -302,6 +303,7 @@ export class DataService {
         IsBlocked: true,
         IsSuspended: true,
         IsSpam: true,
+        IsRegistered:false,
         SpamCount: 45
     },
     {
@@ -314,6 +316,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: false,
         IsSpam: false,
+        IsRegistered:false,
         SpamCount: 0
     },
     {
@@ -326,6 +329,7 @@ export class DataService {
         IsBlocked: true,
         IsSuspended: false,
         IsSpam: true,
+        IsRegistered:true,
         SpamCount: 10
     },
     {
@@ -338,6 +342,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: true,
         IsSpam: true,
+        IsRegistered:true,
         SpamCount: 1205
     },
     {
@@ -350,6 +355,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: true,
         IsSpam: true,
+        IsRegistered:false,
         SpamCount: 1
     },
     {
@@ -362,6 +368,7 @@ export class DataService {
         IsBlocked: true,
         IsSuspended: true,
         IsSpam: false,
+        IsRegistered:false,
         SpamCount: 0
     }
     ]
@@ -500,7 +507,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                SpamCount: 5
+                IsRegistered:false,
+        SpamCount: 5
             },
 
         },
@@ -627,7 +635,8 @@ export class DataService {
                 studentUniversityID: "971456213",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
-                SpamCount: 5
+                IsRegistered:false,
+        SpamCount: 5
             }
         },
         {
@@ -1012,7 +1021,8 @@ export class DataService {
                 studentUniversityID: "9715081050",
                 createdDate: "1501/13/73",
                 updateDate: "1502/19/99",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             }
         },
         {
@@ -1137,7 +1147,8 @@ export class DataService {
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             }
         },
         {
@@ -1262,7 +1273,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             }
         },
         {
@@ -1389,7 +1401,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                SpamCount: 5
+                IsRegistered:false,
+        SpamCount: 5
             }
         },
         {
@@ -1516,7 +1529,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                SpamCount: 5
+                IsRegistered:false,
+        SpamCount: 5
             }
         },
         {
@@ -1642,7 +1656,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                SpamCount: 5
+                IsRegistered:false,
+        SpamCount: 5
             }
         },
         {
@@ -1769,7 +1784,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                SpamCount: 5
+                IsRegistered:false,
+        SpamCount: 5
             }
         },
         {
@@ -2004,7 +2020,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             }
         },
         {
@@ -2134,7 +2151,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             },
 
         },
@@ -2264,7 +2282,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             },
 
         },
@@ -2395,7 +2414,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                SpamCount: 5
+                IsRegistered:true,
+        SpamCount: 5
             },
 
         },
@@ -2529,7 +2549,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                SpamCount: 32
+                IsRegistered:true,
+        SpamCount: 32
             }
 
         },
@@ -2706,7 +2727,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                SpamCount: 32
+                IsRegistered:false,
+        SpamCount: 32
             }
 
         },
@@ -2886,7 +2908,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                SpamCount: 32
+                IsRegistered:false,
+        SpamCount: 32
             }
 
         },
@@ -3064,7 +3087,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                SpamCount: 32
+                IsRegistered:true,
+        SpamCount: 32
             }
 
         },
@@ -3241,7 +3265,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                SpamCount: 32
+                IsRegistered:true,
+        SpamCount: 32
             }
 
         },
@@ -3381,7 +3406,8 @@ export class DataService {
                 IsBlocked: false,
                 IsSuspended: true,
                 IsSpam: true,
-                SpamCount: 33
+                IsRegistered:true,
+        SpamCount: 33
             },
             commentHeader: "افتضاح",
             commentBody: "کتاب بشدت مزخرفی بود",
@@ -3400,7 +3426,8 @@ export class DataService {
                 IsBlocked: true,
                 IsSuspended: false,
                 IsSpam: true,
-                SpamCount: 10
+                IsRegistered:false,
+        SpamCount: 10
             },
             commentHeader: "باید ریخت سطل آشغال",
             commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
@@ -3419,7 +3446,8 @@ export class DataService {
                 IsBlocked: false,
                 IsSuspended: true,
                 IsSpam: true,
-                SpamCount: 1205
+                IsRegistered:false,
+        SpamCount: 1205
             },
             commentHeader: "نویسنده اش احمقه",
             createdDate: "1501/01/22",
@@ -3437,7 +3465,8 @@ export class DataService {
                 IsBlocked: true,
                 IsSuspended: false,
                 IsSpam: true,
-                SpamCount: 10
+                IsRegistered:false,
+        SpamCount: 10
             },
             commentHeader: "&^%&% *^*^*&)^ )*&*)",
             createdDate: "1401/01/22",
@@ -3455,7 +3484,8 @@ export class DataService {
                 IsBlocked: true,
                 IsSuspended: false,
                 IsSpam: true,
-                SpamCount: 10
+                IsRegistered:false,
+        SpamCount: 10
             },
             commentHeader: "09121212112 *@#% $%@$#@$% ",
             createdDate: "1401/01/22",

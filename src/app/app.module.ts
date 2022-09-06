@@ -22,6 +22,7 @@ import { HistoryComponent } from './history/history.component';
 import { SearchTextBoxComponent } from './Search/Component-search-text-box/search-text-box.component';
 import { SearchModalComponent } from './Search/Component-search-modal/search-modal.component';
 import { BookListComponent } from './Book/book-list/book-list.component';
+import { commentListComponent } from './Student/Component-comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BookListComponent } from './Book/book-list/book-list.component';
     SearchTextBoxComponent,
     SearchModalComponent,
     BookListComponent,
+    commentListComponent
   ],
   imports: [
     BrowserModule,

@@ -95,6 +95,14 @@ app-student {
     height: 85% !important;
 }
 
+.child-w20>* {
+    width: 20% !important;
+}
+
+.child-w25>* {
+    width: 25% !important;
+}
+
 .mat-dialog-container {
     display: contents !important;
     overflow: visible !important;
@@ -343,12 +351,13 @@ body {
     border: 0px solid #00000000;
     border-left: none;
 }
+
 /*****************************************************************************/
 /*********************************  text  ************************************/
 /*********************************  text  ************************************/
 /*********************************  text  ************************************/
 /*****************************************************************************/
-.text-overflow{
+.text-overflow {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

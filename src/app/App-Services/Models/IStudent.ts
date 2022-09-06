@@ -15,7 +15,8 @@ export interface IStudent {
     IsSuspended?:boolean,
     IsSpam?: boolean,
     SpamCount?: number,
-    ReportPoint?: number
+    ReportPoint?: number,
+    IsRegistered?:boolean
 }
 
 export interface IStudentReport{

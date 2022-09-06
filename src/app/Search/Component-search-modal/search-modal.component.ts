@@ -4,6 +4,10 @@ import { DataService } from 'src/app/App-Services/data-service';
 import { IBook } from 'src/app/App-Services/Models/IBook';
 import { IStudent } from 'src/app/App-Services/Models/IStudent';
 import { BookDetailsComponent } from 'src/app/Book/Component-book-details/book-details.component';
+import { BookRequestListComponent } from 'src/app/Book/Component-book-request-list/book-request-list.component';
+import { commentListComponent } from 'src/app/Student/Component-comment-list/comment-list.component';
+import { NewRegisterComponent } from 'src/app/Student/Component-new-register/new-register.component';
+import { StudentReportComponent } from 'src/app/Student/Component-student-report/student-report.component';
 
 @Component({
   selector: 'app-search-modal',
@@ -16,6 +20,9 @@ export class SearchModalComponent implements OnInit {
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    console.log(this.student);
+    console.log(this.book);
+
   }
 
   @ViewChild('span', { static: true }) span: ElementRef;
@@ -37,6 +44,14 @@ export class SearchModalComponent implements OnInit {
 
     this.filteredBook = this.book.filter(x => x.PubName.toLowerCase().includes(value) || x.bookName.toLowerCase().includes(value) || x.bookDescription.toLowerCase().includes(value) || x.Author.toLowerCase().includes(value));
     this.filteredStudent = this.student.filter(x => x.studentName.toLowerCase().includes(value) || x.studentSSID.toLowerCase().includes(value) || x.studentUniversityID.toLowerCase().includes(value));
+
+    let action = document.querySelectorAll(".action");
+
+    for (let index = 0; index < action.length; index++) {
+      action[index].classList.remove("uncollapsed");
+      action[index].classList.add("collapsed");
+    }
+
   }
 
   openAction(e: HTMLDivElement) {
@@ -62,4 +77,19 @@ export class SearchModalComponent implements OnInit {
     this.dialog.open(BookDetailsComponent, { data: { "selectedBook": selectedBook } });
   }
 
+  openRegister(selectedStudent) {
+    const dialogRef = this.dialog.open(NewRegisterComponent, { data: { 'selectedStudent': selectedStudent } });
+  }
+
+  openRequestList(selectedStudent) {
+    const dialogRef = this.dialog.open(BookRequestListComponent, { data: { 'selectedStudent': selectedStudent } });
+  }
+
+  openStudentRequest(selectedStudent) {
+    this.dialog.open(StudentReportComponent, { data: { 'selectedStudent': selectedStudent } });
+  }
+
+  openCommentList(selectedStudent) {
+    this.dialog.open(commentListComponent, { data: { 'selectedStudent': selectedStudent } })
+  }
 }

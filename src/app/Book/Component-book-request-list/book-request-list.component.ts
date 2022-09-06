@@ -15,14 +15,17 @@ export class BookRequestListComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<BookRequestListComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private dialog: MatDialog,
-    private dataservice:DataService) {
+    private dataservice: DataService) {
   }
 
   public bookList = this.dataservice.getRequest();
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    if (this.data !== undefined) {
+      this.bookList = this.bookList.filter(x=> x.student.studentID == this.data.selectedStudent.studentID);
+    }
   }
-  openRequestDetail(selectedRequest:IRequestViewModel){
+  openRequestDetail(selectedRequest: IRequestViewModel) {
     const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
   }
 

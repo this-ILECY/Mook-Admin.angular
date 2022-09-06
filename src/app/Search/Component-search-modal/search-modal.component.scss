@@ -67,6 +67,7 @@ $search-main-height: 55vh;
             .col-one {
                 width: calc(50% - 10px);
             }
+
             .col-two {
                 width: 20%;
             }
@@ -97,15 +98,19 @@ $search-main-height: 55vh;
                 border-radius: $border-less-radius;
                 border: 1px solid $buttonHoverColor;
 
+
+                .is-registered-false {
+                    display: none;
+                }
+
                 .item {
-                    width: 20%;
                     text-align: center;
                     padding: 5px 10px 5px 10px;
                     align-items: center;
                     justify-content: center;
                 }
 
-                .item > svg > path {
+                .item>svg>path {
                     fill: $buttonColor;
                 }
 
@@ -117,13 +122,18 @@ $search-main-height: 55vh;
                     border-radius: 0;
                 }
 
+                .item-middle-one {
+                    border-radius: 0 0 $border-less-radius 0 !important;
+                }
+
                 .item-end {
                     border-radius: 0 0 0 $border-less-radius;
                 }
 
                 .item:hover {
                     background-color: $buttonColor;
-                     svg > path {
+
+                    svg>path {
                         fill: #fff;
                     }
                 }
