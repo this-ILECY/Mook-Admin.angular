@@ -1,7 +1,12 @@
+import { DIALOG_DATA } from '@angular/cdk/dialog';
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MessageBoxComponent } from 'src/app/1.Essential-components/message-box/message-box.component';
+import { YesNoMsgboxComponent } from 'src/app/1.Essential-components/yes-no-msgbox/yes-no-msgbox.component';
 import { DataService } from 'src/app/App-Services/data-service';
 import { IComment } from 'src/app/App-Services/Models/IComment';
+import { IStudent } from 'src/app/App-Services/Models/IStudent';
+import { StudentDetailsComponent } from '../Component-student-details/student-details.component';
 
 @Component({
   selector: 'app-comment-list',
@@ -23,8 +28,17 @@ export class commentListComponent implements OnInit {
       this.comments = this.comments.filter(c => c.student.studentID === this.data.selectedStudent.studentID);
     }
   }
+  openMessge(IsAdminAccepted: Boolean) {
+    if (IsAdminAccepted) {
+      this.dialog.open(MessageBoxComponent, { data: { 'message': 'این کامنت قبلا حذف شده' } })
+    } else {
+      let result = this.dialog.open(YesNoMsgboxComponent);
+    }
+  }
 
-
+  openStudent(selectedStudent: IStudent) {
+    this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } })
+  }
 
 }
 

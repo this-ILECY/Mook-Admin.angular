@@ -86,7 +86,9 @@ app-student {
 .d-none {
     display: none !important;
 }
-
+.d-contents{
+    display: contents;
+}
 .h-70 {
     height: 70% !important;
 }
@@ -270,6 +272,14 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.card-is-valid{
+    border-bottom: 2px solid green;
+}
+
+.card-is-invalid{
+    border-bottom: 2px solid red;
 }
 
 /*****************************************************************************/

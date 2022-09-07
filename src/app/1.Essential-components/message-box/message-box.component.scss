@@ -1,0 +1,18 @@
+@import 'src/app/Styles/Variables.scss';
+
+.message-main {
+    font-family: $regular;
+    direction: rtl;
+    color: $buttonColor;
+    height: 20vh;
+    width: 20vw;
+    background: #fff;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.make-sure {
+    text-align: center;
+}

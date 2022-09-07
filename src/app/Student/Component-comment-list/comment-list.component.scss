@@ -10,14 +10,8 @@
 
 
 .comment-list-body {
-    height: calc(85% - 20px);
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     overflow: auto;
-    direction: rtl;
-    align-items: flex-start;
 }
 
 .comment-list-header {
@@ -29,18 +23,29 @@
 }
 
 .comment-modal-main {
+    width: 10vw;
     display: flex;
-    border: 1px solid $buttonHoverColor;
-    border-radius: $border-radius;
-    flex-wrap: wrap;
-    margin: 5px;
-    padding: 10px;
-    width: 25%;
+    margin: 10px 10px;
+    padding: 10px 10px;
     flex-direction: column;
-    height: calc(50% - 40px);
+
 
     .item {
-        height: 12.5%;
+        height: calc(12.5% - 10px);
+        margin: 5px 0px;
+    }
+
+    .comment-modal-header {
+        font-weight: 600;
+        width: inherit;
+    }
+
+    .stuadent-comment-name {
+        text-align: left;
+    }
+
+    .stuadent-comment-name:hover {
+        color: $buttonColor;
     }
 
     .comment-modal-body-main {
@@ -49,7 +54,8 @@
         height: 62.5%;
 
         .comment-modal-body-title {
-            height: 12.5%;
+            height: 10%;
+            font-size: smaller;
         }
 
         .comment-modal-body {
@@ -58,7 +64,12 @@
             border-radius: $border-radius;
             text-align: justify;
             overflow: auto;
-            height: 50%;
+            height: 90%;
+            font-size: calc($font-size - 2px);
         }
+    }
+
+    .comment-modal-created-date {
+        font-size: smaller;
     }
 }

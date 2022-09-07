@@ -7,6 +7,7 @@ import { BookDetailsComponent } from 'src/app/Book/Component-book-details/book-d
 import { BookRequestListComponent } from 'src/app/Book/Component-book-request-list/book-request-list.component';
 import { commentListComponent } from 'src/app/Student/Component-comment-list/comment-list.component';
 import { NewRegisterComponent } from 'src/app/Student/Component-new-register/new-register.component';
+import { StudentDetailsComponent } from 'src/app/Student/Component-student-details/student-details.component';
 import { StudentReportComponent } from 'src/app/Student/Component-student-report/student-report.component';
 
 @Component({
@@ -91,5 +92,8 @@ export class SearchModalComponent implements OnInit {
 
   openCommentList(selectedStudent) {
     this.dialog.open(commentListComponent, { data: { 'selectedStudent': selectedStudent } })
+  }
+  openStudentDetails(selectedStudent: IStudent) {
+    this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } })
   }
 }

@@ -26,7 +26,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:true , Author: "نوید نویدی"
+            IsAvailable: true, Author: "نوید نویدی"
         },
         {
             bookID: 2,
@@ -41,7 +41,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:true , Author: "دیوید هالیدی"
+            IsAvailable: true, Author: "دیوید هالیدی"
         },
         {
             bookID: 3,
@@ -54,7 +54,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:true , Author: "خاویر کرمنت"
+            IsAvailable: true, Author: "خاویر کرمنت"
         },
         {
             bookID: 4,
@@ -69,7 +69,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "بریان تریسی"
+            IsAvailable: false, Author: "بریان تریسی"
         },
         {
             bookID: 5,
@@ -82,7 +82,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "والتر وایت"
+            IsAvailable: false, Author: "والتر وایت"
         },
         {
             bookID: 6,
@@ -96,7 +96,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "محمود فریدونی"
+            IsAvailable: false, Author: "محمود فریدونی"
         },
         {
             bookID: 7,
@@ -109,7 +109,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:true , Author: "ویکتور هوگو"
+            IsAvailable: true, Author: "ویکتور هوگو"
         },
         {
             bookID: 8,
@@ -123,7 +123,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:true , Author: "چارلز دیکنز"
+            IsAvailable: true, Author: "چارلز دیکنز"
         },
         {
             bookID: 9,
@@ -136,7 +136,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:true , Author: "جمعی از اساتید"
+            IsAvailable: true, Author: "جمعی از اساتید"
         },
         {
             bookID: 10,
@@ -149,7 +149,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "یوبابا"
+            IsAvailable: false, Author: "یوبابا"
         },
         {
             bookID: 11,
@@ -163,7 +163,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "James Mark"
+            IsAvailable: false, Author: "James Mark"
         },
         {
             bookID: 12,
@@ -177,7 +177,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "امام!"
+            IsAvailable: false, Author: "امام!"
         },
         {
             bookID: 13,
@@ -191,7 +191,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "آدولف هیتلر"
+            IsAvailable: false, Author: "آدولف هیتلر"
         },
         {
             bookID: 14,
@@ -205,7 +205,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "براندون مول"
+            IsAvailable: false, Author: "براندون مول"
         },
         {
             bookID: 15,
@@ -219,7 +219,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "سیدنی شلدون"
+            IsAvailable: false, Author: "سیدنی شلدون"
         },
         {
             bookID: 16,
@@ -233,7 +233,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "تالکین"
+            IsAvailable: false, Author: "تالکین"
         },
         {
             bookID: 17,
@@ -247,7 +247,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "رولینگ"
+            IsAvailable: false, Author: "رولینگ"
         },
         {
             bookID: 18,
@@ -261,7 +261,7 @@ export class DataService {
             UpdateDate: '1401/06/17',
             IsDeleted: false,
             AdminID: 1,
-             IsAvailable:false , Author: "توماس برنهارد"
+            IsAvailable: false, Author: "توماس برنهارد"
         }
     ]
     public getBook() {
@@ -290,7 +290,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: true,
         IsSpam: true,
-        IsRegistered:false,
+        IsRegistered: false,
         SpamCount: 33
     },
     {
@@ -303,7 +303,7 @@ export class DataService {
         IsBlocked: true,
         IsSuspended: true,
         IsSpam: true,
-        IsRegistered:false,
+        IsRegistered: false,
         SpamCount: 45
     },
     {
@@ -316,7 +316,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: false,
         IsSpam: false,
-        IsRegistered:false,
+        IsRegistered: false,
         SpamCount: 0
     },
     {
@@ -329,7 +329,7 @@ export class DataService {
         IsBlocked: true,
         IsSuspended: false,
         IsSpam: true,
-        IsRegistered:true,
+        IsRegistered: true,
         SpamCount: 10
     },
     {
@@ -342,7 +342,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: true,
         IsSpam: true,
-        IsRegistered:true,
+        IsRegistered: true,
         SpamCount: 1205
     },
     {
@@ -355,7 +355,7 @@ export class DataService {
         IsBlocked: false,
         IsSuspended: true,
         IsSpam: true,
-        IsRegistered:false,
+        IsRegistered: false,
         SpamCount: 1
     },
     {
@@ -368,7 +368,7 @@ export class DataService {
         IsBlocked: true,
         IsSuspended: true,
         IsSpam: false,
-        IsRegistered:false,
+        IsRegistered: false,
         SpamCount: 0
     }
     ]
@@ -407,7 +407,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:false , Author: "ویکتور هوگو"
+                        IsAvailable: false, Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -496,7 +496,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:false , Author: "والتر وایت"
+                        IsAvailable: false, Author: "والتر وایت"
                     },
                 }
             ],
@@ -507,8 +507,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                IsRegistered:false,
-        SpamCount: 5
+                IsRegistered: false,
+                SpamCount: 5
             },
 
         },
@@ -561,7 +561,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:false , Author: "ویکتور هوگو"
+                        IsAvailable: false, Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -635,8 +635,8 @@ export class DataService {
                 studentUniversityID: "971456213",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
-                IsRegistered:false,
-        SpamCount: 5
+                IsRegistered: false,
+                SpamCount: 5
             }
         },
         {
@@ -1021,8 +1021,8 @@ export class DataService {
                 studentUniversityID: "9715081050",
                 createdDate: "1501/13/73",
                 updateDate: "1502/19/99",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             }
         },
         {
@@ -1147,8 +1147,8 @@ export class DataService {
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             }
         },
         {
@@ -1273,8 +1273,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             }
         },
         {
@@ -1401,8 +1401,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                IsRegistered:false,
-        SpamCount: 5
+                IsRegistered: false,
+                SpamCount: 5
             }
         },
         {
@@ -1529,8 +1529,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                IsRegistered:false,
-        SpamCount: 5
+                IsRegistered: false,
+                SpamCount: 5
             }
         },
         {
@@ -1656,8 +1656,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                IsRegistered:false,
-        SpamCount: 5
+                IsRegistered: false,
+                SpamCount: 5
             }
         },
         {
@@ -1784,8 +1784,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                IsRegistered:false,
-        SpamCount: 5
+                IsRegistered: false,
+                SpamCount: 5
             }
         },
         {
@@ -2020,8 +2020,8 @@ export class DataService {
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             }
         },
         {
@@ -2140,7 +2140,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:true , Author: "والتر وایت"
+                        IsAvailable: true, Author: "والتر وایت"
                     },
                 }
             ],
@@ -2151,8 +2151,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             },
 
         },
@@ -2282,8 +2282,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             },
 
         },
@@ -2414,8 +2414,8 @@ export class DataService {
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
-                IsRegistered:true,
-        SpamCount: 5
+                IsRegistered: true,
+                SpamCount: 5
             },
 
         },
@@ -2549,8 +2549,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                IsRegistered:true,
-        SpamCount: 32
+                IsRegistered: true,
+                SpamCount: 32
             }
 
         },
@@ -2713,7 +2713,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:true , Author: "والتر وایت"
+                        IsAvailable: true, Author: "والتر وایت"
                     },
                 }
             ],
@@ -2727,8 +2727,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                IsRegistered:false,
-        SpamCount: 32
+                IsRegistered: false,
+                SpamCount: 32
             }
 
         },
@@ -2784,7 +2784,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:true , Author: "ویکتور هوگو"
+                        IsAvailable: true, Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -2894,7 +2894,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:true , Author: "والتر وایت"
+                        IsAvailable: true, Author: "والتر وایت"
                     },
                 }
             ],
@@ -2908,8 +2908,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                IsRegistered:false,
-        SpamCount: 32
+                IsRegistered: false,
+                SpamCount: 32
             }
 
         },
@@ -2943,7 +2943,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:false , Author: "محمود فریدونی"
+                        IsAvailable: false, Author: "محمود فریدونی"
                     },
                 },
                 {
@@ -2965,7 +2965,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:false , Author: "ویکتور هوگو"
+                        IsAvailable: false, Author: "ویکتور هوگو"
                     },
                 },
                 {
@@ -3073,7 +3073,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:false , Author: "والتر وایت"
+                        IsAvailable: false, Author: "والتر وایت"
                     },
                 }
             ],
@@ -3087,8 +3087,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                IsRegistered:true,
-        SpamCount: 32
+                IsRegistered: true,
+                SpamCount: 32
             }
 
         },
@@ -3251,7 +3251,7 @@ export class DataService {
                         UpdateDate: '1401/06/17',
                         IsDeleted: false,
                         AdminID: 1,
-                         IsAvailable:true , Author: "والتر وایت"
+                        IsAvailable: true, Author: "والتر وایت"
                     },
                 }
             ],
@@ -3265,8 +3265,8 @@ export class DataService {
                 updateDate: "1501/08/09",
                 IsBlocked: true,
                 IsSuspended: true,
-                IsRegistered:true,
-        SpamCount: 32
+                IsRegistered: true,
+                SpamCount: 32
             }
 
         },
@@ -3391,7 +3391,6 @@ export class DataService {
         return this.studentReport;
     }
 
-
     //comment header less than 20 words
     private comment: IComment[] = [
         {
@@ -3406,9 +3405,10 @@ export class DataService {
                 IsBlocked: false,
                 IsSuspended: true,
                 IsSpam: true,
-                IsRegistered:true,
-        SpamCount: 33
+                IsRegistered: true,
+                SpamCount: 33
             },
+            IsAdminAccepted: true,
             commentHeader: "افتضاح",
             commentBody: "کتاب بشدت مزخرفی بود",
             createdDate: "1401/01/21",
@@ -3426,9 +3426,10 @@ export class DataService {
                 IsBlocked: true,
                 IsSuspended: false,
                 IsSpam: true,
-                IsRegistered:false,
-        SpamCount: 10
+                IsRegistered: false,
+                SpamCount: 10
             },
+            IsAdminAccepted: false,
             commentHeader: "باید ریخت سطل آشغال",
             commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
             createdDate: "1401/01/22",
@@ -3446,9 +3447,10 @@ export class DataService {
                 IsBlocked: false,
                 IsSuspended: true,
                 IsSpam: true,
-                IsRegistered:false,
-        SpamCount: 1205
+                IsRegistered: false,
+                SpamCount: 1205
             },
+            IsAdminAccepted: false,
             commentHeader: "نویسنده اش احمقه",
             createdDate: "1501/01/22",
             bookID: 2
@@ -3465,9 +3467,10 @@ export class DataService {
                 IsBlocked: true,
                 IsSuspended: false,
                 IsSpam: true,
-                IsRegistered:false,
-        SpamCount: 10
+                IsRegistered: false,
+                SpamCount: 10
             },
+            IsAdminAccepted: true,
             commentHeader: "&^%&% *^*^*&)^ )*&*)",
             createdDate: "1401/01/22",
             bookID: 2
@@ -3484,13 +3487,160 @@ export class DataService {
                 IsBlocked: true,
                 IsSuspended: false,
                 IsSpam: true,
-                IsRegistered:false,
-        SpamCount: 10
+                IsRegistered: false,
+                SpamCount: 10
             },
+            IsAdminAccepted: true,
             commentHeader: "09121212112 *@#% $%@$#@$% ",
             createdDate: "1401/01/22",
             bookID: 2
-        }
+        },
+        {
+            CommentID: 11,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: true,
+            commentHeader: "باید ریخت سطل آشغال",
+            commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
+        {
+            CommentID: 12,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: true,
+            commentHeader: "باید ریخت سطل آشغال",
+            commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
+        {
+            CommentID: 13,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: true,
+            commentHeader: "باید ریخت سطل آشغال",
+            commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
+        {
+            CommentID: 14,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: false,
+            commentHeader: "باید ریخت سطل آشغال",
+            commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
+        {
+            CommentID: 15,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: true,
+            commentHeader: "باید ریخت سطل آشغال",
+            commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
+        {
+            CommentID: 15,
+            student: {
+                studentID: 27,
+                studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: true,
+            commentHeader: "باید ریخت سطل آشغال",
+            commentBody: "نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.نویسنده ی این کتاب با مغز معیوبش سعی کرده کتاب بنویسه این کاملا مسخره ست. به نظرم باید این کتاب رو با نویسنده اش سوزوند.",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
+        {
+            CommentID: 16,
+            student: {
+                studentID: 24,
+                studentName: "رضا رضایی",
+                studentSSID: "002154515",
+                studentUniversityID: "351564332",
+                createdDate: "1000/00/02",
+                updateDate: "1401/00/31",
+                IsBlocked: true,
+                IsSuspended: false,
+                IsSpam: true,
+                IsRegistered: false,
+                SpamCount: 10
+            },
+            IsAdminAccepted: false,
+            commentHeader: "09121212112 *@#% $%@$#@$% ",
+            createdDate: "1401/01/22",
+            bookID: 2
+        },
     ]
     public getComment() {
         return this.comment;
