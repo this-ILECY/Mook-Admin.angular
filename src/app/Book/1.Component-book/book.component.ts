@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { BookListComponent } from '../book-list/book-list.component';
+import { BookListComponent } from '../Component-book-list/book-list.component';
 
 @Component({
   selector: 'app-book',
@@ -14,7 +14,10 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
   }
   openBookList() {
-    const dialogRef = this.dialog.open(BookListComponent);
+    this.dialog.open(BookListComponent);
+  }
+  openBookListAvailable() {
+    this.dialog.open(BookListComponent, { data: { 'IsAvailable': true } });
   }
 
 }

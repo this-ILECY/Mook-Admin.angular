@@ -21,9 +21,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { HistoryComponent } from './history/history.component';
 import { SearchTextBoxComponent } from './Search/Component-search-text-box/search-text-box.component';
 import { SearchModalComponent } from './Search/Component-search-modal/search-modal.component';
-import { BookListComponent } from './Book/book-list/book-list.component';
+import { BookListComponent } from './Book/Component-book-list/book-list.component';
 import { commentListComponent } from './Student/Component-comment-list/comment-list.component';
 import { MessageBoxComponent } from './1.Essential-components/message-box/message-box.component';
+import { BookToBuyComponent } from './book-to-buy/book-to-buy.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MessageBoxComponent } from './1.Essential-components/message-box/messag
     SearchModalComponent,
     BookListComponent,
     commentListComponent,
-    MessageBoxComponent
+    MessageBoxComponent,
+    BookToBuyComponent
   ],
   imports: [
     BrowserModule,

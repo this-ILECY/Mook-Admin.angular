@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IAdmin } from './Models/IAdmin';
-import { IBook } from './Models/IBook';
+import { IBook, IbookToBuy } from './Models/IBook';
 import { IComment } from './Models/IComment';
 import { IPublisher } from './Models/IPublisher';
 import { IRequestH, IRequestD, IRequestViewModel } from './Models/IRequestH';
@@ -3644,5 +3644,39 @@ export class DataService {
     ]
     public getComment() {
         return this.comment;
+    }
+
+    private bookToBuy: IbookToBuy[] = [
+        {
+            bookToBuyId: 1,
+            studentId: 1,
+            bookName: "کتاب 1",
+            bookAuthor: "نویسنده 1",
+            bookPublisher: "انتشارات 1"
+        },
+        {
+            bookToBuyId: 2,
+            studentId: 2,
+            bookName: "کتاب 2",
+            bookAuthor: "نویسنده 2",
+            bookPublisher: "انتشارات 2"
+        },
+        {
+            bookToBuyId: 3,
+            studentId: 3,
+            bookName: "کتاب 3",
+            bookAuthor: "نویسنده 3",
+            bookPublisher: "انتشارات 3"
+        },
+        {
+            bookToBuyId: 4,
+            studentId: 4,
+            bookName: "کتاب 4",
+            bookAuthor: "نویسنده 4",
+            bookPublisher: "انتشارات 4"
+        }
+    ];
+    public getBookToBuy() {
+        return this.bookToBuy;
     }
 }

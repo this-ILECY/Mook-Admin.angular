@@ -14,3 +14,11 @@ export interface IBook{
     Author?:string
     IsAvailable?:boolean
 }
+
+export interface IbookToBuy{
+     bookToBuyId: number
+     studentId : number
+     bookName : string
+     bookAuthor : string
+     bookPublisher : string
+}
