@@ -24,7 +24,7 @@ import { SearchModalComponent } from './Search/Component-search-modal/search-mod
 import { BookListComponent } from './Book/Component-book-list/book-list.component';
 import { commentListComponent } from './Student/Component-comment-list/comment-list.component';
 import { MessageBoxComponent } from './1.Essential-components/message-box/message-box.component';
-import { BookToBuyComponent } from './book-to-buy/book-to-buy.component';
+import { BookToBuyComponent } from './Book/Component-book-to-buy/book-to-buy.component';
 
 @NgModule({
   declarations: [
