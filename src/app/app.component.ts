@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   admin: IAdmin[] = this.dataService.getAdmin();
+  falsing(){
+    return false;
+  }
 
   ngOnInit(): void {
     if (!localStorage.getItem("AdminID")) {

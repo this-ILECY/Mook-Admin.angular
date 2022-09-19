@@ -1,3 +1,6 @@
-<app-desk-bar></app-desk-bar>
-<app-search-text-box></app-search-text-box>
+<ng-container *ngIf="falsing()">
+    <app-desk-bar></app-desk-bar>
+    <app-search-text-box></app-search-text-box>
+</ng-container>
+
 <router-outlet></router-outlet>
