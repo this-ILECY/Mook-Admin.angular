@@ -41,8 +41,8 @@ export class BookDetailsComponent implements OnInit {
         this.bookPageCount.nativeElement,
         this.bookAuthor.nativeElement
       ]
-      this.done.nativeElement.classList.remove('d-none');
-      this.edit.nativeElement.classList.add('d-none');
+      this.done.nativeElement.classList.remove('d-noneeeee');
+      this.edit.nativeElement.classList.add('d-noneeee');
 
       editForm.forEach(element => {
         this.renderer.removeAttribute(element, "disabled");
