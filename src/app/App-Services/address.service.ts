@@ -9,12 +9,19 @@ export class AddressService {
 
   private logo = "/assets/logo/logoWhite.png"
   public getLogo() { return this.logo }
+ 
+  private Purplelogo = "/assets/logo/logoPurple.png"
+  public getPurpleLogo() { return this.Purplelogo }
 
-  public router ={
-    student:"student",
-    book:"book",
-    main:"main",
-    history:"history"
+  private loginImg = "/assets/img/login-img.png"
+  public getLoginImg() { return this.loginImg }
+
+  public router = {
+    student: "student",
+    book: "book",
+    main: "main",
+    history: "history",
+    login: "login"
   }
 
 }
