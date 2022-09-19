@@ -8,6 +8,7 @@ $lightBlackShadow:#00000026;
 $darkBlackShadow:#0000003b;
 $iconHoverOnPrimary:#7975ee;
 $svgFillOnHoverPrimary:#ffffff91;
+$backgroundGradient:linear-gradient(45deg, rgba(111,106,248,0.7) 0%, rgba(117,87,224,0.7) 29%, rgba(128,85,224,0.7) 47%, rgba(166,152,255,0.6951155462184874) 100%);
 
 /*radius*/
 $border-radius: 25px;
@@ -31,3 +32,7 @@ $font-size:16px;
 
  /*sizes*/
  $mainHeight:93vh;
+
+
+ /*img*/
+ $login-img : "/assets/img/login-img.png";
