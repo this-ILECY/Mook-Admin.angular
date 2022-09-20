@@ -18,7 +18,6 @@ export class AuthService {
 
 
     public loginCheck(userName: string, password: string): boolean {
-        debugger
         let freshStory = this.createToken(userName, password)
         let result = this.tokenCompare(freshStory)
         if (result) {
@@ -53,7 +52,6 @@ export class AuthService {
 
 
     private tokenValidation() {
-        debugger
         let data: IData = JSON.parse(localStorage.getItem('data'));
         var newDate = new Date();
 

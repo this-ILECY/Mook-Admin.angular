@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccessGuard } from './App-Services/access.guard';
 import { AddressService } from './App-Services/address.service';
 import { BookComponent } from './Book/1.Component-book/book.component';
 import { DeskBarComponent } from './Component-desk-bar/desk-bar.component';
@@ -12,10 +13,10 @@ let addressService = new AddressService();
 
 const routeName = addressService.router;
 const routes: Routes = [
-  { path: routeName.student, component: StudentComponent },
-  { path: routeName.book, component: BookComponent },
-  { path: routeName.main, component: MainPageComponent },
-  { path: routeName.history, component: HistoryComponent },
+  { path: routeName.student, component: StudentComponent, canActivate:[AccessGuard] },
+  { path: routeName.book, component: BookComponent, canActivate:[AccessGuard] },
+  { path: routeName.main, component: MainPageComponent, canActivate:[AccessGuard] },
+  { path: routeName.history, component: HistoryComponent, canActivate:[AccessGuard] },
   { path: routeName.login, component: LoginComponent },
   { path: '**', redirectTo: 'student' }
 ];

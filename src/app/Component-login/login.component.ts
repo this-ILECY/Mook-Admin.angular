@@ -1,4 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { AccessGuard } from '../App-Services/access.guard';
 import { AddressService } from '../App-Services/address.service';
 import { AuthService } from '../App-Services/AuthService';
 
@@ -10,7 +12,7 @@ import { AuthService } from '../App-Services/AuthService';
 export class LoginComponent implements OnInit {
 
   constructor(private renderer: Renderer2, private address: AddressService,
-    private auth: AuthService) { }
+    private auth: AuthService, private router: Router, private access: AccessGuard) { }
 
   public logoPath !: string;
   public loginImg !: string;
@@ -19,6 +21,12 @@ export class LoginComponent implements OnInit {
   @ViewChild('main', { static: true }) main: ElementRef
 
   ngOnInit(): void {
+    let canShow = this.access.canActivate()
+
+    if (canShow) {
+      this.router.navigate([this.address.router.student])
+    }
+
     this.loginImg = this.address.getLoginImg();
     this.logoPath = this.address.getPurpleLogo();
   }
@@ -26,29 +34,37 @@ export class LoginComponent implements OnInit {
   public async mookSignIn(event: Event, username: string, password: string) {
 
     event.preventDefault();
-
     this.fromValidation(username, password)
     let result
 
     if (username.length !== 0 && password.length !== 0) {
       result = this.auth.loginCheck(username, password);
     }
-    let s = this.auth.checkToken()
-    console.log(s);
+    let checked = this.auth.checkToken()
+    if (result && checked) {
+      this.router.navigate([this.address.router.student]).then(()=>{
+        window.location.reload();
+      });
+    } else {
+      this.fromValidation(username, password)
+    }
+
   }
 
   fromValidation(username: string, password: string) {
+    let passmatch = document.querySelector(".passmatch-text");
+    let inputs = document.querySelectorAll(".login-input");
+    inputs.forEach(element => {
+      if (!element.classList.contains("input-invalid")) {
+        element.classList.add("input-invalid");
+      }
+    });
     if (username.length === 0 && password.length === 0) {
-      let inputs = document.querySelectorAll(".login-input");
-      inputs.forEach(element => {
-        if (!element.classList.contains("input-invalid")) {
-          element.classList.add("input-invalid");
-        }
-      });
-      let passmatch = document.querySelector(".passmatch-text");
       passmatch.innerHTML = "لطفا اطلاعات را وارد نمایید";
-      passmatch.classList.remove("d-none");
+    } else {
+      passmatch.innerHTML = "عدم تطابق اطلاعات";
     }
+    passmatch.classList.remove("d-none");
 
   }
 

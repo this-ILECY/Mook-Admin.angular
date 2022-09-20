@@ -26,6 +26,7 @@ import { commentListComponent } from './Student/Component-comment-list/comment-l
 import { MessageBoxComponent } from './1.Essential-components/message-box/message-box.component';
 import { BookToBuyComponent } from './Book/Component-book-to-buy/book-to-buy.component';
 import { LoginComponent } from './Component-login/login.component';
+import { ExitMsgboxComponent } from './1.Essential-components/Component-exit-msgbox/exit-msgbox.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { LoginComponent } from './Component-login/login.component';
     commentListComponent,
     MessageBoxComponent,
     BookToBuyComponent,
-    LoginComponent
+    LoginComponent,
+    ExitMsgboxComponent
   ],
   imports: [
     BrowserModule,
