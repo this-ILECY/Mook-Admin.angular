@@ -11,7 +11,6 @@ export class NewRegisterComponent {
 
   constructor(public dialogRef: MatDialogRef<NewRegisterComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-      console.log(this.data);
       
   }
 

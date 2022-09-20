@@ -10,8 +10,7 @@ import { IAdmin } from './App-Services/Models/IAdmin';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private dataService: DataService,
-    private auth:AuthService) {}
+  constructor(private dataService: DataService) {}
 
   admin: IAdmin[] = this.dataService.getAdmin();
   falsing(){
@@ -19,9 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    this.auth.loginCheck("BookAdmin", "Miyaneh.Book@1401");
-
     if (!localStorage.getItem("AdminID")) {
       localStorage.setItem("AdminID", this.admin[0].AdminID.toString())
     }

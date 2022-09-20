@@ -21,9 +21,6 @@ export class SearchModalComponent implements OnInit {
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    console.log(this.student);
-    console.log(this.book);
-
   }
 
   @ViewChild('span', { static: true }) span: ElementRef;

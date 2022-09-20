@@ -1,8 +1,8 @@
+import { verifyHostBindings } from "@angular/compiler";
 import { Injectable } from "@angular/core";
-import sha256 from 'crypto-js/sha256';
-import hmacSHA512 from 'crypto-js/hmac-sha512';
-import Base64 from 'crypto-js/enc-base64';
 import CryptoJS from 'crypto-js';
+import { IData } from "./Models/IData";
+
 
 @Injectable({
     providedIn: 'root'
@@ -17,17 +17,65 @@ export class AuthService {
     private readonly Ending = "W4iLCJ0aGVTdG9yeU5hbWUiOiJNaXlhbmVoLkJvb2tAMTQwMSJ"
 
 
-    public loginCheck(userName: string, password: string):boolean {
+    public loginCheck(userName: string, password: string): boolean {
+        debugger
         let freshStory = this.createToken(userName, password)
         let result = this.tokenCompare(freshStory)
+        if (result) {
+            let theOldTale = this.getOldTale()
+            this.setLocalStorage(theOldTale)
+        }
         return result;
+    }
+    public checkToken() {
+        return this.tokenValidation()
+    }
+
+    private setLocalStorage(token: string) {
+        let newDate = new Date();
+        newDate.setMinutes(newDate.getMinutes() + 30)
+
+        let one = token.substring(0, this.theStoryBegins.length)
+        let two = token.substring(this.theStoryBegins.length + 1, this.theStoryBegins.length + 1 + this.middleOfNowhere.length)
+        let three = token.substring(this.theStoryBegins.length + 2 + this.middleOfNowhere.length, token.length)
+
+        let data: IData = {
+            verification: {
+                one: one,
+                two: three,
+                three: two
+            },
+            date: newDate.getTime()
+        };
+        localStorage.setItem('data', JSON.stringify(data));
+    }
+
+
+
+    private tokenValidation() {
+        debugger
+        let data: IData = JSON.parse(localStorage.getItem('data'));
+        var newDate = new Date();
+
+        if (data !== undefined && data !== null) {
+
+            if (data.date < newDate.getTime()) {
+                let token = data.verification.one + "9" + data.verification.three + "a" + data.verification.two + "9"
+                this.tokenCompare(token);
+            }
+            return true
+        } else {
+            return false
+        }
+    }
+
+    private getOldTale() {
+        return this.theStoryBegins + "9" + this.middleOfNowhere + "a" + this.Ending + "9";
     }
 
     private tokenCompare(freshToken: string): boolean {
-
-        let theOldTale = this.theStoryBegins + "9" + this.middleOfNowhere + "a" + this.Ending + "9"
-        theOldTale = this.mySecret(theOldTale)
-
+        let theOldTale = this.getOldTale();
+        theOldTale = this.mySecret(theOldTale);
         if (freshToken === theOldTale) {
             return true;
         } else {

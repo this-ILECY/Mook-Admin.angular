@@ -27,9 +27,7 @@ export class BookDetailsComponent implements OnInit {
 
   publisher: IPublisher[] = this.dataService.getPublisher();
 
-  ngOnInit(): void {
-    console.log(this.data);
-    
+  ngOnInit(): void {    
   }
   
   

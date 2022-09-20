@@ -45,9 +45,7 @@ export class StudentComponent implements OnInit {
     //   console.log(`Dialog result: ${result}`);
     // });
   }
-  openBookRequest(selectedRequest: IRequestViewModel) {
-    console.log(selectedRequest);
-    
+  openBookRequest(selectedRequest: IRequestViewModel) {    
 
     const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
     // dialogRef.afterClosed().subscribe(result => {
