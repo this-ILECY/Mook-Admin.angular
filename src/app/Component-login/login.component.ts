@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { AddressService } from '../App-Services/address.service';
+import { AuthService } from '../App-Services/AuthService';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,8 @@ import { AddressService } from '../App-Services/address.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private renderer: Renderer2, private address: AddressService) { }
+  constructor(private renderer: Renderer2, private address: AddressService,
+    private auth:AuthService) { }
 
   public logoPath !: string;
   public loginImg !:string;
@@ -25,8 +27,16 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this.fromValidation(username, password)
     if (username.length !== 0 && password.length !== 0) {
-      this.renderer.setAttribute(this.submit.nativeElement, 'disabled', 'disabled')
-      this.renderer.addClass(this.main.nativeElement, 'tenet-wait')
+      // this.renderer.setAttribute(this.submit.nativeElement, 'disabled', 'disabled')
+      // this.renderer.addClass(this.main.nativeElement, 'tenet-wait')
+
+      console.log(username + " " + password);
+      
+      let result = this.auth.loginCheck(username, password);
+      console.log(result);
+      console.log(Date.now());
+      
+      
     }
   }
 
