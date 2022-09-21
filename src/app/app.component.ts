@@ -23,10 +23,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
     this.canShow = this.access.canActivate();
-
-    if (!localStorage.getItem("AdminID")) {
-      localStorage.setItem("AdminID", this.admin[0].AdminID.toString())
-    }
   }
   title = 'MookAdmin';
 }
