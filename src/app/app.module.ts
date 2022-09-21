@@ -28,7 +28,7 @@ import { BookToBuyComponent } from './Book/Component-book-to-buy/book-to-buy.com
 import { LoginComponent } from './Component-login/login.component';
 import { ExitMsgboxComponent } from './1.Essential-components/Component-exit-msgbox/exit-msgbox.component';
 import { NewUserComponent } from './Main/Component-new-user/new-user.component';
-import { AddBookComponent } from './add-book/add-book.component';
+import { AddBookComponent } from './Main/Component-add-book/add-book.component';
 
 @NgModule({
   declarations: [
