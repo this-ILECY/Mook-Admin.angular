@@ -21,7 +21,7 @@
                         <div class="rows-body student-body" (click)="openAction(studentAction)">
                             <div class="main-row">
                                 <div class="col-one student-name text-overflow">{{member.studentName}}</div>
-                                <div class="col-two  text-overflow">{{member.studentSSID}}</div>
+                                <div class="col-two  text-overflow">{{member.studentSID}}</div>
                                 <div class="col-three university-id text-overflow">{{member.studentUniversityID}}</div>
                             </div>
                             <div #studentAction class="action collapsed"  [ngClass]="member.IsRegistered === true ? 'child-w20' : 'child-w25'">

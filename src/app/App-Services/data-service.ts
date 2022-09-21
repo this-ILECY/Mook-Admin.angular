@@ -283,7 +283,7 @@ export class DataService {
     private Student: IStudent[] = [{
         studentID: 21,
         studentName: "سید علیرضا رضایی اصل",
-        studentSSID: "002585258",
+        studentSID: "002585258",
         studentUniversityID: "00452365",
         createdDate: "1500/13/65",
         updateDate: "1501/15/23",
@@ -296,7 +296,7 @@ export class DataService {
     {
         studentID: 22,
         studentName: "مسعود مسعودی",
-        studentSSID: "007585950",
+        studentSID: "007585950",
         studentUniversityID: "971456213",
         createdDate: "1500/13/22",
         updateDate: "1501/08/09",
@@ -309,7 +309,7 @@ export class DataService {
     {
         studentID: 23,
         studentName: "شیرین شیرین زاده",
-        studentSSID: "008565987",
+        studentSID: "008565987",
         studentUniversityID: "9715081050",
         createdDate: "1501/13/73",
         updateDate: "1502/19/99",
@@ -322,7 +322,7 @@ export class DataService {
     {
         studentID: 24,
         studentName: "رضا رضایی",
-        studentSSID: "002154515",
+        studentSID: "002154515",
         studentUniversityID: "351564332",
         createdDate: "1000/00/02",
         updateDate: "1401/00/31",
@@ -335,7 +335,7 @@ export class DataService {
     {
         studentID: 25,
         studentName: "سارا سارایی",
-        studentSSID: "015455315",
+        studentSID: "015455315",
         studentUniversityID: "68743563",
         createdDate: "1650/13/73",
         updateDate: "1600/19/99",
@@ -348,7 +348,7 @@ export class DataService {
     {
         studentID: 26,
         studentName: "اشکان اشکانیان",
-        studentSSID: "351354353",
+        studentSID: "351354353",
         studentUniversityID: "5666576",
         createdDate: "1400/13/73",
         updateDate: "1502/19/99",
@@ -361,7 +361,7 @@ export class DataService {
     {
         studentID: 27,
         studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-        studentSSID: "0548584",
+        studentSID: "0548584",
         studentUniversityID: "981523650",
         createdDate: "1500/13/22",
         updateDate: "1501/08/09",
@@ -503,7 +503,7 @@ export class DataService {
             student: {
                 studentID: 21,
                 studentName: "سید علیرضا رضایی اصل",
-                studentSSID: "002585258",
+                studentSID: "002585258",
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
@@ -631,7 +631,7 @@ export class DataService {
             student: {
                 studentID: 22,
                 studentName: "مسعود مسعودی",
-                studentSSID: "007585950",
+                studentSID: "007585950",
                 studentUniversityID: "971456213",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
@@ -1017,7 +1017,7 @@ export class DataService {
             student: {
                 studentID: 23,
                 studentName: "شیرین شیرین زاده",
-                studentSSID: "008565987",
+                studentSID: "008565987",
                 studentUniversityID: "9715081050",
                 createdDate: "1501/13/73",
                 updateDate: "1502/19/99",
@@ -1143,7 +1143,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -1269,7 +1269,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -1397,7 +1397,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -1525,7 +1525,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -1652,7 +1652,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -1780,7 +1780,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -2016,7 +2016,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -2147,7 +2147,7 @@ export class DataService {
             student: {
                 studentID: 21,
                 studentName: "سید علیرضا رضایی اصل",
-                studentSSID: "002585258",
+                studentSID: "002585258",
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
@@ -2278,7 +2278,7 @@ export class DataService {
             student: {
                 studentID: 21,
                 studentName: "سید علیرضا رضایی اصل",
-                studentSSID: "002585258",
+                studentSID: "002585258",
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
@@ -2410,7 +2410,7 @@ export class DataService {
             student: {
                 studentID: 21,
                 studentName: "سید علیرضا رضایی اصل",
-                studentSSID: "002585258",
+                studentSID: "002585258",
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
@@ -2543,7 +2543,7 @@ export class DataService {
             {
                 studentID: 27,
                 studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-                studentSSID: "0548584",
+                studentSID: "0548584",
                 studentUniversityID: "981523650",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
@@ -2721,7 +2721,7 @@ export class DataService {
             {
                 studentID: 27,
                 studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-                studentSSID: "0548584",
+                studentSID: "0548584",
                 studentUniversityID: "981523650",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
@@ -2902,7 +2902,7 @@ export class DataService {
             {
                 studentID: 27,
                 studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-                studentSSID: "0548584",
+                studentSID: "0548584",
                 studentUniversityID: "981523650",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
@@ -3081,7 +3081,7 @@ export class DataService {
             {
                 studentID: 27,
                 studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-                studentSSID: "0548584",
+                studentSID: "0548584",
                 studentUniversityID: "981523650",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
@@ -3259,7 +3259,7 @@ export class DataService {
             {
                 studentID: 27,
                 studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-                studentSSID: "0548584",
+                studentSID: "0548584",
                 studentUniversityID: "981523650",
                 createdDate: "1500/13/22",
                 updateDate: "1501/08/09",
@@ -3318,7 +3318,7 @@ export class DataService {
         {
             studentID: 21,
             studentName: "سید علیرضا رضایی اصل",
-            studentSSID: "002585258",
+            studentSID: "002585258",
             studentUniversityID: "00452365",
             registerDate: "1500/13/65",
             RequestCount: 10,
@@ -3330,7 +3330,7 @@ export class DataService {
         {
             studentID: 22,
             studentName: "مسعود مسعودی",
-            studentSSID: "007585950",
+            studentSID: "007585950",
             studentUniversityID: "971456213",
             registerDate: "1500/13/22",
             RequestCount: 10,
@@ -3342,7 +3342,7 @@ export class DataService {
         {
             studentID: 23,
             studentName: "شیرین شیرین زاده",
-            studentSSID: "008565987",
+            studentSID: "008565987",
             studentUniversityID: "9715081050",
             registerDate: "1501/13/73",
             RequestCount: 10,
@@ -3354,7 +3354,7 @@ export class DataService {
         {
             studentID: 24,
             studentName: "رضا رضایی",
-            studentSSID: "002154515",
+            studentSID: "002154515",
             studentUniversityID: "351564332",
             registerDate: "1000/00/02",
             RequestCount: 10,
@@ -3366,7 +3366,7 @@ export class DataService {
         {
             studentID: 25,
             studentName: "سارا سارایی",
-            studentSSID: "015455315",
+            studentSID: "015455315",
             studentUniversityID: "68743563",
             registerDate: "1650/13/73",
             RequestCount: 10,
@@ -3378,7 +3378,7 @@ export class DataService {
         {
             studentID: 26,
             studentName: "اشکان اشکانیان",
-            studentSSID: "351354353",
+            studentSID: "351354353",
             studentUniversityID: "5666576",
             registerDate: "1400/13/73",
             RequestCount: 10,
@@ -3398,7 +3398,7 @@ export class DataService {
             student: {
                 studentID: 21,
                 studentName: "سید علیرضا رضایی اصل",
-                studentSSID: "002585258",
+                studentSID: "002585258",
                 studentUniversityID: "00452365",
                 createdDate: "1500/13/65",
                 updateDate: "1501/15/23",
@@ -3419,7 +3419,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3440,7 +3440,7 @@ export class DataService {
             student: {
                 studentID: 25,
                 studentName: "سارا سارایی",
-                studentSSID: "015455315",
+                studentSID: "015455315",
                 studentUniversityID: "68743563",
                 createdDate: "1650/13/73",
                 updateDate: "1600/19/99",
@@ -3460,7 +3460,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3480,7 +3480,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3500,7 +3500,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3521,7 +3521,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3542,7 +3542,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3563,7 +3563,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3584,7 +3584,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3605,7 +3605,7 @@ export class DataService {
             student: {
                 studentID: 27,
                 studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",
@@ -3626,7 +3626,7 @@ export class DataService {
             student: {
                 studentID: 24,
                 studentName: "رضا رضایی",
-                studentSSID: "002154515",
+                studentSID: "002154515",
                 studentUniversityID: "351564332",
                 createdDate: "1000/00/02",
                 updateDate: "1401/00/31",

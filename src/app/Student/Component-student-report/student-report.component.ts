@@ -21,9 +21,9 @@ export class StudentReportComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentReport = this.dataservice.getStudentReport();
-    
-    if (this.data !== undefined) {
-      this.studentReport = this.studentReport.filter(x=> x.studentID == this.data.selectedStudent.studentID);
+
+    if (this.data != (undefined || null)) {
+      this.studentReport = this.studentReport.filter(x => x.studentID == this.data.selectedStudent.studentID);
     }
 
   }

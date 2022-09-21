@@ -24,6 +24,10 @@ export class DeskBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  falsing(){
+    return false
+  }
+
   exit() {
     const dialogRef = this.dialog.open(ExitMsgboxComponent);
 

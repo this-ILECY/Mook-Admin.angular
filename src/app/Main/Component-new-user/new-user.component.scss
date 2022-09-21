@@ -1,0 +1,180 @@
+@import 'src/app/Styles/Variables.scss';
+
+.new-user-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 35vh;
+    width: 75vw;
+    background: #fff;
+}
+
+
+.new-user-body {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    direction: rtl;
+    align-items: flex-start;
+}
+
+.new-user-header {
+    height: 20%;
+}
+
+.right-values {
+    width: 30%;
+}
+
+.left-values {
+    width: 60%;
+}
+
+.new-user-footer:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.reg-svg-deny>svg>path {
+    fill: red;
+}
+
+.edit-main {
+    display: flex;
+    width: calc(100% - 60px);
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 30px;
+    justify-content: flex-end;
+
+    div>svg>path {
+        fill: #0000;
+        stroke: $buttonColor;
+    }
+
+    .edit>svg>path {
+        fill: $buttonColor;
+        stroke: #0000;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div:hover {
+        cursor: pointer;
+    }
+
+    div>svg>path:hover {
+        fill: #0000;
+        stroke: $buttonHoverColor;
+    }
+
+    .edit>svg>path:hover {
+        fill: $buttonHoverColor;
+        stroke: #0000;
+    }
+}
+
+
+.new-user-deny {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 50%;
+    color: red;
+}
+
+.reg-svg-accept>svg>path {
+    fill: green;
+}
+
+.new-user-accept {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    height: 50%;
+    color: green;
+}
+
+.new-user-accept>div,
+.new-user-deny>div {
+    padding: 1px 1px;
+}
+
+.new-user-table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    align-items: stretch;
+    background: #0000000d;
+}
+
+.new-user-table>thead {
+    border-bottom: 1px solid #8055E0;
+    padding: 3px 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-user-table>tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-user-detail {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.student-name,
+.request-date {
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-user-detail>table {
+
+    thead>th,
+    tbody>tr>td {
+        text-align: center;
+
+        .input{
+            text-align: center;
+        }
+        .input-isnew {
+            border: none;
+            border-bottom: 1px solid $lightBlackShadow;
+            border-radius: 0px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttons>div {
+    width: 15%;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -17,7 +17,7 @@ import { StudentReportComponent } from './Student/Component-student-report/stude
 import { BookRequestListComponent } from './Book/Component-book-request-list/book-request-list.component';
 import { UserSpamReportComponent } from './Student/Component-user-spam-report/user-spam-report.component';
 import { BookComponent } from './Book/1.Component-book/book.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { MainPageComponent } from './Main/1.Component-main-page/main-page.component';
 import { HistoryComponent } from './history/history.component';
 import { SearchTextBoxComponent } from './Search/Component-search-text-box/search-text-box.component';
 import { SearchModalComponent } from './Search/Component-search-modal/search-modal.component';
@@ -27,6 +27,8 @@ import { MessageBoxComponent } from './1.Essential-components/message-box/messag
 import { BookToBuyComponent } from './Book/Component-book-to-buy/book-to-buy.component';
 import { LoginComponent } from './Component-login/login.component';
 import { ExitMsgboxComponent } from './1.Essential-components/Component-exit-msgbox/exit-msgbox.component';
+import { NewUserComponent } from './Main/Component-new-user/new-user.component';
+import { AddBookComponent } from './add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { ExitMsgboxComponent } from './1.Essential-components/Component-exit-msg
     MessageBoxComponent,
     BookToBuyComponent,
     LoginComponent,
-    ExitMsgboxComponent
+    ExitMsgboxComponent,
+    NewUserComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,

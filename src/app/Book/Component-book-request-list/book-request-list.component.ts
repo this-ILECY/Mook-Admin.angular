@@ -18,13 +18,15 @@ export class BookRequestListComponent implements OnInit {
     private dataservice: DataService) {
   }
 
-  public bookList = this.dataservice.getRequest();
+  public bookList : IRequestViewModel[] 
 
-  ngOnInit(): void {    
-    if (this.data !== undefined) {
-      this.bookList = this.bookList.filter(x=> x.student.studentID == this.data.selectedStudent.studentID);
+  ngOnInit(): void {
+    this.bookList = this.dataservice.getRequest();
+    if (this.data != (null || undefined)) {      
+      this.bookList = this.bookList.filter(x => x.student.studentID == this.data.selectedStudent.studentID);
     }
   }
+
   openRequestDetail(selectedRequest: IRequestViewModel) {
     const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
   }

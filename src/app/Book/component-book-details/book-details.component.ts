@@ -27,24 +27,24 @@ export class BookDetailsComponent implements OnInit {
 
   publisher: IPublisher[] = this.dataService.getPublisher();
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
   }
-  
-  
-    enableEdit() {
-      let editForm =[
-        this.bookName.nativeElement,
-        this.bookDesc.nativeElement,
-        this.bookPub.nativeElement,
-        this.bookPageCount.nativeElement,
-        this.bookAuthor.nativeElement
-      ]
-      this.done.nativeElement.classList.remove('d-noneeeee');
-      this.edit.nativeElement.classList.add('d-noneeee');
 
-      editForm.forEach(element => {
-        this.renderer.removeAttribute(element, "disabled");
-      });
+
+  enableEdit() {
+    let editForm = [
+      this.bookName.nativeElement,
+      this.bookDesc.nativeElement,
+      this.bookPub.nativeElement,
+      this.bookPageCount.nativeElement,
+      this.bookAuthor.nativeElement
+    ]
+    this.done.nativeElement.classList.remove('d-none');
+    this.edit.nativeElement.classList.add('d-none');
+
+    editForm.forEach(element => {
+      this.renderer.removeAttribute(element, "disabled");
+    });
   }
 
 }

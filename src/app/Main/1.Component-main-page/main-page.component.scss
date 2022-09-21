@@ -1,0 +1,41 @@
+@import 'src/app/Styles/Variables.scss';
+
+/*************************************************************************************************************/
+/******************************************  Main Style  *****************************************************/
+/******************************************  Main Style  *****************************************************/
+/******************************************  Main Style  *****************************************************/
+/*************************************************************************************************************/
+.book-main {
+    direction: rtl;
+    margin-right: 20px;
+    border-radius: 25px;
+    font-family: $regular;
+    width: calc(100vw - $deskBarWidth - 15px);
+    max-height: 100vh;
+    height: 94vh;
+    overflow: hidden;
+}
+
+.main-bar {
+    height: calc(100% - 60px);
+    padding: 30px 0px;
+    justify-content: center;
+    align-items: center;
+
+    .center{
+        display: flex;
+        height: 10vh;
+        width: 30vw;
+
+        *{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .item{
+            align-items: center;
+            width: calc(33% - 20px);
+            margin: 0 10px;
+        }
+    }
+}

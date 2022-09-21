@@ -49,7 +49,17 @@ export class AuthService {
         localStorage.setItem('data', JSON.stringify(data));
     }
 
+    public refreshTimer() {
+        let newDate = new Date();
+        newDate.setMinutes(newDate.getMinutes() + 30)
+        let data: IData = JSON.parse(localStorage.getItem('data'));
 
+        if (data !== undefined && data !== null) {
+            data.date = newDate.getTime()
+
+            localStorage.setItem('data', JSON.stringify(data))
+        }
+    }
 
     private tokenValidation() {
         let data: IData = JSON.parse(localStorage.getItem('data'));

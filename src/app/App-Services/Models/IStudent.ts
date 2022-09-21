@@ -4,7 +4,7 @@ export interface IStudent {
 
     studentID: number,
     studentName: String,
-    studentSSID: string,
+    studentSID: string,
     studentUniversityID: String,
     createdDate: string,
     updateDate: string,
@@ -22,7 +22,7 @@ export interface IStudent {
 export interface IStudentReport{
     studentID:number,
     studentName:string,
-    studentSSID:string,
+    studentSID:string,
     studentUniversityID:string
     RequestCount:number,
     RequsetDelayCount:number,

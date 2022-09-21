@@ -6,7 +6,7 @@ import { BookComponent } from './Book/1.Component-book/book.component';
 import { DeskBarComponent } from './Component-desk-bar/desk-bar.component';
 import { LoginComponent } from './Component-login/login.component';
 import { HistoryComponent } from './history/history.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { MainPageComponent } from './Main/1.Component-main-page/main-page.component';
 import { StudentComponent } from './Student/1.Component-student/student.component';
 
 let addressService = new AddressService();

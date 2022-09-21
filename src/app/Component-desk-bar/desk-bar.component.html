@@ -27,7 +27,7 @@
                     fill="#FAFAFA" />
             </svg>
         </div>
-        <div class="desk-home-icon history activity1" [routerLink]="routeName.history">
+        <div class="desk-home-icon history activity1" [routerLink]="routeName.history" *ngIf="falsing()">
             <svg class="withfill" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="desk-bottom">
-        <div class="desk-bottom-icon setting">
+        <div class="desk-bottom-icon setting" *ngIf="falsing()">
             <svg class="withfill" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
