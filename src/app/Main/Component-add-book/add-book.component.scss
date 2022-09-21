@@ -1,0 +1,214 @@
+@import 'src/app/Styles/Variables.scss';
+
+.book-detail-main {
+    font-family: $regular;
+    direction: rtl;
+    height: 40vh;
+    width: 75vw;
+    background: #fff;
+}
+
+
+.book-detail-body {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    direction: rtl;
+    align-items: flex-start;
+}
+
+.book-detail-header {
+    height: 20%;
+}
+
+.header-svg.card-svg {
+    display: flex;
+}
+
+.right-values {
+    width: 30%;
+}
+
+.left-values {
+    width: 60%;
+}
+
+.book-detail-footer:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.reg-svg-deny>svg>path {
+    fill: red;
+}
+
+.book-detail-deny {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 50%;
+    color: red;
+}
+
+.reg-svg-accept>svg>path {
+    fill: green;
+}
+
+.book-detail-accept {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    height: 50%;
+    color: green;
+}
+
+.book-detail-accept>div,
+.book-detail-deny>div {
+    padding: 1px 1px;
+}
+
+.book-detail-table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    align-items: stretch;
+    background: #0000000d;
+}
+
+.book-detail-table>thead {
+    border-bottom: 1px solid #8055E0;
+    padding: 3px 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-detail-table>tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-detail-body {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+}
+
+.book-main-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: inherit;
+}
+
+.book-detail-left,
+.book-detail-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px 15px;
+}
+
+.book-detail-left {
+    border-right: 1px solid #0000001f;
+}
+
+.book-rating {
+    padding: 0px 10px;
+}
+
+.student-name,
+.request-date {
+    overflow: hidden;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-detail-detail>table {
+
+    thead>th,
+    tbody>tr>td {
+        text-align: center;
+    }
+}
+
+.available-true {
+    color: green;
+    font-family: $Bold;
+}
+
+.available-false {
+    color: red;
+    font-family: $Bold;
+}
+
+.edit-main {
+    display: flex;
+    width: calc(100% - 60px);
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 30px;
+    justify-content: space-between;
+
+    div>svg>path {
+        fill: #0000;
+        stroke: $buttonColor;
+    }
+
+    .edit>svg>path {
+        fill: $buttonColor;
+        stroke: #0000;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div:hover {
+        cursor: pointer;
+    }
+
+    div>svg>path:hover {
+        fill: #0000;
+        stroke: $buttonHoverColor;
+    }
+
+    .edit>svg>path:hover {
+        fill: $buttonHoverColor;
+        stroke: #0000;
+    }
+}
+
+.book-publisher-select {
+    width: 50%;
+}
+
+.inner-main {
+    display: flex;
+    height: 100%;
+    padding: 15px;
+    flex-direction: row;
+    width: 70%;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.inner-main>div>* {
+    padding: 6px 10px;
+}
+
+.inner-right {
+    width: inherit;
+}

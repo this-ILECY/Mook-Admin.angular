@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BookListComponent } from 'src/app/Book/Component-book-list/book-list.component';
 import { BookToBuyComponent } from 'src/app/Book/Component-book-to-buy/book-to-buy.component';
+import { AddBookComponent } from '../Component-add-book/add-book.component';
 import { NewUserComponent } from '../Component-new-user/new-user.component';
 
 @Component({
@@ -14,10 +15,10 @@ export class MainPageComponent implements OnInit {
   constructor(private dialog: MatDialog) { }
   ngOnInit(): void { }
 
-  openBookList() {
-    this.dialog.open(BookListComponent);
+  openAddBook() {
+    this.dialog.open(AddBookComponent);
   }
-  openBookListAvailable() {
+  openRegister() {
     this.dialog.open(NewUserComponent, { data: { 'IsNew': true } });
   }
   openBookToBuy() {

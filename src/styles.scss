@@ -392,6 +392,15 @@ body {
     border-left: none;
 }
 
+.input-isnew {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $lightBlackShadow;
+    border-radius: 0px;
+}
+
 /*****************************************************************************/
 /*********************************  text  ************************************/
 /*********************************  text  ************************************/
