@@ -17,14 +17,6 @@ export class AddBookComponent implements OnInit {
     private dataService: DataService) {
   }
 
-  @ViewChild('done', { static: true }) done!: ElementRef
-  @ViewChild('edit', { static: true }) edit!: ElementRef
-  @ViewChild('bookName', { static: true }) bookName!: ElementRef
-  @ViewChild('bookDesc', { static: true }) bookDesc!: ElementRef
-  @ViewChild('bookPub', { static: true }) bookPub!: ElementRef
-  @ViewChild('bookPageCount', { static: true }) bookPageCount!: ElementRef
-  @ViewChild('bookAuthor', { static: true }) bookAuthor!: ElementRef
-
   publisher: IPublisher[] = this.dataService.getPublisher();
 
   ngOnInit(): void {

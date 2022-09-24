@@ -29,6 +29,7 @@ import { LoginComponent } from './Component-login/login.component';
 import { ExitMsgboxComponent } from './1.Essential-components/Component-exit-msgbox/exit-msgbox.component';
 import { NewUserComponent } from './Main/Component-new-user/new-user.component';
 import { AddBookComponent } from './Main/Component-add-book/add-book.component';
+import { AddNewRequestComponent } from './Main/Component-add-new-request/add-new-request.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AddBookComponent } from './Main/Component-add-book/add-book.component';
     LoginComponent,
     ExitMsgboxComponent,
     NewUserComponent,
-    AddBookComponent
+    AddBookComponent,
+    AddNewRequestComponent
   ],
   imports: [
     BrowserModule,
