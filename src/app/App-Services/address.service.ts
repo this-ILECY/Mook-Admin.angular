@@ -7,9 +7,12 @@ export class AddressService {
 
   constructor() { }
 
+  private baseUrl = "https://localhost:7267";
+  public getBaseUrl
+
   private logo = "/assets/logo/logoWhite.png"
   public getLogo() { return this.logo }
- 
+
   private Purplelogo = "/assets/logo/logoPurple.png"
   public getPurpleLogo() { return this.Purplelogo }
 
