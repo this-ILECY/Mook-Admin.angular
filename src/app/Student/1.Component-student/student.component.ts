@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../App-Services/data-service';
 import { IAdmin } from '../../App-Services/Models/IAdmin';
 import { IStudent } from '../../App-Services/Models/IStudent';
@@ -8,7 +8,6 @@ import { BookRequestComponent } from '../../Book/Component-book-request-details/
 import { IRequestViewModel } from 'src/app/App-Services/Models/IRequestH';
 import { UserListComponent } from '../Component-user-list/user-list.component';
 import { StudentReportComponent } from '../Component-student-report/student-report.component';
-import { map } from 'rxjs/operators'
 import { BookRequestListComponent } from 'src/app/Book/Component-book-request-list/book-request-list.component';
 import { UserSpamReportComponent } from '../Component-user-spam-report/user-spam-report.component';
 import { IComment } from 'src/app/App-Services/Models/IComment';
@@ -27,16 +26,23 @@ export class StudentComponent implements OnInit {
 
   public admin: IAdmin[] = this.dataservice.getAdmin();
   public student: IStudent[] = this.dataservice.getStudent();
-  public request = this.dataservice.getRequest();
-  public newRequest = this.request.filter(x => x.RequestH.IsAccepted == false);
-  public overdueRequest = this.request.filter(x => x.RequestH.IsDelayed);
-  public comment: IComment[] = this.dataservice.getComment();
+  public request: IRequestViewModel[];
+  public newRequest: IRequestViewModel[];
+  public overdueRequest: IRequestViewModel[];
+  public comment: IComment[];
   public AdminName: string = this.admin[0].AdminName;
   public language: string = 'Per';
 
 
+  async ngOnInit() {
+    this.request = await this.dataservice.getRequest();
+    console.log(this.request);
 
-  ngOnInit(): void {
+    this.overdueRequest = this.request.filter(x => x.isDelayed === true);
+    this.newRequest = this.request.filter(x => x.isAccepted === false);
+
+    // this.newRequest = await this.dataservice.getRequest();
+    this.comment = await this.dataservice.getComment();
   }
   openRegisterDetail(selectedStudent: IStudent) {
 
@@ -45,8 +51,8 @@ export class StudentComponent implements OnInit {
     //   console.log(`Dialog result: ${result}`);
     // });
   }
-  openBookRequest(selectedRequest: IRequestViewModel) {    
-
+  openBookRequest(selectedRequest: IRequestViewModel) {
+    console.log(selectedRequest);
     const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log(`Dialog result: ${result}`);

@@ -5,7 +5,7 @@ export interface IComment{
     CommentID:number
     student:IStudent
     commentHeader:string
-    commentBody?:string
+    commentContent?:string
     IsAdminAccepted?:Boolean
     createdDate:string
     bookID?:number

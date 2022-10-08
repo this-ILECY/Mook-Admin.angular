@@ -5,38 +5,45 @@ export interface IRequestH {
     RequestID: number,
     studentID: number,
     AdminID: number,
-    requestAcceptDate?: string,
-    IsAccepted?: boolean,
-    RequestFinishedDate?: string,
-    IsDelayed?: boolean,
-    RequestDescription?: string,
+    requestAcceptDate: string,
+    isAccepted: boolean,
+    RequestFinishedDate: string,
+    isDelayed: boolean,
+    RequestDescription: string,
     createdDate: string,
-    IsDeleted?: boolean,
-    delayTime?:number
+    IsDeleted: boolean,
+    delayTime: number
 }
 
 
-export interface IRequestD{
-    RequestHID:number,
-    RequestDID:number,
-    BookID:number,
-    description:string,
-    IsDamaged:boolean,
-    IsLost:boolean
+export interface IRequestD {
+    RequestHID: number,
+    RequestDID: number,
+    BookID: number,
+    description: string,
+    IsDamaged: boolean,
+    IsLost: boolean
 }
 
-export interface IRequestDetailViewModel{
-    RequestHID:number,
-    RequestDID:number,
-    BookID:number,
-    description:string,
-    IsDamaged:boolean,
-    IsLost:boolean,
-    book:IBook
+export interface IRequestDetailViewModel {
+    RequestDetailID: Number,
+    RequestHeaderID: number,
+    BookID: number,
+    RequestDetailDescription: string,
+    IsDamaged: Boolean,
+    IsLost: Boolean
 }
 
-export interface IRequestViewModel{
-    RequestH?:IRequestH,
-    requestDetail?:IRequestDetailViewModel[],
-    student?:IStudent
+export interface IRequestViewModel {
+    RequestID: number,
+    RequestAcceptedDate: string,
+    isAccepted: Boolean,
+    RequestFinishedDate: string,
+    isDelayed: Boolean,
+    DelayDays: number,
+    RequestDecription: string,
+    createdDate: string,
+    IsDeleted: Boolean,
+    requestDetail: IRequestDetailViewModel[],
+    students: IStudent
 }

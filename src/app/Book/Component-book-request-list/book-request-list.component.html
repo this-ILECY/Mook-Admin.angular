@@ -26,10 +26,10 @@
             <tbody>
                 <ng-container *ngFor="let member of bookList">
                     <tr (click)="openRequestDetail(member)">
-                        <td class="student">{{member.student.studentName}}</td>
+                        <td class="student">{{member.students.studentName}}</td>
                         <td class="request">{{member.requestDetail.length}}</td>
-                        <td class="request">{{member.RequestH.createdDate}}</td>
-                        <td class="request">{{member.RequestH.RequestFinishedDate}}</td>
+                        <td class="request">{{member.createdDate}}</td>
+                        <td class="request">{{member.RequestFinishedDate}}</td>
                     </tr>
                 </ng-container>
             </tbody>

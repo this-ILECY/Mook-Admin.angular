@@ -9,16 +9,16 @@
         </div>
         <div class="header-text">جزئیات سفارش</div>
     </div>
-    <div class="book-re-body card-body" [ngClass]="{'h-85':data.selectedRequest.RequestH.IsAccepted, 'h-70':!data.selectedRequest.RequestH.IsAccepted}">
+    <div class="book-re-body card-body" [ngClass]="{'h-85':data.selectedRequest.isAccepted, 'h-70':!data.selectedRequest.isAccepted}">
         <div class="book-re-detail">
             <div class="student-name">
                 <div class="student-name-text">نام سفارش دهنده: </div>
                 <div class="student-name-value" (click)="studentDetail(data.selectedRequest.student)">
-                    {{data.selectedRequest.student.studentName}}</div>
+                    {{data.selectedRequest.students.studentName}}</div>
             </div>
             <div class="request-date">
                 <div class="request-date-text">تاریخ سفارش: </div>
-                <div class="request-date-value">{{data.selectedRequest.RequestH.createdDate}}</div>
+                <div class="request-date-value">{{data.selectedRequest.createdDate}}</div>
             </div>
 
 
@@ -40,7 +40,7 @@
             </tbody>
         </table>
     </div>
-    <ng-container *ngIf="!data.selectedRequest.RequestH.IsAccepted">
+    <ng-container *ngIf="!data.selectedRequest.isAccepted">
         <div class="book-re-footer card-footer">
             <div class="book-re-deny button">
                 <div class="deny-text">رد</div>

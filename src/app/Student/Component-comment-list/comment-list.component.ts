@@ -21,8 +21,8 @@ export class commentListComponent implements OnInit {
     private dialog: MatDialog) { }
 
   public comments: IComment[];
-  ngOnInit(): void {
-    this.comments = this.dataservice.getComment();
+  async ngOnInit() {
+    this.comments = await this.dataservice.getComment();
 
     if (this.data !== undefined) {
       this.comments = this.comments.filter(c => c.student.studentID === this.data.selectedStudent.studentID);

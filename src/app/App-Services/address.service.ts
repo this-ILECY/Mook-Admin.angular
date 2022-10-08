@@ -7,8 +7,19 @@ export class AddressService {
 
   constructor() { }
 
-  private baseUrl = "https://localhost:7267";
-  public getBaseUrl
+  private baseUrl = "https://localhost:7267/api";
+  public getBaseUrl() {
+    return this.baseUrl;
+  }
+
+  private UrlAddress = {
+    CommentList: "/Comment",
+    requestList:"/Request"
+  }
+  public getUrlAddress() {
+    return this.UrlAddress;
+  }
+
 
   private logo = "/assets/logo/logoWhite.png"
   public getLogo() { return this.logo }

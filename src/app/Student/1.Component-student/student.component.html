@@ -21,7 +21,7 @@
                                 <div class="student-name text-overflow" (click)="openStudent(member.student)">
                                     {{member.student.studentName}}</div>
                             </div>
-                            <div class="message-body">{{member.commentBody}}</div>
+                            <div class="message-body">{{member.commentContent}}</div>
                             <div class="message-footer">
                                 <div class="footer-date">{{member.createdDate}}</div>
 
@@ -104,19 +104,21 @@
                 <div class="overdue-body card-body">
                     <ng-container *ngFor="let member of overdueRequest">
                         <div class="overdue-card button" (click)="openBookRequest(member)">
-                            <div class="card-name">{{member.student.studentName}}</div>
+                            <div class="card-name">{{member.students.studentName}}</div>
                             <div class="card-date">
                                 <div class="date-text">ثبت:</div>
-                                <div class="date-value">{{member.RequestH.createdDate}}</div>
+                                <div class="date-value">{{member.createdDate}}</div>
                             </div>
                             <div class="card-count">
                                 <div class="count-text">تعداد:</div>
-                                <div class="count-value">{{member.requestDetail.length}}</div>
+                                <div class="count-value">
+                                    {{member.requestDetail}}
+                                </div>
                             </div>
                             <div class="card-delay">
                                 <div class="delay-text">تاخیر:</div>
                                 <div class="delay-value-main is-flex">
-                                    <div class="delay-value">{{member.RequestH.delayTime}}</div>
+                                    <div class="delay-value">{{member.DelayDays}}</div>
                                     <div class="delay-day">روز</div>
                                 </div>
                             </div>
@@ -194,12 +196,12 @@
                 <div class="book-re-body card-body">
                     <ng-container *ngFor='let member of newRequest'>
                         <div class="book-request-card button" (click)="openBookRequest(member)">
-                            <div class="book-request-name">{{member.student.studentName}}</div>
-                            <div class="book-request-uni-ID">{{member.student.studentUniversityID}}</div>
-                            <div class="book-request-date">{{member.RequestH.createdDate}}</div>
+                            <div class="book-request-name">{{member.students.studentName}}</div>
+                            <div class="book-request-uni-ID">{{member.students.studentUniversityID}}</div>
+                            <div class="book-request-date">{{member.createdDate}}</div>
                             <div class="book-request-book-count">
                                 <div class="request-detail-count-text">تعداد:</div>
-                                <div class="request-detail-count-value">{{member.requestDetail.length}}</div>
+                                <div class="request-detail-count-value">{{member.requestDetail}}</div>
                             </div>
                         </div>
                     </ng-container>
