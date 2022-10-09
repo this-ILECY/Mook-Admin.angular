@@ -36,13 +36,14 @@ export class StudentComponent implements OnInit {
 
   async ngOnInit() {
     this.request = await this.dataservice.getRequest();
-    console.log(this.request);
-
+    
     this.overdueRequest = this.request.filter(x => x.isDelayed === true);
     this.newRequest = this.request.filter(x => x.isAccepted === false);
-
+    
     // this.newRequest = await this.dataservice.getRequest();
     this.comment = await this.dataservice.getComment();
+    console.log(this.comment);
+
   }
   openRegisterDetail(selectedStudent: IStudent) {
 
@@ -74,5 +75,18 @@ export class StudentComponent implements OnInit {
   }
   openStudent(selectedStudent: IStudent) {
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
+  }
+
+  async acceptComment(id:number){
+    await this.dataservice.acceptComment(id);
+    this.comment = await this.dataservice.getComment();
+    console.log(this.comment);
+    
+  }
+  async deleteComment(id:number){
+    await this.dataservice.acceptComment(id);
+    this.comment = await this.dataservice.getComment();
+    console.log(this.comment);
+    
   }
 }

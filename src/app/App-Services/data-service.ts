@@ -383,7 +383,7 @@ export class DataService {
     public getRequest() {
         return this.setRequest()
     }
-    public async setRequest() {        
+    public async setRequest() {
         var settings = {
             "url": this.address.getBaseUrl() + this.address.getUrlAddress().requestList,
             "method": "GET",
@@ -395,7 +395,7 @@ export class DataService {
 
         this.Request = await $.ajax(settings).done(function (response) {
             return response;
-            
+
         });
         return this.Request;
     }
@@ -519,11 +519,17 @@ export class DataService {
     //comment header less than 20 words
     private comment: IComment[] = []
     public getComment() {
-        return this.setComment()
+        return this.getCommentList()
     }
-    private async setComment() {
+    public acceptComment(id:number){
+        this.AcceptComment(id);
+    }
+    public deleteComment(id:number){
+        this.DeleteComment(id);
+    }
+    private async getCommentList() {
         var settings = {
-            "url": this.address.getBaseUrl() + this.address.getUrlAddress().CommentList,
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().commentList,
             "method": "GET",
             "timeout": 0,
             "headers": {
@@ -535,6 +541,30 @@ export class DataService {
             return res;
         });
         return this.comment;
+    }
+    private async AcceptComment(id: number) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().commentAccept + id,
+            "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        await $.ajax(settings);
+    }
+    private async DeleteComment(id: number) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().commentDelete + id,
+            "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        await $.ajax(settings);
     }
 
     private bookToBuy: IbookToBuy[] = [

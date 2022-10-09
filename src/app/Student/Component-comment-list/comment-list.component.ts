@@ -25,7 +25,7 @@ export class commentListComponent implements OnInit {
     this.comments = await this.dataservice.getComment();
 
     if (this.data !== undefined) {
-      this.comments = this.comments.filter(c => c.student.studentID === this.data.selectedStudent.studentID);
+      this.comments = this.comments.filter(c => c.students.studentID === this.data.selectedStudent.studentID);
     }
   }
   openMessge(IsAdminAccepted: Boolean) {

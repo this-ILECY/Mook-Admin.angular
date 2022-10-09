@@ -13,8 +13,11 @@ export class AddressService {
   }
 
   private UrlAddress = {
-    CommentList: "/Comment",
-    requestList:"/Request"
+    commentList: "/Comment",
+    commentAccept:"/Comment/a/",
+    commentDelete:"/Comment/",
+    requestList:"/Request",
+
   }
   public getUrlAddress() {
     return this.UrlAddress;

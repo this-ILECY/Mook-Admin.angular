@@ -27,9 +27,9 @@
                 <ng-container *ngFor="let member of bookList">
                     <tr (click)="openRequestDetail(member)">
                         <td class="student">{{member.students.studentName}}</td>
-                        <td class="request">{{member.requestDetail.length}}</td>
+                        <td class="request">{{member.requestDetails.length}}</td>
                         <td class="request">{{member.createdDate}}</td>
-                        <td class="request">{{member.RequestFinishedDate}}</td>
+                        <td class="request">{{member.requestFinishedDate}}</td>
                     </tr>
                 </ng-container>
             </tbody>

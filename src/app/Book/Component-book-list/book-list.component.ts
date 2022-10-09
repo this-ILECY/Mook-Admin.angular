@@ -23,8 +23,11 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
     this.Books = this.dataService.getBook();
 
-    if (this.data.IsAvailable) {
-      this.Books = this.Books.filter(x => x.IsAvailable == true)
+    if (this.data !== null) {
+
+      if (this.data.IsAvailable) {
+        this.Books = this.Books.filter(x => x.IsAvailable == true)
+      }
     }
   }
 

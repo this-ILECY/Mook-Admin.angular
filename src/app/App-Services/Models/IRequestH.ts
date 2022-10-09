@@ -7,7 +7,7 @@ export interface IRequestH {
     AdminID: number,
     requestAcceptDate: string,
     isAccepted: boolean,
-    RequestFinishedDate: string,
+    requestFinishedDate: string,
     isDelayed: boolean,
     RequestDescription: string,
     createdDate: string,
@@ -38,12 +38,12 @@ export interface IRequestViewModel {
     RequestID: number,
     RequestAcceptedDate: string,
     isAccepted: Boolean,
-    RequestFinishedDate: string,
+    requestFinishedDate: string,
     isDelayed: Boolean,
     DelayDays: number,
     RequestDecription: string,
     createdDate: string,
     IsDeleted: Boolean,
-    requestDetail: IRequestDetailViewModel[],
+    requestDetails: IRequestDetailViewModel[],
     students: IStudent
 }

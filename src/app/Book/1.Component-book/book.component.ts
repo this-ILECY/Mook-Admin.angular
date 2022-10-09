@@ -13,6 +13,8 @@ export class BookComponent implements OnInit {
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    console.log();
+    
   }
   openBookList() {
     this.dialog.open(BookListComponent);
