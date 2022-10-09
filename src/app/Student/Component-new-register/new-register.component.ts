@@ -14,4 +14,8 @@ export class NewRegisterComponent {
       
   }
 
+  async setAcceptedAdmin(){
+// await 
+  }
+
 }
