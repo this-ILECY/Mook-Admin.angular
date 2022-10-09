@@ -16,6 +16,46 @@ export class DataService {
     constructor(private address: AddressService) { }
 
 
+
+    /************************************************************************************************/
+    /************************************************************************************************/
+    /***************************************  Book api  *********************************************/
+    /************************************************************************************************/
+    /************************************************************************************************/
+    private bookToBuy: IbookToBuy[] = [
+        {
+            bookToBuyId: 1,
+            studentId: 1,
+            bookName: "کتاب 1",
+            bookAuthor: "نویسنده 1",
+            bookPublisher: "انتشارات 1"
+        },
+        {
+            bookToBuyId: 2,
+            studentId: 2,
+            bookName: "کتاب 2",
+            bookAuthor: "نویسنده 2",
+            bookPublisher: "انتشارات 2"
+        },
+        {
+            bookToBuyId: 3,
+            studentId: 3,
+            bookName: "کتاب 3",
+            bookAuthor: "نویسنده 3",
+            bookPublisher: "انتشارات 3"
+        },
+        {
+            bookToBuyId: 4,
+            studentId: 4,
+            bookName: "کتاب 4",
+            bookAuthor: "نویسنده 4",
+            bookPublisher: "انتشارات 4"
+        }
+    ];
+    public getBookToBuy() {
+        return this.bookToBuy;
+    }
+
     private Book: IBook[] = [
         {
             bookID: 1,
@@ -282,101 +322,12 @@ export class DataService {
         return this.Admin;
     }
 
-    private Student: IStudent[] = [{
-        studentID: 21,
-        studentName: "سید علیرضا رضایی اصل",
-        studentSID: "002585258",
-        studentUniversityID: "00452365",
-        createdDate: "1500/13/65",
-        updateDate: "1501/15/23",
-        IsBlocked: false,
-        IsSuspended: true,
-        IsSpam: true,
-        IsRegistered: false,
-        SpamCount: 33
-    },
-    {
-        studentID: 22,
-        studentName: "مسعود مسعودی",
-        studentSID: "007585950",
-        studentUniversityID: "971456213",
-        createdDate: "1500/13/22",
-        updateDate: "1501/08/09",
-        IsBlocked: true,
-        IsSuspended: true,
-        IsSpam: true,
-        IsRegistered: false,
-        SpamCount: 45
-    },
-    {
-        studentID: 23,
-        studentName: "شیرین شیرین زاده",
-        studentSID: "008565987",
-        studentUniversityID: "9715081050",
-        createdDate: "1501/13/73",
-        updateDate: "1502/19/99",
-        IsBlocked: false,
-        IsSuspended: false,
-        IsSpam: false,
-        IsRegistered: false,
-        SpamCount: 0
-    },
-    {
-        studentID: 24,
-        studentName: "رضا رضایی",
-        studentSID: "002154515",
-        studentUniversityID: "351564332",
-        createdDate: "1000/00/02",
-        updateDate: "1401/00/31",
-        IsBlocked: true,
-        IsSuspended: false,
-        IsSpam: true,
-        IsRegistered: true,
-        SpamCount: 10
-    },
-    {
-        studentID: 25,
-        studentName: "سارا سارایی",
-        studentSID: "015455315",
-        studentUniversityID: "68743563",
-        createdDate: "1650/13/73",
-        updateDate: "1600/19/99",
-        IsBlocked: false,
-        IsSuspended: true,
-        IsSpam: true,
-        IsRegistered: true,
-        SpamCount: 1205
-    },
-    {
-        studentID: 26,
-        studentName: "اشکان اشکانیان",
-        studentSID: "351354353",
-        studentUniversityID: "5666576",
-        createdDate: "1400/13/73",
-        updateDate: "1502/19/99",
-        IsBlocked: false,
-        IsSuspended: true,
-        IsSpam: true,
-        IsRegistered: false,
-        SpamCount: 1
-    },
-    {
-        studentID: 27,
-        studentName: "محمدرضا محمدرضایی نژاد محمدشهر",
-        studentSID: "0548584",
-        studentUniversityID: "981523650",
-        createdDate: "1500/13/22",
-        updateDate: "1501/08/09",
-        IsBlocked: true,
-        IsSuspended: true,
-        IsSpam: false,
-        IsRegistered: false,
-        SpamCount: 0
-    }
-    ]
-    public getStudent() {
-        return this.Student;
-    }
+
+    /************************************************************************************************/
+    /************************************************************************************************/
+    /***************************************  request api  ******************************************/
+    /************************************************************************************************/
+    /************************************************************************************************/
 
 
     private Request: IRequestViewModel[] = []
@@ -439,94 +390,71 @@ export class DataService {
         return this.publisher;
     }
 
-    private studentReport: IStudentReport[] = [
-        {
-            studentID: 21,
-            studentName: "سید علیرضا رضایی اصل",
-            studentSID: "002585258",
-            studentUniversityID: "00452365",
-            registerDate: "1500/13/65",
-            RequestCount: 10,
-            RequsetDelayCount: 8,
-            LongestDelay: "285 day",
-            BookRent: 326,
-            BookLost: 12, BookDamaged: 325,
-        },
-        {
-            studentID: 22,
-            studentName: "مسعود مسعودی",
-            studentSID: "007585950",
-            studentUniversityID: "971456213",
-            registerDate: "1500/13/22",
-            RequestCount: 10,
-            RequsetDelayCount: 8,
-            LongestDelay: "285 day",
-            BookRent: 326,
-            BookLost: 12, BookDamaged: 325
-        },
-        {
-            studentID: 23,
-            studentName: "شیرین شیرین زاده",
-            studentSID: "008565987",
-            studentUniversityID: "9715081050",
-            registerDate: "1501/13/73",
-            RequestCount: 10,
-            RequsetDelayCount: 8,
-            LongestDelay: "285 day",
-            BookRent: 326,
-            BookLost: 12, BookDamaged: 325,
-        },
-        {
-            studentID: 24,
-            studentName: "رضا رضایی",
-            studentSID: "002154515",
-            studentUniversityID: "351564332",
-            registerDate: "1000/00/02",
-            RequestCount: 10,
-            RequsetDelayCount: 8,
-            LongestDelay: "285 day",
-            BookRent: 326,
-            BookLost: 12, BookDamaged: 325,
-        },
-        {
-            studentID: 25,
-            studentName: "سارا سارایی",
-            studentSID: "015455315",
-            studentUniversityID: "68743563",
-            registerDate: "1650/13/73",
-            RequestCount: 10,
-            RequsetDelayCount: 8,
-            LongestDelay: "285 day",
-            BookRent: 326,
-            BookLost: 12, BookDamaged: 325,
-        },
-        {
-            studentID: 26,
-            studentName: "اشکان اشکانیان",
-            studentSID: "351354353",
-            studentUniversityID: "5666576",
-            registerDate: "1400/13/73",
-            RequestCount: 10,
-            RequsetDelayCount: 8,
-            LongestDelay: "285 day",
-            BookRent: 326,
-            BookLost: 12, BookDamaged: 325,
-        }]
+
+    /************************************************************************************************/
+    /************************************************************************************************/
+    /***************************************  student api  ******************************************/
+    /************************************************************************************************/
+    /************************************************************************************************/
+    private studentReport: IStudentReport[] = []
+    private Student: IStudent[] = [];
+   
     public getStudentReport() {
-        return this.studentReport;
+        return this.GetStudentReport();
+    }
+    public getStudent() {
+        return this.GetStudent();
     }
 
+    private async GetStudentReport() {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentReport,
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        this.studentReport = await $.ajax(settings).done(function (res) {
+            return res;
+        });
+        return this.studentReport;
+    }
+    private async GetStudent(){
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList,
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        this.Student = await $.ajax(settings).done(function (res) {
+            return res;
+        });
+        return this.Student;
+    }
+
+    /************************************************************************************************/
+    /************************************************************************************************/
+    /***************************************  comment api  ******************************************/
+    /************************************************************************************************/
+    /************************************************************************************************/
     //comment header less than 20 words
     private comment: IComment[] = []
+
     public getComment() {
         return this.getCommentList()
     }
-    public acceptComment(id:number){
+    public acceptComment(id: number) {
         this.AcceptComment(id);
     }
-    public deleteComment(id:number){
+    public deleteComment(id: number) {
         this.DeleteComment(id);
     }
+
     private async getCommentList() {
         var settings = {
             "url": this.address.getBaseUrl() + this.address.getUrlAddress().commentList,
@@ -567,37 +495,5 @@ export class DataService {
         await $.ajax(settings);
     }
 
-    private bookToBuy: IbookToBuy[] = [
-        {
-            bookToBuyId: 1,
-            studentId: 1,
-            bookName: "کتاب 1",
-            bookAuthor: "نویسنده 1",
-            bookPublisher: "انتشارات 1"
-        },
-        {
-            bookToBuyId: 2,
-            studentId: 2,
-            bookName: "کتاب 2",
-            bookAuthor: "نویسنده 2",
-            bookPublisher: "انتشارات 2"
-        },
-        {
-            bookToBuyId: 3,
-            studentId: 3,
-            bookName: "کتاب 3",
-            bookAuthor: "نویسنده 3",
-            bookPublisher: "انتشارات 3"
-        },
-        {
-            bookToBuyId: 4,
-            studentId: 4,
-            bookName: "کتاب 4",
-            bookAuthor: "نویسنده 4",
-            bookPublisher: "انتشارات 4"
-        }
-    ];
-    public getBookToBuy() {
-        return this.bookToBuy;
-    }
+  
 }

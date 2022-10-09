@@ -30,7 +30,7 @@
                 <th>نویسنده</th>
             </thead>
             <tbody>
-                <ng-container *ngFor="let member of data.selectedRequest.isAccepteds">
+                <ng-container *ngFor="let member of data.selectedRequest.requestDetails">
                     <tr (click)="openBookDetail(member.books)">
                         <td>{{member.books.bookName}}</td>
                         <td>{{member.books.publisher}}</td>

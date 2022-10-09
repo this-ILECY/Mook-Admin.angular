@@ -17,6 +17,8 @@ export class AddressService {
     commentAccept:"/Comment/a/",
     commentDelete:"/Comment/",
     requestList:"/Request",
+    studentReport:"/Student/rpt",
+    studentList:"/Student"
 
   }
   public getUrlAddress() {

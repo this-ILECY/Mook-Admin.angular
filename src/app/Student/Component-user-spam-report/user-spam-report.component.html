@@ -25,11 +25,11 @@
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let member of Students">
-                        <tr (click)="openStudentDetail(member)" *ngIf="member.IsSpam">
+                        <tr (click)="openStudentDetail(member)" *ngIf="member.isSpam">
                             <th>{{member.studentID}}</th>
                             <td>{{member.studentName}}</td>
                             <td>{{member.studentUniversityID}}</td>
-                            <td>{{member.SpamCount}}</td>
+                            <td>{{member.spamCount}}</td>
                         </tr>
                     </ng-container>
                 </tbody>

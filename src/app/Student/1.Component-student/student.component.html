@@ -181,7 +181,7 @@
                         <div class="header-text">درخواست های ثبت نام</div>
                     </div>
                     <div class="register-body card-body">
-                        <ng-container *ngFor="let member of student">
+                        <ng-container *ngFor="let member of newStudent">
                             <div class="new-reg-main" mat-button (click)="openRegisterDetail(member)">
                                 <div class="reg-name">{{member.studentName}}</div>
                                 <div class="reg-uni-ID">{{member.studentUniversityID}}</div>

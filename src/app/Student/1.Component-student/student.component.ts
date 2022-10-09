@@ -25,7 +25,8 @@ export class StudentComponent implements OnInit {
     private dialog: MatDialog) { }
 
   public admin: IAdmin[] = this.dataservice.getAdmin();
-  public student: IStudent[] = this.dataservice.getStudent();
+  public student: IStudent[];
+  public newStudent: IStudent[];
   public request: IRequestViewModel[];
   public newRequest: IRequestViewModel[];
   public overdueRequest: IRequestViewModel[];
@@ -36,7 +37,8 @@ export class StudentComponent implements OnInit {
 
   async ngOnInit() {
     this.request = await this.dataservice.getRequest();
-    
+    this.student = await this.dataservice.getStudent();
+    this.newStudent = this.student.filter(x => x.isRegistered === false);
     this.overdueRequest = this.request.filter(x => x.isDelayed === true);
     this.newRequest = this.request.filter(x => x.isAccepted === false);
     

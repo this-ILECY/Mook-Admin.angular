@@ -8,27 +8,24 @@ export interface IStudent {
     studentUniversityID: String,
     createdDate: string,
     updateDate: string,
-    IsDeleted?: boolean,
-    AdminID?: number,
+    isDeleted?: boolean,
+    adminID?: number,
     userID?: number,
-    IsBlocked?:boolean,
-    IsSuspended?:boolean,
-    IsSpam?: boolean,
-    SpamCount?: number,
-    ReportPoint?: number,
-    IsRegistered?:boolean
+    isBlocked?:boolean,
+    isSuspended?:boolean,
+    isSpam?: boolean,
+    spamCount?: number,
+    reportPoint?: number,
+    isRegistered?:boolean
 }
 
 export interface IStudentReport{
-    studentID:number,
-    studentName:string,
-    studentSID:string,
-    studentUniversityID:string
-    RequestCount:number,
-    RequsetDelayCount:number,
-    LongestDelay:string,
-    BookRent:number,
-    BookDamaged:number,
-    BookLost?:number
+    students:IStudent
+    requestCount:number,
+    requsetDelayCount:number,
+    longestDelay:string,
+    bookRent:number,
+    bookDamaged:number,
+    bookLost?:number
     registerDate:string
 }

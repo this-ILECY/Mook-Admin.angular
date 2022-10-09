@@ -18,10 +18,12 @@ export class UserSpamReportComponent implements OnInit {
 
 
   Students!: IStudent[]
-  ngOnInit(): void {
-    this.Students = this.dataService.getStudent();
+  async ngOnInit() {
+    this.Students = await this.dataService.getStudent();
+    console.log(this.Students);
+    
   }
-  openStudentDetail(selectedStudent:IStudent){
+  openStudentDetail(selectedStudent: IStudent) {
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
   }
 

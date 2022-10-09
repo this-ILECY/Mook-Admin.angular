@@ -30,6 +30,7 @@ export class StudentDetailsComponent implements OnInit {
 
   //on intialization
   ngOnInit(): void {
+   console.log(this.data);
    
     this.editForm = [
       this.Name.nativeElement,

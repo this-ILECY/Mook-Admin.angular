@@ -15,21 +15,22 @@ export class SearchTextBoxComponent implements OnInit {
   constructor(private dataservice: DataService,
     private dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.student = await this.dataservice.getStudent();
   }
 
   @ViewChild('mainsearch', { static: true }) mainsearch: ElementRef;
 
-  public student: IStudent[] = this.dataservice.getStudent();
+  public student: IStudent[];
   public book: IBook[] = this.dataservice.getBook();
 
   showsearch() {
     const dialogRef = this.dialog.open(SearchModalComponent);
   }
 
-  
+
 }
 
-document.addEventListener('keyDown',()=>{
-    
+document.addEventListener('keyDown', () => {
+
 })

@@ -20,13 +20,14 @@ export class SearchModalComponent implements OnInit {
   constructor(private dataservice: DataService,
     private dialog: MatDialog) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.student = await this.dataservice.getStudent();
   }
 
   @ViewChild('span', { static: true }) span: ElementRef;
   @ViewChild('studentAction', { static: true }) studentAction: ElementRef;
 
-  public student: IStudent[] = this.dataservice.getStudent();
+  public student: IStudent[];
   public book: IBook[] = this.dataservice.getBook();
   public filteredBook;
   public filteredStudent;

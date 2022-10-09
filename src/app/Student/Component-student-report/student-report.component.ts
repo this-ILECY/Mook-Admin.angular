@@ -19,20 +19,16 @@ export class StudentReportComponent implements OnInit {
 
   studentReport!: IStudentReport[];
 
-  ngOnInit(): void {
-    this.studentReport = this.dataservice.getStudentReport();
+  async ngOnInit() {
+    this.studentReport = await this.dataservice.getStudentReport();
 
     if (this.data != (undefined || null)) {
-      this.studentReport = this.studentReport.filter(x => x.studentID == this.data.selectedStudent.studentID);
+      this.studentReport = this.studentReport.filter(x => x.students.studentID == this.data.selectedStudent.studentID);
     }
 
   }
 
-  openStudentDetail(studentID: number) {
-
-
-    let selectedStudent: IStudent | undefined = this.dataservice.getStudent().find(x => x.studentID == studentID);
-
+  openStudentDetail(selectedStudent: IStudent) {
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
   }
 
