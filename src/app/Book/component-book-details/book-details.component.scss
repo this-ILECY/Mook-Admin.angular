@@ -198,10 +198,38 @@
 .inner-main {
     display: flex;
     height: 100%;
-    flex-direction: row;
+    flex-direction: column;
     width: 70%;
     align-self: center;
     justify-content: space-between;
+    // $n:1,2,3,4,5,6,7,8,9;
+
+    // @each $number in $n {
+    // $divided : $number % 2;
+    // @if $divided % 2 == 0 {
+    // .inner-main:nth-child(#{$number}){
+    //     background-color: #000;
+    //     }
+    //  } 
+    //@else{
+    //     .class:nth-child(#{$number}){
+    //     height:3px;
+    //     }
+    // }
+    //}
+    .child-main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .ch-0{
+            width: 30%;
+        }
+        .ch-1{
+            width: 65%;
+        }
+    }
+
 }
 
 .inner-main>div>* {

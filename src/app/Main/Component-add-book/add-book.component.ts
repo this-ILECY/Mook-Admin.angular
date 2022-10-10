@@ -17,7 +17,6 @@ export class AddBookComponent implements OnInit {
     private dataService: DataService) {
   }
 
-  publisher: IPublisher[] = this.dataService.getPublisher();
 
   ngOnInit(): void {
   }

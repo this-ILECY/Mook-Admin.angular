@@ -25,7 +25,6 @@ export class BookDetailsComponent implements OnInit {
   @ViewChild('bookPageCount', { static: true }) bookPageCount!: ElementRef
   @ViewChild('bookAuthor', { static: true }) bookAuthor!: ElementRef
 
-  publisher: IPublisher[] = this.dataService.getPublisher();
 
   ngOnInit(): void {
   }

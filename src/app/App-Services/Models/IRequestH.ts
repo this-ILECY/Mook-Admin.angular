@@ -2,7 +2,7 @@ import { IBook } from "./IBook"
 import { IStudent } from "./IStudent";
 
 export interface IRequestH {
-    RequestID: number,
+    requestID: number,
     studentID: number,
     AdminID: number,
     requestAcceptDate: string,
@@ -35,15 +35,15 @@ export interface IRequestDetailViewModel {
 }
 
 export interface IRequestViewModel {
-    RequestID: number,
-    RequestAcceptedDate: string,
+    requestID: number,
+    requestAcceptedDate: string,
     isAccepted: Boolean,
     requestFinishedDate: string,
     isDelayed: Boolean,
-    DelayDays: number,
-    RequestDecription: string,
+    delayDays: number,
+    requestDecription: string,
     createdDate: string,
-    IsDeleted: Boolean,
+    isDeleted: Boolean,
     requestDetails: IRequestDetailViewModel[],
     students: IStudent
 }

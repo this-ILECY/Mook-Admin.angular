@@ -18,15 +18,14 @@
                     class="book-desc input-disable input"></textarea>
             </div>
             <div class="book-detail-left">
-                <select #bookPub class="book-publisher-select input-disable input input-isnew" name="" id="">
-                    <ng-container *ngFor="let member of publisher">
+                <input type="text" #bookPub class="book-publisher-select input-disable input input-isnew" name="" id="">
+                    <!-- <ng-container *ngFor="let member of publisher">
                         <option class="book-publisher-option" value="{{member.PublisherID}}">
                             <div class="publisher-main">
                                 <div class="publisher-name">{{member.PublisherName}}</div>
                             </div>
                         </option>
-                    </ng-container>
-                </select>
+                    </ng-container> -->
                 <div class="inner-main">
                     <div class="inner-right">
                         <div class="book-page-title">تعداد صفحات کتاب</div>

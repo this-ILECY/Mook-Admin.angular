@@ -42,33 +42,47 @@
                     class="book-desc input-disable input">{{data.selectedBook.bookDescription}}</textarea>
             </div>
             <div class="book-detail-left">
-                <select #bookPub class="book-publisher-select input-disable input" name="" id="" disabled>
-                    <ng-container *ngFor="let member of publisher">
-                        <option class="book-publisher-option" value="{{member.PublisherID}}">
-                            <div class="publisher-main">
-                                <div class="publisher-name">{{member.PublisherName}}</div>
-                            </div>
-                        </option>
-                    </ng-container>
-                </select>
+                <!-- <ng-container *ngFor="let member of publisher">
+                    <option class="book-publisher-option" value="{{member.PublisherID}}">
+                        <div class="publisher-main">
+                            <div class="publisher-name">{{member.PublisherName}}</div>
+                        </div>
+                    </option>
+                </ng-container> -->
                 <div class="inner-main">
-                    <div class="inner-right">
-                        <div class="rating-title">امتیاز کتاب</div>
-                        <div class="rating-count-title">تعداد امتیاز</div>
-                        <div class="book-page-title">تعداد صفحات کتاب</div>
-                        <div class="book-date-title">تاریخ ثبت کتاب</div>
-                        <div class="book-date-title">نویسنده</div>
+                    <div class="child-main">
+                        <div class="ch-0 rating-title">انتشارات:</div>
+                        <input type="text" #bookPub class="ch-1 book-publisher-select input-disable input"
+                            value="{{data.selectedBook.publisher}}" disabled>
                     </div>
-                    <div class="inner-left">
-                        <div class="rating-value">{{data.selectedBook.bookRating}}</div>
-                        <div class="rating-count-value">{{data.selectedBook.BookratingCount}}</div>
-                        <input type="text" #bookPageCount class="book-page-value input-disable input" disabled
+                    <div class="child-main">
+                        <div class="ch-0 rating-title">امتیاز کتاب:</div>
+                        <div class="ch-1 rating-value">{{data.selectedBook.bookRating}}</div>
+                    </div>
+
+                    <div class="child-main">
+                        <div class="ch-0 rating-count-title">تعداد امتیاز:</div>
+                        <div class="ch-1 rating-count-value">{{data.selectedBook.BookratingCount}}</div>
+                    </div>
+
+                    <div class="child-main">
+                        <div class="ch-0 book-page-title">تعداد صفحات کتاب:</div>
+                        <input type="text" #bookPageCount class="ch-1 book-page-value input-disable input" disabled
                             value="{{data.selectedBook.bookPagesCount}}" placeholder="تعداد صفحات کتاب">
-                        <div type="text" class="book-date-value input-disable input">
-                            {{data.selectedBook.createdDate}}</div>
-                        <input type="text" #bookAuthor class="book-author input-disable input" disabled
-                            value="{{data.selectedBook.Author}}" placeholder="نویسنده">
                     </div>
+
+                    <div class="child-main">
+                        <div class="ch-0 book-date-title">تاریخ ثبت کتاب:</div>
+                        <div type="text" class="ch-1 book-date-value input-disable input">
+                            {{data.selectedBook.createdDate}}</div>
+                    </div>
+
+                    <div class="child-main">
+                        <div class="ch-0 book-date-title">نویسنده:</div>
+                        <input type="text" #bookAuthor class="ch-1 book-author input-disable input" disabled
+                            value="{{data.selectedBook.author}}" placeholder="نویسنده">
+                    </div>
+
                 </div>
             </div>
         </div>

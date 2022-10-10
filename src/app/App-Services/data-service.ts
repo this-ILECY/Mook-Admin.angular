@@ -332,9 +332,16 @@ export class DataService {
 
     private Request: IRequestViewModel[] = []
     public getRequest() {
-        return this.setRequest()
+        return this.GetRequest()
     }
-    public async setRequest() {
+    public acceptRequest(id: number) {
+        return this.AcceptRequest(id);
+    }
+    public deleteRequest(id: number) {
+        return this.DeleteRequest(id);
+    }
+
+    private async GetRequest() {
         var settings = {
             "url": this.address.getBaseUrl() + this.address.getUrlAddress().requestList,
             "method": "GET",
@@ -350,44 +357,37 @@ export class DataService {
         });
         return this.Request;
     }
+    private async AcceptRequest(id: number) {
+        let requestChange = this.address.getUrlAddress().requestChange.replace("{0}", id.toString())
+            .replace("{1}", this.address.getMethod().requestMethods.IsRegistered.toString())
+        var settings = {
+            "url": this.address.getBaseUrl() + requestChange,
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
 
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async DeleteRequest(id: number) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().requestDelete + id,
+            "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
 
-    private publisher: IPublisher[] = [
-        {
-            PublisherID: 1,
-            PublisherName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی ",
-            PublisherPhone: "09141414114",
-            publisherAddress: " شهر خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
-            CreatedDate: '1400/12/12',
-            IsDeleted: false,
-        },
-        {
-            PublisherID: 2,
-            PublisherName: "کتاب های شهر",
-            PublisherPhone: "09121212112",
-            publisherAddress: " شهر خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
-            CreatedDate: '1404/10/12',
-            IsDeleted: false,
-        },
-        {
-            PublisherID: 3,
-            PublisherName: "نشر کتاب",
-            PublisherPhone: "09131313113",
-            publisherAddress: " شهر خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
-            CreatedDate: '1500/09/05',
-            IsDeleted: false,
-        },
-        {
-            PublisherID: 4,
-            PublisherName: "فروشگاه  شهر کتاب",
-            PublisherPhone: "09131313113",
-            publisherAddress: " شهر خیابان 1 پلاک 2 کوچه 3 طبقه 4 واحد 5",
-            CreatedDate: '1500/09/05',
-            IsDeleted: false,
-        },
-    ]
-    public getPublisher() {
-        return this.publisher;
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
     }
 
 
@@ -398,12 +398,18 @@ export class DataService {
     /************************************************************************************************/
     private studentReport: IStudentReport[] = []
     private Student: IStudent[] = [];
-   
+
     public getStudentReport() {
         return this.GetStudentReport();
     }
     public getStudent() {
         return this.GetStudent();
+    }
+    public acceptNewRegister(id: number) {
+        return this.AcceptNewRegister(id);
+    }
+    public deleteNewRegister(id: number) {
+        return this.DeleteNewRegister(id)
     }
 
     private async GetStudentReport() {
@@ -421,7 +427,7 @@ export class DataService {
         });
         return this.studentReport;
     }
-    private async GetStudent(){
+    private async GetStudent() {
         var settings = {
             "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList,
             "method": "GET",
@@ -435,6 +441,36 @@ export class DataService {
             return res;
         });
         return this.Student;
+    }
+    private async AcceptNewRegister(id: number) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().newRegisterAccept + id,
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async DeleteNewRegister(id: number) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().newRegisterDelete + id,
+            "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
     }
 
     /************************************************************************************************/
@@ -495,5 +531,5 @@ export class DataService {
         await $.ajax(settings);
     }
 
-  
+
 }

@@ -14,17 +14,32 @@ export class AddressService {
 
   private UrlAddress = {
     commentList: "/Comment",
-    commentAccept:"/Comment/a/",
-    commentDelete:"/Comment/",
-    requestList:"/Request",
-    studentReport:"/Student/rpt",
-    studentList:"/Student"
+    commentAccept: "/Comment/a/",
+    commentDelete: "/Comment/",
+    requestList: "/Request",
+    studentReport: "/Student/rpt",
+    studentList: "/Student",
+    newRegisterDelete: "/Student/",
+    newRegisterAccept: "/Student/",
+    requestChange: "/Request/{0}?method={1}",
+    requestDelete: "/Request/",
 
   }
+
   public getUrlAddress() {
     return this.UrlAddress;
   }
 
+  private methods = {
+    requestMethods: {
+      IsBlocked: 0,
+      IsRegistered: 1,
+      IsSuspended: 2
+    }
+  }
+  public getMethod(){
+    return this.methods;
+  }
 
   private logo = "/assets/logo/logoWhite.png"
   public getLogo() { return this.logo }

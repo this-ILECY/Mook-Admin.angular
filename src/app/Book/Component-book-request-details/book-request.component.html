@@ -41,7 +41,7 @@
         </table>
     </div>
     <ng-container *ngIf="!data.selectedRequest.isAccepted">
-        <div class="book-re-footer card-footer">
+        <div class="book-re-footer card-footer" (click)="setDeletedRequest(data.selectedRequest.requestID)">
             <div class="book-re-deny button">
                 <div class="deny-text">رد</div>
                 <div class="reg-svg-deny is-flex">
@@ -52,7 +52,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="book-re-accept button">
+            <div class="book-re-accept button" (click)="setAcceptedAdmin(data.selectedRequest.requestID)">
                 <div class="accept-text">پذیرش</div>
                 <div class="reg-svg-accept is-flex">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

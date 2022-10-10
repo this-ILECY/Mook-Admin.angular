@@ -15,7 +15,7 @@
                 </div>
                 <div class="comment-body card-body">
                     <ng-container *ngFor="let member of comment">
-                        <div class="message">
+                        <div class="message  comment-number-{{member.commentID}}">
                             <div class="message-header">
                                 <div class="header-text">{{member.commentHeader}}</div>
                                 <div class="student-name text-overflow" (click)="openStudent(member.students)">
@@ -128,7 +128,7 @@
                             <div class="card-delay">
                                 <div class="delay-text">تاخیر:</div>
                                 <div class="delay-value-main is-flex">
-                                    <div class="delay-value">{{member.DelayDays}}</div>
+                                    <div class="delay-value">{{member.delayDays}}</div>
                                     <div class="delay-day">روز</div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                     </div>
                     <div class="register-body card-body">
                         <ng-container *ngFor="let member of newStudent">
-                            <div class="new-reg-main" mat-button (click)="openRegisterDetail(member)">
+                            <div class="new-reg-main new-register-number-{{member.studentID}}" mat-button (click)="openRegisterDetail(member)">
                                 <div class="reg-name">{{member.studentName}}</div>
                                 <div class="reg-uni-ID">{{member.studentUniversityID}}</div>
                                 <div class="reg-date">{{member.createdDate}}</div>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="book-re-body card-body">
                     <ng-container *ngFor='let member of newRequest'>
-                        <div class="book-request-card button" (click)="openBookRequest(member)">
+                        <div class="book-request-card button new-request-number-{{member.requestID}}" (click)="openBookRequest(member)">
                             <div class="book-request-name">{{member.students.studentName}}</div>
                             <div class="book-request-uni-ID">{{member.students.studentUniversityID}}</div>
                             <div class="book-request-date">{{member.createdDate}}</div>
