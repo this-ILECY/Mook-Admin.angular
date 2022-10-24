@@ -13,25 +13,25 @@ export class AddressService {
   }
 
   private UrlAddress = {
+    Book: "/Book",
     commentList: "/Comment",
-    commentAccept: "/Comment/a/",
-    commentDelete: "/Comment/",
-    requestList: "/Request",
-    studentReport: "/Student/rpt",
-    studentList: "/Student",
-    newRegisterDelete: "/Student/",
-    newRegisterAccept: "/Student/",
-    requestChange: "/Request/{0}?method={1}",
-    requestDelete: "/Request/",
+    commentAccept:"/Comment/a/",
+    commentDelete:"/Comment/",
+    requestList:"/Request",
+    studentReport:"/Student/rpt",
+    studentList:"/Student",
+    studentChange:"/Student?id={0}&method={1}",
+    newRegisterDelete:"/Student/",
+    requestAccept:"/Request/",
+    requestDelete:"/Request/",
 
   }
-
   public getUrlAddress() {
     return this.UrlAddress;
   }
 
   private methods = {
-    requestMethods: {
+    student: {
       IsBlocked: 0,
       IsRegistered: 1,
       IsSuspended: 2

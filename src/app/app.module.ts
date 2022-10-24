@@ -30,6 +30,8 @@ import { ExitMsgboxComponent } from './1.Essential-components/Component-exit-msg
 import { NewUserComponent } from './Main/Component-new-user/new-user.component';
 import { AddBookComponent } from './Main/Component-add-book/add-book.component';
 import { AddNewRequestComponent } from './Main/Component-add-new-request/add-new-request.component';
+import { StudentSelectComponent } from './Main/Compenent-student-select/student-select.component';
+import { BookSelectComponent } from './Main/Component-book-select/book-select.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { AddNewRequestComponent } from './Main/Component-add-new-request/add-new
     ExitMsgboxComponent,
     NewUserComponent,
     AddBookComponent,
-    AddNewRequestComponent
+    AddNewRequestComponent,
+    StudentSelectComponent,
+    BookSelectComponent
   ],
   imports: [
     BrowserModule,

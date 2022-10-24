@@ -1,18 +1,18 @@
 export interface IBook{
     bookID:number,
-    PubID?:number,
-    PubName:string,
     bookName:string,
-    bookPagesCount:number,
+    bookratingCount:number,
     bookRating:number,
-    BookratingCount:number,
+    publisher:string,
+    author:string
+    bookPagesCount:number,
     bookDescription:string,
     createdDate:string,
-    UpdateDate:string,
-    IsDeleted:boolean,
-    AdminID:number,
-    Author?:string
-    IsAvailable?:boolean
+    updateDate:string,
+    isDeleted:boolean,
+    isDamaged:boolean,
+    isAvailable?:boolean
+    adminID:number,
 }
 
 export interface IbookToBuy{

@@ -16,6 +16,27 @@ export class DataService {
     constructor(private address: AddressService) { }
 
 
+    private Admin: IAdmin[] = [{
+        AdminID: 1,
+        AdminName: "امیرحسین",
+        AdminPhone: "09123421550",
+        createdDate: "1401/08/35",
+        updateDate: "1401/13/68",
+        IsDeleted: false,
+    }]
+    public getAdmin() {
+        return this.Admin;
+    }
+    /************************************************************************************************/
+    /************************************************************************************************/
+    /****************************************  Message **********************************************/
+    /************************************************************************************************/
+    /************************************************************************************************/
+
+    public message = {
+        infoUpdatedSuccessfully: "اطلاعات با موفقیت آپدیت شد"
+    }
+
 
     /************************************************************************************************/
     /************************************************************************************************/
@@ -56,270 +77,93 @@ export class DataService {
         return this.bookToBuy;
     }
 
-    private Book: IBook[] = [
-        {
-            bookID: 1,
-            PubID: 1, bookName: "مهندسی نرم افزار",
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: true, Author: "نوید نویدی"
-        },
-        {
-            bookID: 2,
-            bookName: "فیزیک هالیدی",
-            PubID: 2,
-            PubName: "کتاب های شهر",
-            bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: true, Author: "دیوید هالیدی"
-        },
-        {
-            bookID: 3,
-            PubID: 1, bookName: "بیشعوری",
-            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی ", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: true, Author: "خاویر کرمنت"
-        },
-        {
-            bookID: 4,
-            bookName: "غورباقه ات را قورت بده",
-            PubID: 2,
-            PubName: "کتاب های شهر",
-            bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "بریان تریسی"
-        },
-        {
-            bookID: 5,
-            PubID: 1, bookName: "مرد مواد فروش",
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "والتر وایت"
-        },
-        {
-            bookID: 6,
-            bookName: "میکروکنترلر",
-            PubID: 2,
-            PubName: "کتاب های شهر", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "محمود فریدونی"
-        },
-        {
-            bookID: 7,
-            PubID: 1, bookName: "چگونه استاد راهنما شویم",
-            PubName: "کتاب های شهر", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: true, Author: "ویکتور هوگو"
-        },
-        {
-            bookID: 8,
-            bookName: "حسن کچل",
-            PubID: 4,
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: true, Author: "چارلز دیکنز"
-        },
-        {
-            bookID: 9,
-            PubID: 1, bookName: "دروس بی مزه",
-            PubName: "انتشارات دانشجویان جوان دانشکده فنی مهندسی ", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: " لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: true, Author: "جمعی از اساتید"
-        },
-        {
-            bookID: 10,
-            PubID: 1, bookName: "سیستم عامل",
-            PubName: "کتاب های شهر", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "یوبابا"
-        },
-        {
-            bookID: 11,
-            bookName: "Advanced English Grammar",
-            PubID: 4,
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "James Mark"
-        },
-        {
-            bookID: 12,
-            bookName: "وصایای امام!",
-            PubID: 4,
-            PubName: "فروشگاه شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "امام!"
-        },
-        {
-            bookID: 13,
-            bookName: "نبرد من",
-            PubID: 4,
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "آدولف هیتلر"
-        },
-        {
-            bookID: 14,
-            bookName: "دنیای خالی از قهرمان",
-            PubID: 4,
-            PubName: "کتاب های شهر", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "براندون مول"
-        },
-        {
-            bookID: 15,
-            bookName: "در جست و جوی معما",
-            PubID: 4,
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "سیدنی شلدون"
-        },
-        {
-            bookID: 16,
-            bookName: "سیلماریلیون",
-            PubID: 4,
-            PubName: "فروشگاه آخرین کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "تالکین"
-        },
-        {
-            bookID: 17,
-            bookName: "هری پاتر",
-            PubID: 4,
-            PubName: "فروشگاه  شهر کتاب", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "رولینگ"
-        },
-        {
-            bookID: 18,
-            bookName: "آشفتگی",
-            PubID: 4,
-            PubName: "فروشگاه بزرگ شهر ", bookPagesCount: 320,
-            bookRating: 3.2,
-            BookratingCount: 56,
-            bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            createdDate: '1401/05/06',
-            UpdateDate: '1401/06/17',
-            IsDeleted: false,
-            AdminID: 1,
-            IsAvailable: false, Author: "توماس برنهارد"
-        }
-    ]
+    private Book: IBook[] = []
+
+    public updateBook(book: IBook) {
+        return this.UpdateBook(book);
+    }
+    public createBook(book: IBook) {
+        return this.CreateBook(book);
+    }
     public getBook() {
-        return this.Book;
+        return this.GetBook();
     }
 
-    private Admin: IAdmin[] = [{
-        AdminID: 1,
-        AdminName: "امیرحسین",
-        AdminPhone: "09123421550",
-        createdDate: "1401/08/35",
-        updateDate: "1401/13/68",
-        IsDeleted: false,
-    }]
-    public getAdmin() {
-        return this.Admin;
+    private async GetBook() {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().Book,
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+        this.Book = await $.ajax(settings).done(function (response) {
+            return response;
+
+        });
+        return this.Book;
+    }
+    private async UpdateBook(book: IBook) {
+
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().Book,
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+                "Accept": "text/plain"
+            },
+            "data": JSON.stringify({
+                "bookID": book.bookID,
+                "bookName": book.bookName,
+                "bookPagesCount": book.bookPagesCount,
+                "bookRating": book.bookRating,
+                "publisher": book.publisher,
+                "author": book.author,
+                "bookRatingCount": book.bookratingCount,
+                "bookDescription": book.bookDescription,
+                "isAvailable": book.isAvailable,
+                "createdDate": book.createdDate,
+                "isDamaged": book.isDamaged
+            }),
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async CreateBook(book: IBook) {
+
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().Book,
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+                "Accept": "text/plain"
+            },
+            "data": JSON.stringify({
+                "bookID": book.bookID,
+                "AcceptedAdminID":book.adminID,
+                "bookName": book.bookName,
+                "bookPagesCount": book.bookPagesCount,
+                "bookRating": book.bookRating,
+                "publisher": book.publisher,
+                "author": book.author,
+                "bookRatingCount": book.bookratingCount,
+                "bookDescription": book.bookDescription,
+                "isAvailable": book.isAvailable,
+                "createdDate": book.createdDate,
+                "isDamaged": book.isDamaged
+            }),
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
     }
 
 
@@ -358,10 +202,9 @@ export class DataService {
         return this.Request;
     }
     private async AcceptRequest(id: number) {
-        let requestChange = this.address.getUrlAddress().requestChange.replace("{0}", id.toString())
-            .replace("{1}", this.address.getMethod().requestMethods.IsRegistered.toString())
+
         var settings = {
-            "url": this.address.getBaseUrl() + requestChange,
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().requestAccept + id,
             "method": "PUT",
             "timeout": 0,
             "headers": {
@@ -411,6 +254,18 @@ export class DataService {
     public deleteNewRegister(id: number) {
         return this.DeleteNewRegister(id)
     }
+    public updateStudent(student: IStudent) {
+        return this.UpdateStudent(student);
+    }
+    public createStudent(student: IStudent) {
+        return this.CreateStudent(student);
+    }
+    public suspendStudent(id: number) {
+        return this.SuspendStudent(id);
+    }
+    public blockStudent(id: number) {
+        return this.BlockStudent(id);
+    }
 
     private async GetStudentReport() {
         var settings = {
@@ -443,9 +298,11 @@ export class DataService {
         return this.Student;
     }
     private async AcceptNewRegister(id: number) {
+        let studentChange = this.address.getUrlAddress().studentChange
+            .replace("{0}", id.toString()).replace("{1}", this.address.getMethod().student.IsRegistered.toString())
         var settings = {
-            "url": this.address.getBaseUrl() + this.address.getUrlAddress().newRegisterAccept + id,
-            "method": "PUT",
+            "url": this.address.getBaseUrl() + studentChange,
+            "method": "PATCH",
             "timeout": 0,
             "headers": {
                 "Accept": "text/plain"
@@ -461,6 +318,99 @@ export class DataService {
         var settings = {
             "url": this.address.getBaseUrl() + this.address.getUrlAddress().newRegisterDelete + id,
             "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async UpdateStudent(student: IStudent) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList,
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+                "Accept": "text/plain"
+            },
+            "data": JSON.stringify({
+                "studentID": student.studentID,
+                "studentName": student.studentName,
+                "studentSSID": student.studentSSID,
+                "studentUniversityID": student.studentUniversityID,
+                "spamCount": student.spamCount,
+                "isSuspended": student.isSuspended,
+                "isRegistered": student.isRegistered,
+                "createdDate": student.createdDate,
+                "isBlocked": student.isBlocked,
+                "reportPoint": student.reportPoint,
+                "isSpam": student.isSpam
+            }),
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async CreateStudent(student: IStudent) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList,
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+                "Accept": "text/plain"
+            },
+            "data": JSON.stringify({
+                "studentID": student.studentID,
+                "studentName": student.studentName,
+                "studentSSID": student.studentSSID,
+                "studentUniversityID": student.studentUniversityID,
+                "spamCount": student.spamCount,
+                "isSuspended": student.isSuspended,
+                "isRegistered": student.isRegistered,
+                "createdDate": student.createdDate,
+                "isBlocked": student.isBlocked,
+                "reportPoint": student.reportPoint,
+                "isSpam": student.isSpam,
+                "AcceptedAdminID":student.adminID
+            }),
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async SuspendStudent(id: number) {
+        let studentChange = this.address.getUrlAddress().studentChange
+            .replace("{0}", id.toString()).replace("{1}", this.address.getMethod().student.IsSuspended.toString())
+        var settings = {
+            "url": this.address.getBaseUrl() + studentChange,
+            "method": "PATCH",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
+    private async BlockStudent(id: number) {
+        let studentChange = this.address.getUrlAddress().studentChange
+            .replace("{0}", id.toString()).replace("{1}", this.address.getMethod().student.IsBlocked.toString())
+        var settings = {
+            "url": this.address.getBaseUrl() + studentChange,
+            "method": "PATCH",
             "timeout": 0,
             "headers": {
                 "Accept": "text/plain"

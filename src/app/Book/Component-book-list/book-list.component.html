@@ -21,8 +21,8 @@
                     <ng-container *ngFor="let member of Books">
                         <tr (click)="openBookDetail(member)">
                             <th class="text-overflow">{{member.bookName}}</th>
-                            <td class="text-overflow">{{member.PubName}}</td>
-                            <td class="text-overflow">{{member.Author}}</td>
+                            <td class="text-overflow">{{member.publisher}}</td>
+                            <td class="text-overflow">{{member.author}}</td>
                         </tr>
                     </ng-container>
                 </tbody>

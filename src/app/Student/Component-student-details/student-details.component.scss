@@ -79,37 +79,6 @@
 }
 
 
-.student-detail-deny {
-    display: flex;
-    width: 30%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-    height: 50%;
-    color: red;
-}
-
-.reg-svg-accept>svg>path {
-    fill: green;
-}
-
-.student-detail-accept {
-    display: flex;
-    width: 30%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid green;
-    height: 50%;
-    color: green;
-}
-
-.student-detail-accept>div,
-.student-detail-deny>div {
-    padding: 1px 1px;
-}
-
 .student-detail-table {
     display: flex;
     flex-direction: column;

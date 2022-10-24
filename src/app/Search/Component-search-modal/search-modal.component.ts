@@ -22,13 +22,14 @@ export class SearchModalComponent implements OnInit {
 
   async ngOnInit() {
     this.student = await this.dataservice.getStudent();
+    this.book = await this.dataservice.getBook();
   }
 
   @ViewChild('span', { static: true }) span: ElementRef;
   @ViewChild('studentAction', { static: true }) studentAction: ElementRef;
 
   public student: IStudent[];
-  public book: IBook[] = this.dataservice.getBook();
+  public book: IBook[];
   public filteredBook;
   public filteredStudent;
 
@@ -41,8 +42,8 @@ export class SearchModalComponent implements OnInit {
       this.span.nativeElement.classList.add('d-none');
     }
 
-    this.filteredBook = this.book.filter(x => x.PubName.toLowerCase().includes(value) || x.bookName.toLowerCase().includes(value) || x.bookDescription.toLowerCase().includes(value) || x.Author.toLowerCase().includes(value));
-    this.filteredStudent = this.student.filter(x => x.studentName.toLowerCase().includes(value) || x.studentSID.toLowerCase().includes(value) || x.studentUniversityID.toLowerCase().includes(value));
+    this.filteredBook = this.book.filter(x => x.publisher.toLowerCase().includes(value) || x.bookName.toLowerCase().includes(value) || x.bookDescription.toLowerCase().includes(value) || x.author.toLowerCase().includes(value));
+    this.filteredStudent = this.student.filter(x => x.studentName.toLowerCase().includes(value) || x.studentSSID.toLowerCase().includes(value) || x.studentUniversityID.toLowerCase().includes(value));
 
     let action = document.querySelectorAll(".action");
 

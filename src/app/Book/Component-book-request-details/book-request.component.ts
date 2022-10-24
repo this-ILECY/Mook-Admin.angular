@@ -17,27 +17,34 @@ export class BookRequestComponent {
   constructor(public dialogRef: MatDialogRef<BookRequestComponent>,
     private dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private dataService:DataService) {      
+    private dataService: DataService) {
   }
 
-  studentDetail(selectedStudent:IStudent){
-    const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
+  studentDetail(selectedStudent: IStudent) {
+    const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } })
+      .afterClosed().subscribe(result => {
+        this.data.selectedRequest.students.isBlocked = result.isBlocked;
+        this.data.selectedRequest.students.isSuspended = result.isSuspended; 
+
+      });
+    console.log(dialogRef);
+
   }
-  openBookDetail(selectedBook:IBook){
+  openBookDetail(selectedBook: IBook) {
     const dialogRef = this.dialog.open(BookDetailsComponent, { data: { 'selectedBook': selectedBook } });
   }
 
 
   async setAcceptedAdmin(id: number) {
     console.log(id);
-    
+
     let result: boolean = await this.dataService.acceptRequest(id);
-console.log(result);
+    console.log(result);
 
     if (result) {
       this.dialogRef.close({
-        result:result,
-        id:id
+        result: result,
+        id: id
       });
     }
   }
@@ -46,8 +53,8 @@ console.log(result);
     let result: boolean = await this.dataService.deleteRequest(id);
     if (result) {
       this.dialogRef.close({
-        result:result,
-        id:id
+        result: result,
+        id: id
       });
     }
   }

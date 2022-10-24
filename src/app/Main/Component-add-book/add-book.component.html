@@ -18,26 +18,24 @@
                     class="book-desc input-disable input"></textarea>
             </div>
             <div class="book-detail-left">
-                <input type="text" #bookPub class="book-publisher-select input-disable input input-isnew" name="" id="">
-                    <!-- <ng-container *ngFor="let member of publisher">
-                        <option class="book-publisher-option" value="{{member.PublisherID}}">
-                            <div class="publisher-main">
-                                <div class="publisher-name">{{member.PublisherName}}</div>
-                            </div>
-                        </option>
-                    </ng-container> -->
                 <div class="inner-main">
                     <div class="inner-right">
+                        <div class="book-publisher-title">انتشارات</div>
                         <div class="book-page-title">تعداد صفحات کتاب</div>
-                        <div class="book-date-title">نویسنده</div>
+                        <div class="book-author-title">نویسنده</div>
                     </div>
                     <div class="inner-left">
-                        <input type="text" #bookPageCount class="book-page-value input-disable input input-isnew"
+                        <input type="text" #bookPub class="book-publisher-select input-disable input input-isnew"
+                            name="" id="">
+                        <input type="number" #bookPageCount class="book-page-value input-disable input input-isnew"
                             placeholder="">
                         <input type="text" #bookAuthor class="book-author input-disable input input-isnew"
                             placeholder="">
                     </div>
                 </div>
+
+                <div class="button save-new-book" (click)="saveBook()">ثبت کتاب</div>
+
             </div>
         </div>
     </div>

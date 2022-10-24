@@ -17,12 +17,12 @@ export class UserSpamReportComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
 
-  Students!: IStudent[]
+  Students!: IStudent[];
+
   async ngOnInit() {
-    this.Students = await this.dataService.getStudent();
-    console.log(this.Students);
-    
+    this.Students = await  this.dataService.getStudent();
   }
+
   openStudentDetail(selectedStudent: IStudent) {
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
   }

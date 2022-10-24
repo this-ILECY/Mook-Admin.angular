@@ -11,18 +11,18 @@ import { BookToBuyComponent } from '../Component-book-to-buy/book-to-buy.compone
 export class BookComponent implements OnInit {
 
   constructor(private dialog: MatDialog) { }
-
+  public falsing = 1;
   ngOnInit(): void {
     console.log();
-    
+
   }
   openBookList() {
     this.dialog.open(BookListComponent);
   }
   openBookListAvailable() {
-    this.dialog.open(BookListComponent, { data: { 'IsAvailable': true } });
+    this.dialog.open(BookListComponent, { data: { 'isAvailable': true } });
   }
-  openBookToBuy(){
+  openBookToBuy() {
     this.dialog.open(BookToBuyComponent)
   }
 }

@@ -4,17 +4,17 @@ export interface IStudent {
 
     studentID: number,
     studentName: String,
-    studentSID: string,
+    studentSSID: string,
     studentUniversityID: String,
     createdDate: string,
     updateDate: string,
-    isDeleted?: boolean,
     adminID?: number,
     userID?: number,
+    spamCount?: number,
     isBlocked?:boolean,
+    isDeleted?: boolean,
     isSuspended?:boolean,
     isSpam?: boolean,
-    spamCount?: number,
     reportPoint?: number,
     isRegistered?:boolean
 }

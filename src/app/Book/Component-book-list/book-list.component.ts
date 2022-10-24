@@ -20,15 +20,19 @@ export class BookListComponent implements OnInit {
 
   Books!: IBook[]
 
-  ngOnInit(): void {
-    this.Books = this.dataService.getBook();
+  async ngOnInit() {
+    this.Books = await this.dataService.getBook();
 
+
+    
     if (this.data !== null) {
-
-      if (this.data.IsAvailable) {
-        this.Books = this.Books.filter(x => x.IsAvailable == true)
+      
+      if (this.data.isAvailable) {
+        console.log(this.Books);
+        this.Books = this.Books.filter(x => x.isAvailable == true)
       }
     }
+    
   }
 
   openBookDetail(selectedBook: IBook) {

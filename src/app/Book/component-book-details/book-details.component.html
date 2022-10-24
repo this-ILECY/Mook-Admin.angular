@@ -12,8 +12,8 @@
     <div class="book-detail-body card-body">
         <div class="edit-main">
             <div class="is-available-main">
-                <div class="available-true" *ngIf="data.selectedBook.IsAvailable">موجود</div>
-                <div class="available-false" *ngIf="!data.selectedBook.IsAvailable">ناموجود</div>
+                <div class="available-true" *ngIf="data.selectedBook.isAvailable">موجود</div>
+                <div class="available-false" *ngIf="!data.selectedBook.isAvailable">ناموجود</div>
             </div>
             <div class="right-edit">
                 <div #edit class="edit" (click)="enableEdit()">
@@ -24,7 +24,7 @@
                     </svg>
                     <div class="edit-text">ویرایش</div>
                 </div>
-                <div #done class="done d-none">
+                <div #done class="done d-none" (click)="updateData(data.selectedBook)">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
@@ -42,13 +42,6 @@
                     class="book-desc input-disable input">{{data.selectedBook.bookDescription}}</textarea>
             </div>
             <div class="book-detail-left">
-                <!-- <ng-container *ngFor="let member of publisher">
-                    <option class="book-publisher-option" value="{{member.PublisherID}}">
-                        <div class="publisher-main">
-                            <div class="publisher-name">{{member.PublisherName}}</div>
-                        </div>
-                    </option>
-                </ng-container> -->
                 <div class="inner-main">
                     <div class="child-main">
                         <div class="ch-0 rating-title">انتشارات:</div>
@@ -62,7 +55,7 @@
 
                     <div class="child-main">
                         <div class="ch-0 rating-count-title">تعداد امتیاز:</div>
-                        <div class="ch-1 rating-count-value">{{data.selectedBook.BookratingCount}}</div>
+                        <div class="ch-1 rating-count-value">{{data.selectedBook.bookRatingCount}}</div>
                     </div>
 
                     <div class="child-main">

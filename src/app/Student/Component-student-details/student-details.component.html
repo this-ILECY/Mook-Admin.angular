@@ -19,7 +19,7 @@
                 </svg>
                 <div class="edit-text">ویرایش</div>
             </div>
-            <div #done class="done d-none">
+            <div #done class="done d-none" (click)="updateData(selectedStudent)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
@@ -44,7 +44,7 @@
                         <td><input #uniID type="text" class="UniID input-disable input" disabled
                                 value="{{selectedStudent.studentUniversityID}}"></td>
                         <td><input #SID type="text" class="SID input-disable input" disabled
-                                value="{{selectedStudent.studentSID}}"></td>
+                                value="{{selectedStudent.studentSSID}}"></td>
                         <td><input #SID type="text" class="input-disable input" disabled
                                 value="{{selectedStudent.createdDate}}">
                         </td>
@@ -55,7 +55,8 @@
             </table>
         </div>
         <div class="buttons">
-            <div class="suspend button" (click)="suspend()" *ngIf="!data.selectedStudent.IsSuspended">
+            
+            <div class="suspend button" (click)="suspend(data.selectedStudent.studentID)" *ngIf="!data.selectedStudent.isSuspended">
                 <div class="suspend-text">تعلیق کاربر</div>
                 <div class="suspend-svg button-svg is-flex">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +66,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="unsuspend button revert-button" (click)="suspend()" *ngIf="data.selectedStudent.IsSuspended">
+            <div class="unsuspend button revert-button" (click)="suspend(data.selectedStudent.studentID)" *ngIf="data.selectedStudent.isSuspended">
                 <div class="suspend-text">عدم تعلیق</div>
                 <div class="suspend-svg button-svg revert-button-svg is-flex">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +76,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="block button" (click)="block()" *ngIf="!data.selectedStudent.IsBlocked">
+            <div class="block button" (click)="block(data.selectedStudent.studentID)" *ngIf="!data.selectedStudent.isBlocked">
                 <div class="block-text">قفل کاربر</div>
                 <div class="block-svg button-svg is-flex">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +86,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="unblock button revert-button" (click)="block()" *ngIf="data.selectedStudent.IsBlocked">
+            <div class="unblock button revert-button" (click)="block(data.selectedStudent.studentID)" *ngIf="data.selectedStudent.isBlocked">
                 <div class="block-text">آزادسازی کاربر</div>
                 <div class="block-svg button-svg revert-button-svg is-flex">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

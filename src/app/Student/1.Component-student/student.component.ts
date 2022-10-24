@@ -44,7 +44,8 @@ export class StudentComponent implements OnInit {
     this.newRequest = this.request.filter(x => x.isAccepted === false && x.isDeleted === false);
     this.comment = await this.dataservice.getComment();
   
-    console.log(this.newRequest);
+    console.log(this.student);
+    console.log(this.newStudent);
     
   }
   openRegisterDetail(selectedStudent: IStudent) {

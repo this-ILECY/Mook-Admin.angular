@@ -19,10 +19,20 @@ export class UserListComponent implements OnInit {
 
   Students!: IStudent[]
   async ngOnInit() {
+
     this.Students = await this.dataService.getStudent();
+    console.log(this.Students);
   }
   openStudentDetail(selectedStudent: IStudent) {
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });
+
+    dialogRef.afterClosed().subscribe(async res => {
+      if (res.result) {
+        this.Students = [];
+        this.Students = await this.dataService.getStudent();
+
+      }
+    });
   }
 
 }

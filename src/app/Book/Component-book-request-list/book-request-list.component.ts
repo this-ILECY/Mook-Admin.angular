@@ -22,9 +22,10 @@ export class BookRequestListComponent implements OnInit {
 
   async ngOnInit() {
     this.bookList = await this.dataservice.getRequest();
-    console.log(this.bookList);
     
     if (this.data != (null || undefined)) {      
+      console.log(this.bookList.filter(x => x.students.studentID == this.data.selectedStudent.studentID));
+
       this.bookList = this.bookList.filter(x => x.students.studentID == this.data.selectedStudent.studentID);
     }
   }

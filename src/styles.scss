@@ -342,7 +342,7 @@ body {
 }
 
 .input-invalid{
-    border-bottom: 1px solid rgb(255, 0, 0);
+    border-bottom: 1px solid rgb(255, 0, 0) !important;
 }
 
 //// input group :
@@ -394,9 +394,9 @@ body {
 
 .input-isnew {
     border: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
     border-bottom: 1px solid $lightBlackShadow;
     border-radius: 0px;
 }
