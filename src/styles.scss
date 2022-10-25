@@ -91,13 +91,16 @@ app-student {
     border: none;
     border-bottom: 1px solid $lightBlackShadow;
 }
+
 .has-not-border {
     border: none;
 }
+
 .has-updown-margin-form {
     margin-top: 1%;
     margin-bottom: 1.5%;
 }
+
 .is-flex {
     display: flex;
 }
@@ -109,7 +112,8 @@ app-student {
 .d-contents {
     display: contents;
 }
-.d-inline-block{
+
+.d-inline-block {
     display: inline-block;
 }
 
@@ -128,6 +132,7 @@ app-student {
 .child-w25>* {
     width: 25% !important;
 }
+
 .has-no-border {
     border-radius: 0;
     border: none;
@@ -143,7 +148,7 @@ app-student {
 app-book-request,
 app-new-register {
     padding: 0 !important;
-    border-radius: $border-radius  !important;
+    border-radius: $border-radius !important;
     height: 100% !important;
     width: 100% !important;
     overflow: visible !important;
@@ -186,15 +191,15 @@ app-new-register {
     color: $buttonHoverColor;
 
     .button-svg>svg>path {
-        fill: $buttonHoverColor  !important;
+        fill: $buttonHoverColor !important;
     }
 
     .button-svg-special>svg {
-        fill: $buttonHoverColor  !important;
+        fill: $buttonHoverColor !important;
     }
 
     .button-svg-stroke>svg>path {
-        stroke: $buttonHoverColor  !important;
+        stroke: $buttonHoverColor !important;
     }
 }
 
@@ -222,15 +227,15 @@ app-new-register {
     color: $svgFillOnHoverPrimary;
 
     .revert-button-svg>svg>path {
-        fill: $svgFillOnHoverPrimary  !important;
+        fill: $svgFillOnHoverPrimary !important;
     }
 
     .revert-button-svg-special>svg {
-        fill: $svgFillOnHoverPrimary  !important;
+        fill: $svgFillOnHoverPrimary !important;
     }
 
     .revert-button-svg-stroke>svg>path {
-        stroke: $svgFillOnHoverPrimary  !important;
+        stroke: $svgFillOnHoverPrimary !important;
     }
 }
 
@@ -341,7 +346,7 @@ body {
     background-color: #00000000;
 }
 
-.input-invalid{
+.input-invalid {
     border-bottom: 1px solid rgb(255, 0, 0) !important;
 }
 
@@ -411,8 +416,16 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.text-red-color{
-    color:red
+
+.text-red-color {
+    color: red
+}
+
+.text-invalid {
+    color: red !important;
+}
+.text-invalid::after {
+    content: "!";
 }
 
 
@@ -488,62 +501,62 @@ body {
         flex: 0 0 auto;
         width: 8.3333333333%;
     }
-    
+
     .col-md-2 {
         flex: 0 0 auto;
         width: 16.666666666%;
     }
-    
+
     .col-md-3 {
         flex: 0 0 auto;
         width: 24.999999999%;
     }
-    
+
     .col-md-4 {
         flex: 0 0 auto;
         width: 33.33333333333%;
     }
-    
+
     .col-md-5 {
         flex: 0 0 auto;
         width: 41.5555555555%;
     }
-    
+
     .col-md-6 {
         flex: 0 0 auto;
         width: 50%;
     }
-    
+
     .col-md-7 {
         flex: 0 0 auto;
         width: 58.33333333%;
     }
-    
+
     .col-md-8 {
         flex: 0 0 auto;
         width: 66.6666666666%;
     }
-    
+
     .col-md-9 {
         flex: 0 0 auto;
         width: 74.9999999999%;
     }
-    
+
     .col-md-10 {
         flex: 0 0 auto;
         width: 83.333333333333%;
     }
-    
+
     .col-md-11 {
         flex: 0 0 auto;
         width: 91.555555555555%;
     }
-    
+
     .col-md-12 {
         flex: 0 0 auto;
         width: 100%;
     }
-    
+
 }
 
 @media (min-width: 576px) {
@@ -605,5 +618,22 @@ body {
     .col-sm-12 {
         flex: 0 0 auto;
         width: 100%;
+    }
+}
+
+/*****************************************************************************/
+/*********************************  table  ***********************************/
+/*********************************  table  ***********************************/
+/*********************************  table  ***********************************/
+/*****************************************************************************/
+
+.invalid-table {
+    thead {
+        color: red;
+        border-bottom: 1px solid red !important;
+
+        th::after {
+            content: "!";
+        }
     }
 }

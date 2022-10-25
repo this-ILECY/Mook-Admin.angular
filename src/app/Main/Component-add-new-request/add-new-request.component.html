@@ -12,19 +12,19 @@
     <div class="book-re-body card-body h-70">
         <div class="book-re-detail">
             <div class="student-name">
-                <div class="student-name-text" (click)="openChooseStudent()">انتخاب سفارش دهنده</div>
-                <div *ngIf="student !== null" class="student-name-value">{{student.studentName}}</div>
+                <div #invalid class="student-name-text" (click)="openChooseStudent()">انتخاب سفارش دهنده</div>
+                <div *ngIf="student !== undefined" class="student-name-value">{{student.studentName}}</div>
             </div>
             <div class="request-date">
                 <div class="request-date-text">تاریخ سفارش: </div>
                 <div class="request-date-value">{{DateNow}}</div>
             </div>
             <div class="student-name">
-                <div class="student-name-text" (click)="openChooseBook()">افزودن کتاب</div>
+                <div  class="student-name-text" (click)="openChooseBook()">افزودن کتاب</div>
             </div>
 
         </div>
-        <table class="book-re-table">
+        <table #table class="book-re-table">
             <thead>
                 <th>نام کتاب</th>
                 <th>انتشارات</th>
@@ -41,7 +41,7 @@
             </tbody>
         </table>
     </div>
-    <div class="book-re-footer card-footer" (click)="SaveOrder(data.selectedRequest.requestID)">
+    <div class="book-re-footer card-footer" (click)="SaveOrder()">
         <div class="book-re-accept button">
             <div class="deny-text">ثبت سفارش</div>
         </div>

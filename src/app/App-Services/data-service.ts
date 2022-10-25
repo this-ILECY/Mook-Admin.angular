@@ -7,6 +7,7 @@ import { IRequestViewModel } from './Models/IRequestH';
 import { IStudent, IStudentReport } from './Models/IStudent';
 import * as $ from 'jquery';
 import { AddressService } from './address.service';
+import { date } from './date.service';
 
 @Injectable({
     providedIn: 'root'
@@ -146,7 +147,7 @@ export class DataService {
             },
             "data": JSON.stringify({
                 "bookID": book.bookID,
-                "AcceptedAdminID":book.adminID,
+                "AcceptedAdminID": book.adminID,
                 "bookName": book.bookName,
                 "bookPagesCount": book.bookPagesCount,
                 "bookRating": book.bookRating,
@@ -183,6 +184,9 @@ export class DataService {
     }
     public deleteRequest(id: number) {
         return this.DeleteRequest(id);
+    }
+    public createRequest(request: IRequestViewModel) {
+        return this.CreateRequest(request);
     }
 
     private async GetRequest() {
@@ -232,6 +236,95 @@ export class DataService {
         });
         return result;
     }
+    private async CreateRequest(request: IRequestViewModel) {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().requestList,
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+                "Accept": "text/plain"
+            },
+            "data": JSON.stringify({
+                requestID: request.requestID,
+                studentID: request.studentID,
+                requestAcceptedDate: request.requestAcceptedDate,
+                isAccepted: request.isAccepted,
+                requestFinishedDate: request.requestFinishedDate,
+                isDelayed: request.isDelayed,
+                delayDays: request.delayDays,
+                requestDecription: request.requestDecription,
+                createdDate: date.now(),
+                isDeleted: request.isDeleted,
+                requestDetails: request.requestDetails,
+                students: request.students,
+            }),
+            // "data": JSON.stringify({
+            //     "requestID": request.requestID,
+            //     "studentID": request.studentID,
+            //     "requestAcceptedDate": request.requestAcceptedDate,
+            //     "isAccepted": false,
+            //     "requestFinishedDate": null,
+            //     "isDelayed": false,
+            //     "delayDays": 0,
+            //     "requestDecription": "",
+            //     "createdDate": date.now(),
+            //     "isDeleted": false,
+            //     "requestDetails": [
+            //       {
+            //         "requestDetailID": -6714494,
+            //         "requestHeaderID": -94141231,
+            //         "bookID": -80081852,
+            //         "books": {
+            //           "bookID": -36604591,
+            //           "acceptedAdminID": -97080096,
+            //           "bookName": "enim tempor est ut",
+            //           "bookPagesCount": -55287901,
+            //           "bookRating": 48775824.62162477,
+            //           "publisher": "aute ut sunt",
+            //           "author": "anim consequat in consectetur dolore",
+            //           "bookRatingCount": -67461384,
+            //           "bookDescription": "dolor ut",
+            //           "isAvailable": false,
+            //           "isDamaged": true,
+            //           "createdDate": "cillum cupidatat"
+            //         },
+            //         "requestDetailDescription": "incididunt sed",
+            //         "isDamaged": false,
+            //         "isLost": true
+            //       },
+            //       {
+            //         "requestDetailID": -88684681,
+            //         "requestHeaderID": 97641356,
+            //         "bookID": 98472638,
+            //         "books": {
+            //           "bookID": -91869192,
+            //           "acceptedAdminID": 15133666,
+            //           "bookName": "mollit",
+            //           "bookPagesCount": 5443725,
+            //           "bookRating": -8269378.559137672,
+            //           "publisher": "tempor",
+            //           "author": "aliqua ",
+            //           "bookRatingCount": -72721760,
+            //           "bookDescription": "dolore Duis",
+            //           "isAvailable": true,
+            //           "isDamaged": true,
+            //           "createdDate": "labore ex"
+            //         },
+            //         "requestDetailDescription": "officia commodo",
+            //         "isDamaged": false,
+            //         "isLost": false
+            //       }
+            //     ],
+            //     "students": request.students
+            //     }),
+        };
+
+        let result: boolean = await $.ajax(settings).done(res => {
+            return res;
+        });
+        return result;
+    }
 
 
     /************************************************************************************************/
@@ -240,13 +333,17 @@ export class DataService {
     /************************************************************************************************/
     /************************************************************************************************/
     private studentReport: IStudentReport[] = []
-    private Student: IStudent[] = [];
+    private Students: IStudent[] = [];
+    private Student:IStudent = null;
 
     public getStudentReport() {
         return this.GetStudentReport();
     }
     public getStudent() {
         return this.GetStudent();
+    }
+    public getStudentByID(id:number) {
+        return this.GetStudentByID(id);
     }
     public acceptNewRegister(id: number) {
         return this.AcceptNewRegister(id);
@@ -282,9 +379,9 @@ export class DataService {
         });
         return this.studentReport;
     }
-    private async GetStudent() {
+    private async GetStudentByID(id:number) {        
         var settings = {
-            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList,
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList + "/" + id,
             "method": "GET",
             "timeout": 0,
             "headers": {
@@ -296,6 +393,21 @@ export class DataService {
             return res;
         });
         return this.Student;
+    }
+    private async GetStudent() {
+        var settings = {
+            "url": this.address.getBaseUrl() + this.address.getUrlAddress().studentList,
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
+                "Accept": "text/plain"
+            },
+        };
+
+        this.Students = await $.ajax(settings).done(function (res) {
+            return res;
+        });
+        return this.Students;
     }
     private async AcceptNewRegister(id: number) {
         let studentChange = this.address.getUrlAddress().studentChange
@@ -379,7 +491,7 @@ export class DataService {
                 "isBlocked": student.isBlocked,
                 "reportPoint": student.reportPoint,
                 "isSpam": student.isSpam,
-                "AcceptedAdminID":student.adminID
+                "AcceptedAdminID": student.adminID
             }),
         };
 

@@ -13,6 +13,7 @@ import { UserSpamReportComponent } from '../Component-user-spam-report/user-spam
 import { IComment } from 'src/app/App-Services/Models/IComment';
 import { StudentDetailsComponent } from '../Component-student-details/student-details.component';
 import { YesNoMsgboxComponent } from 'src/app/1.Essential-components/yes-no-msgbox/yes-no-msgbox.component';
+import { GetRequestComponent } from 'src/app/Book/Component-get-request/get-request.component';
 
 
 @Component({
@@ -43,10 +44,10 @@ export class StudentComponent implements OnInit {
     this.overdueRequest = this.request.filter(x => x.isDelayed === true && x.isDeleted === false);
     this.newRequest = this.request.filter(x => x.isAccepted === false && x.isDeleted === false);
     this.comment = await this.dataservice.getComment();
-  
+
     console.log(this.student);
     console.log(this.newStudent);
-    
+
   }
   openRegisterDetail(selectedStudent: IStudent) {
 
@@ -61,7 +62,7 @@ export class StudentComponent implements OnInit {
     console.log(selectedRequest);
     const dialogRef = this.dialog.open(BookRequestComponent, { data: { 'selectedRequest': selectedRequest } });
     dialogRef.afterClosed().subscribe(result => {
-      
+
       if (result.result === true) {
         console.log(result);
         document.querySelector(".new-request-number-" + result.id).classList.add("d-none");
@@ -81,6 +82,9 @@ export class StudentComponent implements OnInit {
   }
   openSpamReport() {
     const dialogRef = this.dialog.open(UserSpamReportComponent);
+  }
+  openGetRequest() {
+    const dialogRef = this.dialog.open(GetRequestComponent);
   }
   openStudent(selectedStudent: IStudent) {
     const dialogRef = this.dialog.open(StudentDetailsComponent, { data: { 'selectedStudent': selectedStudent } });

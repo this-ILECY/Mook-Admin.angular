@@ -4,38 +4,40 @@ import { IStudent } from "./IStudent";
 export interface IRequestH {
     requestID: number,
     studentID: number,
-    AdminID: number,
+    adminID: number,
     requestAcceptDate: string,
     isAccepted: boolean,
     requestFinishedDate: string,
     isDelayed: boolean,
-    RequestDescription: string,
+    requestDescription: string,
     createdDate: string,
-    IsDeleted: boolean,
+    isDeleted: boolean,
     delayTime: number
 }
 
 
 export interface IRequestD {
-    RequestHID: number,
-    RequestDID: number,
-    BookID: number,
+    requestHID: number,
+    requestDID: number,
+    bookID: number,
     description: string,
-    IsDamaged: boolean,
-    IsLost: boolean
+    isDamaged: boolean,
+    isLost: boolean
 }
 
 export interface IRequestDetailViewModel {
-    RequestDetailID: Number,
-    RequestHeaderID: number,
-    BookID: number,
-    RequestDetailDescription: string,
-    IsDamaged: Boolean,
-    IsLost: Boolean
+    requestDetailID: Number,
+    requestHeaderID: number,
+    bookID: number,
+    books:IBook,
+    requestDetailDescription: string,
+    isDamaged: Boolean,
+    isLost: Boolean
 }
 
 export interface IRequestViewModel {
     requestID: number,
+    studentID:number,
     requestAcceptedDate: string,
     isAccepted: Boolean,
     requestFinishedDate: string,

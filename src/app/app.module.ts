@@ -32,6 +32,8 @@ import { AddBookComponent } from './Main/Component-add-book/add-book.component';
 import { AddNewRequestComponent } from './Main/Component-add-new-request/add-new-request.component';
 import { StudentSelectComponent } from './Main/Compenent-student-select/student-select.component';
 import { BookSelectComponent } from './Main/Component-book-select/book-select.component';
+import { GetRequestComponent } from './Book/Component-get-request/get-request.component';
+import { RequestSelectComponent } from './Main/Component-request-select/request-select.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { BookSelectComponent } from './Main/Component-book-select/book-select.co
     AddBookComponent,
     AddNewRequestComponent,
     StudentSelectComponent,
-    BookSelectComponent
+    BookSelectComponent,
+    GetRequestComponent,
+    RequestSelectComponent
   ],
   imports: [
     BrowserModule,

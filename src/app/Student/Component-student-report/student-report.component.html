@@ -17,7 +17,6 @@
                 <th>شماره دانشجویی</th>
                 <th>تعداد سفارشات</th>
                 <th>سفارشات تاریخ گذشته</th>
-                <th>بیشترین تاخیر</th>
                 <th>تعداد کتاب</th>
                 <th>کتابهای آسیب دیده</th>
                 <th>کتابهای گم شده</th>
@@ -25,17 +24,16 @@
             </thead>
             <tbody>
                 <ng-container *ngFor="let member of studentReport">
-                    <tr (click)="openStudentDetail(member.students)">
-                        <td>{{member.students.studentName}}</td>
-                        <td>{{member.students.studentSSID}}</td>
-                        <td>{{member.students.studentUniversityID}}</td>
+                    <tr (click)="openStudentDetail(member.studentID)">
+                        <td>{{member.studentName}}</td>
+                        <td>{{member.studentSSID}}</td>
+                        <td>{{member.studentUniversityID}}</td>
                         <td>{{member.requestCount}}</td>
                         <td>{{member.requsetDelayCount}}</td>
                         <td>{{member.bookRent}}</td>
                         <td>{{member.bookDamaged}}</td>
                         <td>{{member.bookLost}}</td>
-                        <td>{{member.registerDate}}</td>
-                        <td>{{member.longestDelay}}</td>
+                        <td>{{member.createdDate}}</td>
                     </tr>
                 </ng-container>
             </tbody>

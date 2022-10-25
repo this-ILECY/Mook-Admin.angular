@@ -244,16 +244,23 @@
 .history-main>div {
     padding: 5px 0;
 }
-
-.spam-main {
-    width: calc(100% - 10px);
+.spam-get-request{
     display: flex;
+    width: calc(100% - 10px);
     height: calc(10% - 10px);
     flex-direction: row;
-    justify-content: center;
-    border-radius: 25px;
-    margin: 5px;
-    align-items: center;
+    
+    .spam-main,
+    .get-request  {
+        display: flex;
+        flex-direction: row;
+        width: calc(50% - 10px);
+        height: calc(100% - 10px);
+        justify-content: space-evenly;
+        border-radius: 25px;
+        margin: 5px;
+        align-items: center;
+    }
 }
 
 .spam-main>div {
