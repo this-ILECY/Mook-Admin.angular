@@ -3,7 +3,6 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { MessageBoxComponent } from 'src/app/1.Essential-components/message-box/message-box.component';
 import { IBook } from 'src/app/App-Services/Models/IBook';
 import { DataService } from '../../App-Services/data-service';
-import { IPublisher } from '../../App-Services/Models/IPublisher';
 
 @Component({
   selector: 'app-book-details',

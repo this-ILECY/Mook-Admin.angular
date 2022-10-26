@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { IAdmin } from './Models/IAdmin';
 import { IBook, IbookToBuy } from './Models/IBook';
 import { IComment } from './Models/IComment';
-import { IPublisher } from './Models/IPublisher';
 import { IRequestViewModel } from './Models/IRequestH';
 import { IStudent, IStudentReport } from './Models/IStudent';
 import * as $ from 'jquery';
@@ -18,12 +17,12 @@ export class DataService {
 
 
     private Admin: IAdmin[] = [{
-        AdminID: 1,
-        AdminName: "امیرحسین",
-        AdminPhone: "09123421550",
+        adminID: 1,
+        adminName: "امیرحسین",
+        adminPhone: "09123421550",
         createdDate: "1401/08/35",
         updateDate: "1401/13/68",
-        IsDeleted: false,
+        isDeleted: false,
     }]
     public getAdmin() {
         return this.Admin;

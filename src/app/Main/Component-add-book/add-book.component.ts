@@ -1,11 +1,9 @@
 import { Component, ElementRef, Inject, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { count } from 'rxjs';
 import { MessageBoxComponent } from 'src/app/1.Essential-components/message-box/message-box.component';
 import { DataService } from 'src/app/App-Services/data-service';
 import { date } from 'src/app/App-Services/date.service';
 import { IBook } from 'src/app/App-Services/Models/IBook';
-import { IPublisher } from 'src/app/App-Services/Models/IPublisher';
 
 @Component({
   selector: 'app-add-book',
@@ -15,7 +13,6 @@ import { IPublisher } from 'src/app/App-Services/Models/IPublisher';
 export class AddBookComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<AddBookComponent>,
-    private renderer: Renderer2,
     private dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private dataService: DataService) {
@@ -52,7 +49,7 @@ export class AddBookComponent implements OnInit {
         isDeleted: false,
         isDamaged: false,
         isAvailable: true,
-        adminID: this.dataService.getAdmin()[0].AdminID
+        adminID: this.dataService.getAdmin()[0].adminID
       }
 
       let result = await this.dataService.createBook(book);

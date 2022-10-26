@@ -1,8 +1,8 @@
 export interface IAdmin {
-    AdminID: number,
-    AdminName: string,
-    AdminPhone: string,
+    adminID: number,
+    adminName: string,
+    adminPhone: string,
     createdDate: string,
     updateDate: string,
-    IsDeleted: boolean,
+    isDeleted: boolean,
 }

@@ -11,8 +11,8 @@
     </div>
     <div class="comment-list-body card-body">
         <ng-container *ngFor="let member of comments">
-            <div class="comment-modal-main button" [ngClass]="member.IsAdminAccepted === true ? 'card-is-invalid':'card-is-valid'">
-                <div class="d-contents" (click)="openMessge(member.IsAdminAccepted)">
+            <div class="comment-modal-main button" [ngClass]="member.isAdminAccepted === true ? 'card-is-invalid':'card-is-valid'">
+                <div class="d-contents" (click)="openMessge(member.isAdminAccepted)">
                     <div class="item comment-modal-header text-overflow">{{member.commentHeader}}</div>
                     <div class="comment-modal-body-main">
                         <div class="comment-modal-body-title">متن کامنت</div>

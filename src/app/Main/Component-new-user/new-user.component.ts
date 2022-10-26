@@ -40,7 +40,7 @@ export class NewUserComponent implements OnInit {
         studentSSID: this.SID.nativeElement.value,
         createdDate: date.now(),
         updateDate: date.now(),
-        adminID: this.dataservice.getAdmin()[0].AdminID,
+        adminID: this.dataservice.getAdmin()[0].adminID,
         userID: 0,
         spamCount: 0,
         isBlocked: false,

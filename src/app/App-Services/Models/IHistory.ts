@@ -1,10 +1,10 @@
 export interface IHistory{
-    HistoryID:number,
+    historyID:number,
     adminID:number,
     studentID:number,
-    TableName:string,
+    tableName:string,
     columnName:string,
-    TableID:number,
+    tableID:number,
     date:string,
-    HistoryDescription:string
+    historyDescription:string
 }

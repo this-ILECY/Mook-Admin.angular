@@ -33,7 +33,7 @@ export class StudentComponent implements OnInit {
   public newRequest: IRequestViewModel[];
   public overdueRequest: IRequestViewModel[];
   public comment: IComment[];
-  public AdminName: string = this.admin[0].AdminName;
+  public AdminName: string = this.admin[0].adminName;
   public language: string = 'Per';
 
 
@@ -41,12 +41,11 @@ export class StudentComponent implements OnInit {
     this.request = await this.dataservice.getRequest();
     this.student = await this.dataservice.getStudent();
     this.newStudent = this.student.filter(x => x.isRegistered === false && x.isDeleted === false);
-    this.overdueRequest = this.request.filter(x => x.isDelayed === true && x.isDeleted === false);
+    this.overdueRequest = this.request.filter(x => x.isDelayed === true && x.isDeleted === false && x.isAccepted === true);
     this.newRequest = this.request.filter(x => x.isAccepted === false && x.isDeleted === false);
     this.comment = await this.dataservice.getComment();
 
-    console.log(this.student);
-    console.log(this.newStudent);
+    console.log(this.request.filter(x => x.isAccepted === true));
 
   }
   openRegisterDetail(selectedStudent: IStudent) {
